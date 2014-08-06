@@ -1,0 +1,32 @@
+body {
+  font-family: Verdana;
+  font-size: 12px;
+}
+.form_row label {
+  display: block;
+}
+.flash_message {
+  margin-bottom: 13px;
+  background: #f1ede1;
+  border: 2px solid #aaaaaa;
+  color: #000000;
+  border-radius: 0.3em;
+  padding: 0.3em 2em 0.3em 2em;
+  min-width: 300px;
+  display: inline-block;
+  /*font-size: 80%;*/
+
+}
+.flash_message.flash_message_error {
+  color: #bb0000;
+  border-color: red;
+  background: #ffe8e2;
+}
+.flash_message.flash_message_info {
+  background: #DFFFA6;
+  border: 2px solid #01C074;
+}
+.errorMessage {
+  color: red;
+  font-weight: bold;
+}

@@ -1,0 +1,6 @@
+nbproject/*
+config/local.php
+protected/logs/*
+protected/runtime/*
+assets/*
+

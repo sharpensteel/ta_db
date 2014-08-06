@@ -1,0 +1,6 @@
+nbproject/*
+protected/logs/*
+protected/runtime/*
+assets/*
+/.htaccess
+

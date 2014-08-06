@@ -26,7 +26,7 @@ class Report_activity_widget extends CWidget{
 			if(!isset($player_arr[$attack['att_login']])) continue;
 			$player = &$player_arr[$attack['att_login']];
 			$player['attack_arr'][(int)$attack['def_base_level']] = $attack;
-			$lvl_modifier = pow(1.25, $attack['def_base_level']);
+			$lvl_modifier = pow(1.2, $attack['def_base_level']);
 			$player['score'] += $lvl_modifier * ( (int)$attack['kills']*5 + (int)$attack['attacks'] );
 			unset($player);
 		}

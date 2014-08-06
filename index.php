@@ -12,7 +12,7 @@ if(!empty($GLOBALS['is_enable_log_request'])){
 
 
 // change the following paths if necessary
-$yii=dirname(__FILE__).'/../../../xampp/yii/framework/yii.php';
+$yii=YII_FRAMEWORK_DIR.'/yii.php';
 $config=dirname(__FILE__).'/protected/config/main.php';
 
 if(defined('DEVEL_MODE') && constant('DEVEL_MODE')){

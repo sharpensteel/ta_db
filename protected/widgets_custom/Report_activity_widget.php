@@ -4,6 +4,10 @@
 class Report_activity_widget extends CWidget{
 	public $interval_days = 30;	
 	
+	const DEFENDER_LEVEL_FACTOR = 1.2;
+	const KILL_MULTIPLIER = 6;
+	const ATTACK_MULTIPLIER = 1;
+	
 	public function run(){
 		
 		$attack_arr = query_arr(
@@ -27,14 +31,16 @@ class Report_activity_widget extends CWidget{
 			$player = &$player_arr[$attack['att_login']];
 			$player['attack_arr'][(int)$attack['def_base_level']] = $attack;
 			$lvl_modifier = pow(1.2, $attack['def_base_level']);
-			$player['score'] += $lvl_modifier * ( (int)$attack['kills']*5 + (int)$attack['attacks'] );
+			$player['score'] += $lvl_modifier * ( (int)$attack['kills']*6 + (int)$attack['attacks'] );
 			unset($player);
 		}
 		
 		$player_arr_by_score = array_values($player_arr);
 		usort($player_arr_by_score, function($a, $b){ return -($a['score'] - $b['score']); });
+	
 		
 		?>
+		<span style="color:gray;font-style:italic;"><? self::print_score_calc_description() ?></span><br><br>
 		<?
 		foreach($player_arr_by_score as $player){
 			?><b><?=$player['name']?> </b> score=<?=round($player['score']/1000000,3)?> M*
@@ -50,5 +56,9 @@ class Report_activity_widget extends CWidget{
 			<br>
 			<?
 		}
+	}
+	
+	function print_score_calc_description(){
+		echo "Scores increasing each base kill/attack. kill/attack score ratio: ".self::KILL_MULTIPLIER.":".self::ATTACK_MULTIPLIER.". Scores increased with each level by *".self::DEFENDER_LEVEL_FACTOR."<br> *** NOTE: this score does not account importance of targets!";
 	}
 }

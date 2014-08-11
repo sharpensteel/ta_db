@@ -135,12 +135,12 @@ class Packet_parser {
 				case PacketType::PT_ATTACKS_LOG:
 					
 					$record_arr = query_arr('select id, attack_log_json from attack where LENGTH(attack_log_json) '. ($forse_all ? ' and (not COALESCE(attack_log_is_parsed,0)) ':'') );
-					$id = $record_arr['id'];
-					$json = $record_arr['attack_log_json'];
 					
 					$res .= 'records neeed to parse: '.count($record_arr).'<br>';
 					foreach($record_arr as $record){
-						
+						$id = $record['id'];
+						$json = $record['attack_log_json'];
+
 						try{
 							$count_changed += self::parse_and_update__attack($id,$json);
 							$count_parsed++;

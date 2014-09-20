@@ -18,7 +18,7 @@ class Report_activity_widget extends CWidget{
 			array('interval_days' => $this->interval_days));
 		
 		
-		$player_arr = make_array_indexed_by_records_field(query_arr('select id, name from player where is_active order by name'),'name');
+		$player_arr = make_array_indexed_by_records_field(query_arr('select id, name from player where is_member order by name'),'name');
 		
 		
 		

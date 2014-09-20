@@ -50,11 +50,14 @@ class Packet_parser {
 				break;
 			case PacketType::PT_ALLAINCE_MEMBER_DATA:
 				$count_uploaded = count($packets);
+				query_execute('update player set is_member=0');
+				
 				foreach($packets as $packet){
 					$id = $packet['i'];
 					$name = $packet['n'];
 					$json = json_encode($packet,JSON_UNESCAPED_UNICODE);
-					$count_inserted += query_execute('insert into player (id, name, alliance_member_data_json) values (:id, :name, alliance_member_data_json) ON DUPLICATE KEY UPDATE name=:name, alliance_member_data_json=:alliance_member_data_json',
+					
+					$count_inserted += query_execute('insert into player (id, name, alliance_member_data_json, is_member) values (:id, :name, alliance_member_data_json, 1) ON DUPLICATE KEY UPDATE name=:name, alliance_member_data_json=:alliance_member_data_json, is_member=1',
 						array('id'=>$id, 'name'=>$name ,'alliance_member_data_json' => $json));
 						
 					/*try{

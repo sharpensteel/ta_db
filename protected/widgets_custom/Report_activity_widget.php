@@ -18,7 +18,8 @@ class Report_activity_widget extends CWidget{
 			array('interval_days' => $this->interval_days));
 		
 		
-		$player_arr = make_array_indexed_by_records_field(query_arr('select id, name from player where is_member order by name'),'name');
+		$alliance_id = 101; //vortex ares
+		$player_arr = make_array_indexed_by_records_field(query_arr('select id, name from player where alliance_id=:alliance_id order by name',array('alliance_id'=>$alliance_id)),'name');
 		
 		
 		

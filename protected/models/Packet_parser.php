@@ -50,14 +50,14 @@ class Packet_parser {
 				break;
 			case PacketType::PT_ALLAINCE_MEMBER_DATA:
 				$count_uploaded = count($packets);
-				query_execute('update player set is_member=0');
+				//query_execute('update player set is_member=0');
 				
 				foreach($packets as $packet){
 					$id = $packet['i'];
 					$name = $packet['n'];
 					$json = json_encode($packet,JSON_UNESCAPED_UNICODE);
 					
-					$count_inserted += query_execute('insert into player (id, name, alliance_member_data_json, is_member) values (:id, :name, alliance_member_data_json, 1) ON DUPLICATE KEY UPDATE name=:name, alliance_member_data_json=:alliance_member_data_json, is_member=1',
+					$count_inserted += query_execute('insert into player (id, name, alliance_member_data_json) values (:id, :name, alliance_member_data_json) ON DUPLICATE KEY UPDATE name=:name, alliance_member_data_json=:alliance_member_data_json',
 						array('id'=>$id, 'name'=>$name ,'alliance_member_data_json' => $json));
 						
 					/*try{
@@ -70,16 +70,16 @@ class Packet_parser {
 				}
 				break;
 			case PacketType::PT_PUBLIC_ALLIANCE_INFO:
-				
-				$is_member = (int)($m['i']) === 101; // 101 - vortex
+				$packet = $packets;
+				$alliance_id = (int)($packet['i']);// 101 - vortex ares
 				foreach($packet['m'] as $m){
 					$id = $m['i'];
 					$name = $m['n'];
 					$rank = $m['r'];
-					$score = $m['p'];
-					$count_inserted += query_execute('insert into player (id, name, is_member, rank, score ) values (:id, :name, :is_member, :rank, :score)'
-							. ' ON DUPLICATE KEY UPDATE name=:name, is_member=:is_member, rank=:rank, score=:score',
-						array('id'=>$id, 'name'=>$name ,'is_member' => $is_member, 'rank'=>$rank, 'score'=>$score));
+					$points = $m['p'];
+					$count_inserted += query_execute('insert into player (id, name, rank, points, alliance_id) values (:id, :name, :rank, :points, :alliance_id)'
+							. ' ON DUPLICATE KEY UPDATE name=:name, rank=:rank, points=:points, alliance_id=:alliance_id',
+						array('id'=>$id, 'name'=>$name, 'rank'=>$rank, 'points'=>$points, 'alliance_id'=>$alliance_id));
 				}
 				break;
 			default:

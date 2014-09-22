@@ -69,6 +69,19 @@ class Packet_parser {
 					}*/					
 				}
 				break;
+			case PacketType::PT_PUBLIC_ALLIANCE_INFO:
+				
+				$is_member = (int)($m['i']) === 101; // 101 - vortex
+				foreach($packet['m'] as $m){
+					$id = $m['i'];
+					$name = $m['n'];
+					$rank = $m['r'];
+					$score = $m['p'];
+					$count_inserted += query_execute('insert into player (id, name, is_member, rank, score ) values (:id, :name, :is_member, :rank, :score)'
+							. ' ON DUPLICATE KEY UPDATE name=:name, is_member=:is_member, rank=:rank, score=:score',
+						array('id'=>$id, 'name'=>$name ,'is_member' => $is_member, 'rank'=>$rank, 'score'=>$score));
+				}
+				break;
 			default:
 				throw new Exception(__METHOD__.":".__LINE__." unknown packet_type_id=$packet_type_id");
 		}
@@ -161,6 +174,12 @@ class Packet_parser {
 					throw new UException(__METHOD__.":".__LINE__." not implemended");
 					break;
 				case PacketType::PT_PAYER_INFO:
+					throw new Exception(__METHOD__.":".__LINE__." not implemended");
+					break;
+				case PacketType::PT_ALLAINCE_MEMBER_DATA:
+					throw new Exception(__METHOD__.":".__LINE__." not implemended");
+					break;
+				case PacketType::PT_PUBLIC_ALLIANCE_INFO:
 					throw new Exception(__METHOD__.":".__LINE__." not implemended");
 					break;
 				default:

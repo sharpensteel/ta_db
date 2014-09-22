@@ -14,6 +14,7 @@ class PacketType extends CActiveRecord
 	const PT_ATTACK_REPORT = 2; // GetReportDataAndHeader
 	const PT_PAYER_INFO = 3;     // GetPlayerInfo
 	const PT_ALLAINCE_MEMBER_DATA = 4;     // AllianceGetMemberData
+	const PT_PUBLIC_ALLIANCE_INFO = 5;     // GetPublicAllianceInfo
 	
 	/**
 	 * @return string the associated database table name

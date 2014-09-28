@@ -3,6 +3,7 @@
 
 class Report_activity_widget extends CWidget{
 	public $interval_days = 30;	
+	public $alliance_id; //101: vortex ares
 	
 	const DEFENDER_LEVEL_FACTOR = 1.2;
 	const KILL_MULTIPLIER = 6;
@@ -18,8 +19,7 @@ class Report_activity_widget extends CWidget{
 			array('interval_days' => $this->interval_days));
 		
 		
-		$alliance_id = 101; //vortex ares
-		$player_arr = make_array_indexed_by_records_field(query_arr('select id, name from player where alliance_id=:alliance_id order by name',array('alliance_id'=>$alliance_id)),'name');
+		$player_arr = make_array_indexed_by_records_field(query_arr('select id, name from player where alliance_id=:alliance_id order by name',array('alliance_id'=>$this->alliance_id)),'name');
 		
 		
 		
@@ -41,8 +41,11 @@ class Report_activity_widget extends CWidget{
 		$player_arr_by_score = array_values($player_arr);
 		usort($player_arr_by_score, function($a, $b){ return -($a['score'] - $b['score']); });
 	
+		$alliance_name = query_scalar('select name from alliance where id=:id', array('id'=>$this->alliance_id));
+		if($alliance_name === false) $alliance_name = '???';
 		
 		?>
+		Alliance: <?=$alliance_name?><br>
 		<span style="color:gray;font-style:italic;"><? self::print_score_calc_description() ?></span><br><br>
 		<?
 		foreach($player_arr_by_score as $player){

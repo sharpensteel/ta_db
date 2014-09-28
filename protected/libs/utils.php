@@ -799,7 +799,10 @@ function get_backtrace_string($separator = '\r\n  '){
  * @return mixed[] returns new array with references to original records indexed by $field_name
  */
 function &make_array_indexed_by_records_field($unindexed_arr, $field_name='id', $key_set_type = null){
-	if(!count($unindexed_arr)) return array();
+	if(!count($unindexed_arr)) {
+		$empty_res = array();
+		return $empty_res;
+	}
 	
 	$indexed_arr = array();
 	reset($unindexed_arr);

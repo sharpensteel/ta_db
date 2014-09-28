@@ -11,9 +11,12 @@ $this->pageTitle=Yii::app()->name;
 
 <a href="<?=createUrl("attacks_table")?>">combat log</a><br><br>
 
+<a href="<?=createUrl("report_activity/index",array('alliance_id'=>256,'interval_days'=>30))?>">Report of activity in Siege</a><br><br>
+
+
 <br>
 <br>
 <span style="font-size:12px;font-weight:bold;">Players activity in the last 30 days:</span><br><br>
 <div style="margin-left:20px;background:#ededff;padding:20px;display:inline-block">
-<? $this->widget('application.widgets_custom.Report_activity_widget',array('interval_days'=>30)); ?>
+<? $this->widget('application.widgets_custom.Report_activity_widget',array('interval_days'=>30, 'alliance_id'=>101)); ?>
 </div>

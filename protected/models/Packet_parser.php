@@ -72,6 +72,7 @@ class Packet_parser {
 			case PacketType::PT_PUBLIC_ALLIANCE_INFO:
 				$packet = $packets;
 				$alliance_id = (int)($packet['i']);// 101 - vortex ares
+				query_execute('update player set alliance_id=-alliance_id where alliance_id=:alliance_id',array('alliance_id'=>$alliance_id));
 				foreach($packet['m'] as $m){
 					$id = $m['i'];
 					$name = $m['n'];

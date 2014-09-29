@@ -137,6 +137,9 @@ class Attack extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 			'pagination'=>array('pageSize'=>30),
+			'sort' => array(
+				'defaultOrder' => array('id' => CSort::SORT_DESC),
+			),
 		));
 	}
 

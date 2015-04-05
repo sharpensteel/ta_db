@@ -30,7 +30,7 @@ class GameClientBackendController extends Controller {
 	}
 	
 	function actionTest1($session_id){
-		echo "123@";
+		vd($session_id);
 		$url = 'https://prodgame17.alliances.commandandconquer.com/259/Presentation/Service.svc/ajaxEndpoint/AllianceGetMemberData';
 		$params = array(
 			CURLOPT_POST => true,
@@ -39,6 +39,7 @@ class GameClientBackendController extends Controller {
 		);
 		$res = curl_get_contents($url, $params);
 		vd($res);
+		
 		
 		
 	}

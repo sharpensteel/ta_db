@@ -37,7 +37,7 @@ class GameClientBackendController extends Controller {
 			CURLOPT_POSTFIELDS => array('session' => $session_id),
 			//CURLOPT_HTTPHEADER => array('application/x-www-form-urlencoded')
 		);
-		$res = curl_get_contents($params);
+		$res = curl_get_contents($url, $params);
 		vd($res);
 		
 		

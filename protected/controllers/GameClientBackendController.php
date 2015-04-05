@@ -32,9 +32,12 @@ class GameClientBackendController extends Controller {
 	function actionTest1($session_id){
 		vd($session_id);
 		$url = 'https://prodgame17.alliances.commandandconquer.com/259/Presentation/Service.svc/ajaxEndpoint/AllianceGetMemberData';
+		
+		
 		$params = array(
 			CURLOPT_POST => true,
 			CURLOPT_POSTFIELDS => array('session' => $session_id),
+			CURLOPT_HTTPHEADER,array('X-Qooxdoo-Response-Type: application/json'),
 			//CURLOPT_HTTPHEADER => array('application/x-www-form-urlencoded')
 		);
 		$res = curl_get_contents($url, $params);

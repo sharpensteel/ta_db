@@ -169,7 +169,7 @@ function curl_get_contents($url, $curl_options_additional=null)
 		error_log($errorStr);
 	}
 	else{
-		myLog(__METHOD__.": response body: ".$body."  url:".$url);
+		my_log(__METHOD__.": response body: ".$body."  url:".$url);
 	}
 
 	return $ok ? $body : FALSE;

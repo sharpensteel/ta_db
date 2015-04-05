@@ -112,7 +112,7 @@ function delete_dir($dirPath) {
  */
 function curl_get_contents($url, $curl_options_additional=null)
 {
-	TRACE_CALL(__METHOD__, func_get_args());
+	//TRACE_CALL(__METHOD__, func_get_args());
 	static $ch = 0;
 	
 	if(!function_exists('curl_init')){

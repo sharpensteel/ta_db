@@ -3,9 +3,11 @@
 class Form_utils{
 	
 	public static function generate_list_data_from_table_model($table_model, $title_attibute = 'name'){
-		$record_arr = $table_model->findAll();		
-		array_splice($record_arr, 0, 0, array('id'=>0, 'name'=>'' ));
-		return CHtml::listData($record_arr,'id',$title_attibute);
+		$record_arr = $table_model->findAll();	
+		//array_splice($record_arr, 0, 0, array('id'=>0, 'name'=>'' ));	
+		$list = CHtml::listData($record_arr,'id',$title_attibute);
+		if(!isset($list[0])) $list[0] = '';
+		return $list;
 	}
 	
 	

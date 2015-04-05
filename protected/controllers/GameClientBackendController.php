@@ -37,7 +37,10 @@ class GameClientBackendController extends Controller {
 		$params = array(
 			CURLOPT_POST => true,
 			CURLOPT_POSTFIELDS => array('session' => $session_id),
-			CURLOPT_HTTPHEADER => array('X-Qooxdoo-Response-Type: application/json'),
+			CURLOPT_HTTPHEADER => array(
+				'X-Qooxdoo-Response-Type: application/json',
+				'Content-Type: application/javascript',
+			),
 			//CURLOPT_HTTPHEADER => array('application/x-www-form-urlencoded')
 		);
 		$res = curl_get_contents($url, $params);

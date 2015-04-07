@@ -110,13 +110,14 @@ function delete_dir($dirPath) {
  * @param array $curl_options_additional; example: array(CURLOPT_POST => true, CURLOPT_HTTPHEADER => array('application/x-www-form-urlencoded') )
  * @return string if ok, or FALSE on error
  */
-function curl_get_contents($url, $curl_options_additional=null)
+function curl_get_contents($url, $curl_options_additional=null, $throw_exceptions=false)
 {
 	//TRACE_CALL(__METHOD__, func_get_args());
 	static $ch = 0;
 	
 	if(!function_exists('curl_init')){
 		error_log("curl not enabled!!");
+		if($throw_exceptions) throw new Exception ("curl not enabled!!");
 		exit;
 	}
 	
@@ -155,7 +156,6 @@ function curl_get_contents($url, $curl_options_additional=null)
 		$ok = 0;
 	}
 	
-	
 	if( $status<200 || $status>299 ){
 		$errorStr .= 'Response http status code: ' . $status.'. ';
 		$ok = 0;
@@ -164,9 +164,10 @@ function curl_get_contents($url, $curl_options_additional=null)
 
 	if(!$ok){
 		$errorStr = "error in ".__FUNCTION__.":\nurl: ".$url."\nerror:".$errorStr."\n";
+		if($throw_exceptions) throw new Exception ($errorStr);
 		$errorStr .= "response header: ".$header."\nresponse body: ".$body;
-		
-		error_log($errorStr);
+		error_log($errorStr);		
+
 	}
 	else{
 		my_log(__METHOD__.": response body: ".$body."  url:".$url);

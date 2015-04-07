@@ -57,8 +57,8 @@ class Packet_parser {
 					$name = $packet['n'];
 					$json = json_encode($packet,JSON_UNESCAPED_UNICODE);
 					
-					$count_inserted += query_execute('insert into player (id, name, alliance_member_data_json) values (:id, :name, alliance_member_data_json) ON DUPLICATE KEY UPDATE name=:name, alliance_member_data_json=:alliance_member_data_json',
-						array('id'=>$id, 'name'=>$name ,'alliance_member_data_json' => $json));
+					$count_inserted += query_execute('insert into player (id, name) values (:id, :name, alliance_member_data_json) ON DUPLICATE KEY UPDATE name=:name',
+						array('id'=>$id, 'name'=>$name));
 						
 					/*try{
 						$count_parsed += self::parse_and_update__attack($id, $json);
@@ -70,18 +70,7 @@ class Packet_parser {
 				}
 				break;
 			case PacketType::PT_PUBLIC_ALLIANCE_INFO:
-				$packet = $packets;
-				$alliance_id = (int)($packet['i']);// 101 - vortex ares
-				query_execute('update player set alliance_id=-alliance_id where alliance_id=:alliance_id',array('alliance_id'=>$alliance_id));
-				foreach($packet['m'] as $m){
-					$id = $m['i'];
-					$name = $m['n'];
-					$rank = $m['r'];
-					$points = $m['p'];
-					$count_inserted += query_execute('insert into player (id, name, rank, points, alliance_id) values (:id, :name, :rank, :points, :alliance_id)'
-							. ' ON DUPLICATE KEY UPDATE name=:name, rank=:rank, points=:points, alliance_id=:alliance_id',
-						array('id'=>$id, 'name'=>$name, 'rank'=>$rank, 'points'=>$points, 'alliance_id'=>$alliance_id));
-				}
+				$count_inserted += self::update_public_alliance_info($packets);
 				break;
 			default:
 				throw new Exception(__METHOD__.":".__LINE__." unknown packet_type_id=$packet_type_id");
@@ -90,6 +79,42 @@ class Packet_parser {
 		
 		return 'records uploaded: '.$count_uploaded.';  records inserted(updated): '.$count_inserted."; records parsed: ".$count_parsed."; record parse errors: ".$count_parse_errors;
 		
+	}
+	
+	
+	/**
+	 * @param mixed[] $data example(in json form): {"a":[{"a":3136,"an":"United People-rank 5","aw":false,"bc":435,"fac":1,"pc":50,"r":1,"s":1883697982,"sa":40694362,"sc":2034718103}....
+	 */
+	static public function update_alliances_list($data)
+	{
+		$count_inserted = 0;
+		$record_arr = $data["a"];
+		foreach($record_arr as $record){
+			$id = $record['a'];
+			$name = $record['an'];
+			$rank = $record['r'];
+			$count_inserted += query_execute('insert into alliance (id, name, rank) values (:id, :name, :rank) ON DUPLICATE KEY UPDATE name=:name, rank=:rank',
+				array('id'=>$id, 'name'=>$name,'rank'=>$rank)
+			);
+		}
+		return $count_inserted;
+	}
+	
+	static public function update_public_alliance_info($data)
+	{
+		$count_inserted = 0;
+		$alliance_id = (int)($data['i']);// 101 - vortex ares
+		query_execute('update player set alliance_id=-alliance_id where alliance_id=:alliance_id',array('alliance_id'=>$alliance_id));
+		foreach($data['m'] as $m){
+			$id = $m['i'];
+			$name = $m['n'];
+			$rank = $m['r'];
+			$points = $m['p'];
+			$count_inserted += query_execute('insert into player (id, name, rank, points, alliance_id) values (:id, :name, :rank, :points, :alliance_id)'
+					. ' ON DUPLICATE KEY UPDATE name=:name, rank=:rank, points=:points, alliance_id=:alliance_id',
+				array('id'=>$id, 'name'=>$name, 'rank'=>$rank, 'points'=>$points, 'alliance_id'=>$alliance_id));
+		}
+		return $count_inserted;
 	}
 	
 	/**

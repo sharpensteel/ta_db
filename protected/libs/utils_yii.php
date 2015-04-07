@@ -293,17 +293,17 @@ function &active_record_array_to_associative(&$arr, $key_name = 'id'){
 
 /**
  * 
- * @param mixed[] $record_mem_arr
+ * @param mixed[] $record_mem_arr   array can be not indexed by key
  * @param string $table_name
  * @param string $key_field_name
- * @param string[] $field_name_arr
- * @param string $sql_select
+ * @param string[] $field_name_arr fields to syncronize
+ * @param string $sql_select 
  */
-function array_syncronize_with_table($record_mem_arr, $table_name, $key_field_name, $field_name_arr = array(), $sql_select = null )
+function array_syncronize_with_table($record_mem_arr, $table_name, $key_field_name, $field_name_arr = array(), $sql_select = null, $disable_deleting = false )
 {
-	my_log(__FUNCTION__.": table_name=P$table_name}");
+	my_log(__FUNCTION__.": table_name=$table_name}");
 	
-	query_execute("delete from gem_filter where coalesce(name,'')=''");
+	//query_execute("delete from gem_filter where coalesce(name,'')=''");
 			
 	$field_name_arr_with_key = $field_name_arr;
 	if(array_search($key_field_name, $field_name_arr_with_key) === false){
@@ -369,17 +369,19 @@ function array_syncronize_with_table($record_mem_arr, $table_name, $key_field_na
 				$update_equating_sql .= "`{$field_name}` = :{$field_name}";
 			}
 			if(!count($params)) { continue; }
+			$params[$key_field_name] = $record_mem[$key_field_name];
 			$update_sql = "update `$table_name` set ".$update_equating_sql." where `$key_field_name`=:{$key_field_name}";
 			query_execute($update_sql,$params);
 			unset($record_db);
 		}
 	}
 	
-	$delete_sql = "delete from `$table_name` where `$key_field_name`=:{$key_field_name}";
-	foreach($record_db_arr as $record_db){
-		if(isset($record_db['record_exists_in_memory'])) continue;
-		query_execute( $delete_sql, array($key_field_name => $record_db[$key_field_name]) );
+	if(!$disable_deleting){
+		$delete_sql = "delete from `$table_name` where `$key_field_name`=:{$key_field_name}";
+		foreach($record_db_arr as $record_db){
+			if(isset($record_db['record_exists_in_memory'])) continue;
+			query_execute( $delete_sql, array($key_field_name => $record_db[$key_field_name]) );
+		}
 	}
-	
 	
 }

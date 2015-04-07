@@ -2,7 +2,7 @@
 /* @var $this SiteController */
 
 $this->pageTitle=Yii::app()->name;
-
+/*
 ?>
 <b>C&C Tiberium alliance database</b>
 <span style="float:right">latest attack log: <?=$dt_last_attack?></span>
@@ -19,4 +19,13 @@ $this->pageTitle=Yii::app()->name;
 <span style="font-size:12px;font-weight:bold;">Players activity in the last 30 days:</span><br><br>
 <div style="margin-left:20px;background:#ededff;padding:20px;display:inline-block">
 <? $this->widget('application.widgets_custom.Report_activity_widget',array('interval_days'=>30, 'alliance_id'=>101)); ?>
+</div>
+<? */
+
+?>
+<b>World 91 Forgotten Fortress attackers list</b>
+<span style="float:right">latest update: <?= date("r",query_scalar('select unix_timestamp(dt_last_world_update) from global_data where id=1')) ?></span>
+<br><br><br>
+<div style="margin-left:20px;background:#F0F0F0;padding:20px;display:inline-block">
+	<? $this->widget('application.widgets_custom.Report_ff_list_widget',array() ); ?>
 </div>

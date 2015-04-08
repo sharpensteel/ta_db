@@ -19,7 +19,7 @@ class Update_player_widget extends CWidget{
 				
 				<div style="margin-bottom:10px">
 					<div style="display:inline-block;width:140px">Your name: </div>
-					<select name="Player_form[id]">
+					<select name="Player_form[id]" style="width:200px">
 						<option value="">select...</option>
 						<?
 						foreach($player_arr as $player){
@@ -33,6 +33,10 @@ class Update_player_widget extends CWidget{
 				<div style="margin-bottom:10px">
 					<div style="display:inline-block;width:140px">Your offense level:</div>
 					<input name="Player_form[offense_level]" type="text" style="width:50px" value="<?=$default_ol?>"><br>
+				</div>
+				<div style="margin-bottom:10px">
+					<div style="display:inline-block;width:140px">Substitution:</div>
+					<input name="Player_form[substitution]" type="text" style="width:200px;" value=""><br>
 				</div>
 				
 				<div style="text-align:center;margin-top:20px;">

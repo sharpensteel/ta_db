@@ -68,7 +68,8 @@ class Report_ff_list_widget extends CWidget{
 					<th>Name</th>
 					<th>OL</th>
 					<th>OL Updated</th>
-					<th>Status</th>
+					<th>Team</th>
+					<th style="font-size: 0.8em;">Team calculated</th>
 					<th>Scores<br>total/main base</th>
 					<th>Fraction</th>
 					<th>Aliance origin</th>
@@ -137,6 +138,7 @@ class Report_ff_list_widget extends CWidget{
 					<td><?=$player['name']?></td>
 					<td><?=$player['offense_level']?></td>
 					<td><?=$player['dt_last_updated_ol'] ? date('Y-n-d',$player['dt_last_updated_ol']) : ''?></td>
+					<td></td>
 					<td><?=$status?></td>
 					<td><?=$this->format_points($player['points'])." /".$this->format_points($player['points_main_base']).""?></td>
 					<td><?= ($player['fraction']==1)?'GDI':'NOD' ?></td>

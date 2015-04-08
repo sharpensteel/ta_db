@@ -33,6 +33,7 @@ class SiteController extends Controller
 		$this->render('index', $params);
 		
 	}
+	
 
 	/**
 	 * This is the action to handle external exceptions.
@@ -107,5 +108,54 @@ class SiteController extends Controller
 	{
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
+	}
+	
+	public function actionPlayer_update(){
+		$model = new Player_form();
+		try{
+			if(isset($_REQUEST['Player_form']))
+			{
+
+				if(isset($_REQUEST['Player_form']['id'])){
+					setcookie('up_id', $_REQUEST['Player_form']['id'], time()+60*60*24*1000, "/");
+				}
+
+				if(isset($_REQUEST['Player_form']['offense_level'])){
+					setcookie('up_ol', $_REQUEST['Player_form']['offense_level'], time()+60*60*24*1000, "/");
+				}
+
+				//$model->attributes=$_REQUEST['Player_form'];
+				$model->id = $_REQUEST['Player_form']['id'];
+				$model->offense_level = $_REQUEST['Player_form']['offense_level'];
+
+				if(!(int)$model->id){
+					throw new Exception('Select your name');
+				}
+				
+				$model->offense_level = (double)str_replace(',', '.', $model->offense_level);
+				if(!$model->offense_level){
+					throw new Exception('Enter correct offense level');
+				}
+				
+				$model->update();
+				
+				yii_flash_append('info', 'Information saved');
+
+				/*if($model->validate())
+					{
+
+					$res = $model->update();
+
+					if($res !== false){
+						yii_flash_append('info', $res);
+					}
+				}*/
+
+			}		
+		}
+		catch(Exception $e){
+			yii_flash_append('error', $e->getMessage());
+		}
+		header("Location: ".baseUrl());
 	}
 }

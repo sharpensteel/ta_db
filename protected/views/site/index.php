@@ -27,5 +27,10 @@ $this->pageTitle=Yii::app()->name;
 <span style="float:right">latest update: <?= date("r",query_scalar('select unix_timestamp(dt_last_world_update) from global_data where id=1')) ?></span>
 <br><br><br>
 <div style="margin-left:20px;background:#F0F0F0;padding:20px;display:inline-block">
+	<span style="font-size: 1.2em;">Update your data:</span><br>
+	<? $this->widget('application.widgets_custom.Update_player_widget',array() ); ?>
+</div>
+<br><br><br>
+<div style="margin-left:20px;background:#F0F0F0;padding:20px;display:inline-block">
 	<? $this->widget('application.widgets_custom.Report_ff_list_widget',array() ); ?>
 </div>

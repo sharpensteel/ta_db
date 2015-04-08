@@ -98,7 +98,7 @@ class World_data_updater {
 	public function update_players_detail_data(){
 		echo "Update members detailed data... ";
 		
-		$sql_select_players = "SELECT p.id, p.alliance_id, p.rank, p.has_sat_code, p.points, p.points_main_base, p.fraction, p.has_badge, p.hub_name, p.hub_position".
+		$sql_select_players = "SELECT p.id, p.alliance_id, p.rank, p.has_sat_code, p.points, p.points_main_base, p.fraction, p.has_badge, p.hub_name, p.hub_position, p.distance_to_ff_main".
 			" FROM player p".
 			" LEFT JOIN alliance a ON p.`alliance_id`=a.`id`".
 			" WHERE a.`allways_full_update` OR p.`interested_in_ff_run` order by p.rank";
@@ -114,9 +114,12 @@ class World_data_updater {
 		
 		$player_updated_arr = array();
 		
-		foreach($record_db_arr as $record_id){
-			$player_id = (int)$record_id['id'];
+		foreach($record_db_arr as $record_db){
+			
+			$player_id = (int)$record_db['id'];
 			$data_obfuscated = $this->send_request_json( $this->url_ajax_endpoint."GetPublicPlayerInfo", array('id' => $player_id) );
+
+
 			
 			$data_parsed = array(
 				'id' => $player_id,
@@ -129,6 +132,7 @@ class World_data_updater {
 				'has_badge' => 0,
 				'hub_name' => null,
 				'hub_position' => null,
+				'distance_to_ff_main' => 999
 			);
 			
 			
@@ -144,7 +148,13 @@ class World_data_updater {
 			if(isset($data_obfuscated['c'])){
 				foreach($data_obfuscated['c'] as $base_info){
 					$points = $base_info['p'];
-					if($points > $data_parsed['points_main_base']) $data_parsed['points_main_base'] = $points;
+					if($points > $data_parsed['points_main_base']){
+						$data_parsed['points_main_base'] = $points;
+						
+						$dx = abs( $base_info['x'] - 550);
+						$dy = abs( $base_info['x'] - 550);
+						$data_parsed['distance_to_ff_main'] = (int)round(sqrt($dx*$dx + $dy*$dy));
+					}
 					
 					$coord = $base_info['x'].':'.$base_info['y'];
 					
@@ -157,6 +167,10 @@ class World_data_updater {
 					}
 				}
 			}
+			
+			
+			
+				
 			
 			$player_updated_arr[] = $data_parsed;
 			

@@ -158,4 +158,29 @@ class SiteController extends Controller
 		}
 		header("Location: ".baseUrl());
 	}
+	
+	// https://ta_local/ta_db/site/Admin_secret_door?secret=asdeksjljk3s1sd4wsda
+	// http://146.185.186.182/ta_db/ta_db/site/Admin_secret_door?secret=asdeksjljk3s1sd4wsda
+	public function actionAdmin_secret_door($secret){
+		if($secret != 'asdeksjljk3s1sd4wsda'){
+			yii_flash_append('error', 'incorrect secret!');
+		}
+		else{
+			session_start_if_not();
+			$_SESSION['is_admin'] = 1;
+		}
+		header("Location: ".baseUrl());
+	}
+	
+	
+	public function actionPlayer_update_team($player_id, $team){
+		session_start_if_not();
+		if(!array_default($_SESSION, 'is_admin',0)){
+			echo "only admins can do that."; return;
+		}
+		query_execute('insert into player_update_history (player_id, team) values (:player_id, :team)', array('player_id'=>$player_id, 'team'=>$team));
+		query_execute('update player set team=:team where id=:player_id', array('player_id'=>$player_id, 'team'=>$team));
+		echo "updated ".$player_id." ".$team;
+	}
+	
 }

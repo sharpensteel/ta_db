@@ -132,10 +132,8 @@ class Report_ff_list_widget extends CWidget{
 				
 				
 				$is_unbadged = $player['interested_in_ff_run'] && !$player['has_badge'];
-				if($is_unbadged) $count_unbadged++;
 				?>
 				<tr class="<?=$player['has_badge'] ? 'has_badge' : ''?>" >
-					<td><?=$is_unbadged ? $count_unbadged : '' ?></td>
 					<td><?=$player['name']?></td>
 					<td><?=$player['offense_level']?></td>
 					<td><?=$player['dt_last_updated_ol'] ? date('Y-n-d',$player['dt_last_updated_ol']) : ''?></td>

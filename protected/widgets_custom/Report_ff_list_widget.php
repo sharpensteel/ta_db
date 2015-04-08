@@ -63,6 +63,10 @@ class Report_ff_list_widget extends CWidget{
 			.Report_ff_list_widget tr.has_badge{
 				background:#F9F6E4;
 			}
+		
+			.Report_ff_list_widget .team_input.not_saved,.Report_ff_list_widget .team_input.not_saved:focus{
+				border-color: #02FF22;
+			}
 		</style>
 		
 		<?
@@ -75,10 +79,17 @@ class Report_ff_list_widget extends CWidget{
 					var player_id = $input.closest('.fl_row_player').attr('player_id');
 					var team = $input.val();
 					var team_htmlencoded = encodeURIComponent(team);
+					$input.addClass('not_saved');
+					
 					$.ajax({
 						url: '<?=baseUrl()?>site/Player_update_team',
 						data: {player_id:player_id,team:team}
 					}).done(function(data) {
+						
+						$input.data('saved_val', data);
+						if($input.data('saved_val') === $input.val()){
+							$input.removeClass('not_saved');
+						}
 						//console.log(data);
 					});
 				}
@@ -90,14 +101,15 @@ class Report_ff_list_widget extends CWidget{
 						var $elem = $(this);
 
 						// Save current value of $element
-						$elem.data('oldVal', $elem.val());
+						$elem.data('old_val', $elem.val());
+						$elem.data('saved_val', $elem.val());
 
 						// Look for changes in the value
 						$elem.bind("propertychange change click keyup input paste", function(event){
 						   // If value has changed...
-						   if ($elem.data('oldVal') != $elem.val()) {
+						   if ($elem.data('old_val') != $elem.val()) {
 							// Updated stored value
-							$elem.data('oldVal', $elem.val());
+							$elem.data('old_val', $elem.val());
 
 							// Do action
 							

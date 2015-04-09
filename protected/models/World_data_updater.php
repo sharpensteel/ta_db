@@ -152,7 +152,7 @@ class World_data_updater {
 						$data_parsed['points_main_base'] = $points;
 						
 						$dx = abs( $base_info['x'] - 550);
-						$dy = abs( $base_info['x'] - 550);
+						$dy = abs( $base_info['y'] - 550);
 						$data_parsed['distance_to_ff_main'] = (int)round(sqrt($dx*$dx + $dy*$dy));
 					}
 					

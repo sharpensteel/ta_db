@@ -68,3 +68,7 @@ $this->pageTitle=Yii::app()->name;
 	<div class="section_title">Hubs map</div>
 	<? $this->widget('application.widgets_custom.Hubs_map_widget',array() ); ?>
 </div>
+
+<div style="margin-top:40px;margin-bottom:20px;text-align: right;margin-right:30px;">
+	Created by <a href="mailto:sharpensteel@gmail.com">sharpensteel1</a>. For your feedback or if you need sources, please message/e-mail me.
+</div>

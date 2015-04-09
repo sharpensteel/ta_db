@@ -138,7 +138,6 @@ class Report_ff_list_widget extends CWidget{
 					<th style="min-width: 110px;">Team</th>
 					<th style="font-size: 0.8em;">Team calculated</th>
 					<th>Scores<br>total/main base</th>
-					<th>Fraction</th>
 					<th>Aliance origin</th>
 					<th>Aliance current</th>
 					<th>Need badge?</th>
@@ -146,7 +145,8 @@ class Report_ff_list_widget extends CWidget{
 					<th>Substitution</th>
 					<th>Sat. code</th>
 					<th>On hub</th>
-					<th style="font-size: 1em;">Distance<br>main base to FF</th>
+					<th>Fraction</th>
+					<!--<th style="font-size: 1em;">Distance<br>main base to FF</th>-->
 				</tr>
 			</thead>
 			
@@ -210,7 +210,6 @@ class Report_ff_list_widget extends CWidget{
 					<td><? if($is_admin){ ?><input class="team_input" type="text" value="<?=$team?>"><? } else { echo $team; }; ?></td>
 					<td><?=$status?></td>
 					<td><?=$this->format_points($player['points'])." /".$this->format_points($player['points_main_base']).""?></td>
-					<td><?= ($player['fraction']==1)?'GDI':'NOD' ?></td>
 					<td><?=$player['alliance_original_str']?></td>
 					<td><?=$player['alliance_name']?></td>
 					<td><?=($player['interested_in_ff_run'] && !$player['has_badge'])?'YES':'NO' ?></td>
@@ -218,7 +217,8 @@ class Report_ff_list_widget extends CWidget{
 					<td><?=$player['substitution']?></td>
 					<td><?=$player['has_sat_code'] ? '' : '<span class="warning">NO</span>' ?></td>
 					<td><?=($player['hub_name'].''!='')?$player['hub_name'].':'.$player['hub_position'] :''?></td>
-					<td><?=$player['distance_to_ff_main']?></td>
+					<td><?= ($player['fraction']==1)?'GDI':'NOD' ?></td>
+					<!--<td><?=$player['distance_to_ff_main']?></td>-->
 				</tr>
 				<?
 				

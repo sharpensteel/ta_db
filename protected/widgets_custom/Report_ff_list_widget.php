@@ -140,7 +140,7 @@ class Report_ff_list_widget extends CWidget{
 					<th>Scores<br>total/main base</th>
 					<th>Aliance origin</th>
 					<th>Aliance current</th>
-					<th>Need badge?</th>
+					<!--<th>Need badge?</th>-->
 					<th>Have badge?</th>
 					<th>Substitution</th>
 					<th>Sat. code</th>
@@ -212,7 +212,7 @@ class Report_ff_list_widget extends CWidget{
 					<td><?=$this->format_points($player['points'])." /".$this->format_points($player['points_main_base']).""?></td>
 					<td><?=$player['alliance_original_str']?></td>
 					<td><?=$player['alliance_name']?></td>
-					<td><?=($player['interested_in_ff_run'] && !$player['has_badge'])?'YES':'NO' ?></td>
+					<!--<td><?=($player['interested_in_ff_run'] && !$player['has_badge'])?'YES':'NO' ?></td>-->
 					<td><?=$player['has_badge']?'YES':'NO' ?></td>
 					<td><?=$player['substitution']?></td>
 					<td><?=$player['has_sat_code'] ? '' : '<span class="warning">NO</span>' ?></td>

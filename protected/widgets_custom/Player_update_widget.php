@@ -1,7 +1,7 @@
 <?
 
 
-class Update_player_widget extends CWidget{
+class Player_update_widget extends CWidget{
 	
 	public function run()
 	{

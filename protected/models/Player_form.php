@@ -40,7 +40,7 @@ class Player_form {
 		);
 		
 		query_execute(
-			'update player set offense_level=:offense_level, dt_last_updated_ol=current_timestamp where id=:player_id',
+			'update player set offense_level=:offense_level, interested_in_ff_run=:interested_in_ff_run, dt_last_updated_ol=current_timestamp where id=:player_id',
 			array('player_id'=>$this->id,'offense_level'=>$this->offense_level)
 		);
 	}

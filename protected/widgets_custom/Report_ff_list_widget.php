@@ -65,7 +65,11 @@ class Report_ff_list_widget extends CWidget{
 			}
 		
 			.Report_ff_list_widget .team_input.not_saved,.Report_ff_list_widget .team_input.not_saved:focus{
-				border-color: #02FF22;
+				border-color: #0222FF;
+			}
+			
+			.Report_ff_list_widget tr.fl_row_player td:nth-child(5) {
+				font-size: 0.8em;
 			}
 		</style>
 		
@@ -131,7 +135,7 @@ class Report_ff_list_widget extends CWidget{
 					<th>Name</th>
 					<th>OL</th>
 					<th>OL Updated</th>
-					<th>Team</th>
+					<th style="min-width: 110px;">Team</th>
 					<th style="font-size: 0.8em;">Team calculated</th>
 					<th>Scores<br>total/main base</th>
 					<th>Fraction</th>
@@ -142,7 +146,7 @@ class Report_ff_list_widget extends CWidget{
 					<th>Substitution</th>
 					<th>Sat. code</th>
 					<th>On hub</th>
-					<th style="font-size: 0.8em;">Distance<br>main base to FF</th>
+					<th style="font-size: 1em;">Distance<br>main base to FF</th>
 				</tr>
 			</thead>
 			
@@ -201,7 +205,7 @@ class Report_ff_list_widget extends CWidget{
 				?>
 				<tr class="fl_row_player <?=($player['has_badge'] ? 'has_badge' : '')?>" player_id="<?=($player['id'])?>" >
 					<td><?=$player['name']?></td>
-					<td><?=$player['offense_level']?></td>
+					<td><?=sprintf("%.2f",$player['offense_level'])?></td>
 					<td><?=$player['dt_last_updated_ol'] ? date('Y-n-d',$player['dt_last_updated_ol']) : ''?></td>
 					<td><? if($is_admin){ ?><input class="team_input" type="text" value="<?=$team?>"><? } else { echo $team; }; ?></td>
 					<td><?=$status?></td>

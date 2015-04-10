@@ -120,9 +120,6 @@ class SiteController extends Controller
 					setcookie('up_id', $_REQUEST['Player_form']['id'], time()+60*60*24*1000, "/");
 				}
 
-				if(isset($_REQUEST['Player_form']['offense_level'])){
-					setcookie('up_ol', $_REQUEST['Player_form']['offense_level'], time()+60*60*24*1000, "/");
-				}
 
 				//$model->attributes=$_REQUEST['Player_form'];
 				$model->id = $_REQUEST['Player_form']['id'];

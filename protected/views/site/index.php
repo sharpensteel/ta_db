@@ -23,7 +23,8 @@ $this->pageTitle=Yii::app()->name;
 <? */
 
 ?>
-
+<script src="<?=baseUrl()?>libs/jquery-1.11.1.min.js"></script>
+		
 <style>
 	body{
 		margin:0;

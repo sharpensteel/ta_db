@@ -5,6 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
 	<link rel="stylesheet" type="text/css" href="<?=baseUrl()?>/css/common.css"/>
+	<script src="<?=baseUrl()?>libs/jquery-1.11.1.min.js"></script>
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>

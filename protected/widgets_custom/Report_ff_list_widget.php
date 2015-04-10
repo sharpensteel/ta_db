@@ -31,7 +31,6 @@ class Report_ff_list_widget extends CWidget{
 		$player_arr = query_arr($sql_select_players);
 		
 		?>
-		<script src="<?=baseUrl()?>libs/jquery-1.11.1.min.js"></script>
 		<style>
 			.warning{
 				color:red;font-weght:bold;

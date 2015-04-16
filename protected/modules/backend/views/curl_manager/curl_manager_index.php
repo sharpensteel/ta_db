@@ -2,10 +2,12 @@
 $ok = 1;
 $error_str = '';
 
-$url = isset($_POST['curl_manager']) ? $_POST['curl_manager']['url'] : 'https://www.tiberiumalliances.com/j_security_check';
-$input_body = isset($_POST['curl_manager']) ? array_default($_POST['curl_manager'],'post_data') : '&id=&j_username=&password=&spring-security-redirect=&timezone=0';
-$input_headers = isset($_POST['curl_manager']) ? array_default($_POST['curl_manager'],'input_headers') : '';
-$is_post = isset($_POST['curl_manager']) ? isset($_POST['curl_manager']['is_post']) : 1;
+$url = isset($_REQUEST['curl_manager']) ? $_REQUEST['curl_manager']['url'] : 'https://www.tiberiumalliances.com/j_security_check';
+$input_body = isset($_REQUEST['curl_manager']) ? array_default($_REQUEST['curl_manager'],'post_data') : '&id=&j_username=&password=&spring-security-redirect=&timezone=0';
+$input_headers = isset($_REQUEST['curl_manager']) ? array_default($_REQUEST['curl_manager'],'input_headers') : '';
+$input_cookies = isset($_REQUEST['curl_manager']) ? array_default($_REQUEST['curl_manager'],'input_cookies') : '';
+$is_post = isset($_REQUEST['curl_manager']) ? isset($_REQUEST['curl_manager']['is_post']) : 1;
+
 	
 //&id=&j_username=sharpensteel@yandex.ru&password=Rzhev1942&spring-security-redirect=&timezone=0
 ?>
@@ -29,6 +31,10 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POST, $is_post ? 1 : 0);
 if($is_post){
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $input_body);
+}
+
+if(strlen($input_cookies)){
+	curl_setopt($ch, CURLOPT_COOKIE, $input_cookies);
 }
 
 if(strlen($input_headers)){
@@ -84,6 +90,7 @@ and in game you can get all the info you want by clicking buttons and see what a
 	url:<br><input type="text" name="curl_manager[url]" value="<?=$url ?>" style="width:600px;"><br><br>
 	post_data:<br><textarea type="text" name="curl_manager[input_body]" style="width:600px;height:100px;"><?=$input_body ?></textarea><br><br>
 	headers:<br><textarea type="text" name="curl_manager[input_headers]" style="width:600px;height:100px;"><?=$input_headers ?></textarea><br><br>
+	cookies:<br><textarea type="text" name="curl_manager[input_cookies]" style="width:600px;height:100px;"><?=$input_cookies ?></textarea><br><br>
 	is POST:<input type="checkbox" name="curl_manager[is_post]" <?=$is_post?'checked':'' ?> ><br><br>
 	<input type="submit" value="submit">
 </form>

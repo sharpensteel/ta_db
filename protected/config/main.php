@@ -48,10 +48,13 @@ $config_main = array(
 
 	// application components
 	'components'=>array(
+		
 		'user'=>array(
+			'class' => 'WebUser',
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+		
 		// uncomment the following to enable URLs in path-format
 		
 		'urlManager'=>array(

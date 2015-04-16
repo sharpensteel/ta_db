@@ -45,4 +45,9 @@ $GLOBALS['error_handler_prev'] = set_error_handler('my_error_handler');
 
 
 
-Yii::createWebApplication($config)->run();
+require_once __DIR__.'/protected/components/WebApplication.php';
+
+session_start_if_not();
+
+Yii::createApplication('WebApplication',$config)->run();
+

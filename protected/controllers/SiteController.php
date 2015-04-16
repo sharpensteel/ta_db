@@ -80,6 +80,7 @@ class SiteController extends Controller
 	 */
 	public function actionLogin()
 	{
+		$this->layout='//layouts/yii_column2';
 		$model=new LoginForm;
 
 		// if it is ajax validation request

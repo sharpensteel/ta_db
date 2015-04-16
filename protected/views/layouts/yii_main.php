@@ -25,13 +25,24 @@
 	<div id="header">
 		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
 	</div><!-- header -->
+	
+	<?
+	$flash_messages = Yii::app()->user->getFlashes();
+	if($flash_messages){
+		?>
+		<ul class="flashes" style="padding:1em 0 0em 0;margin:0;list-style-type: none;"><?
+		foreach($flash_messages as $key => $message) {
+			echo '<li><div class="flash_message flash_message_' . $key . '" style="">' . $message . "</div></li>\n";
+		}
+		?></ul><?
+	} ?>
 
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
+				//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+				//array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

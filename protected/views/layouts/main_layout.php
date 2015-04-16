@@ -10,7 +10,7 @@
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
-<body>
+<body style="margin:0">
 	<?
 	$flash_messages = Yii::app()->user->getFlashes();
 	if($flash_messages){

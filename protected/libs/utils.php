@@ -185,8 +185,19 @@ function session_start_if_not(){
 		$isSectionStarted = 0;
 	}*/
 	
-	if(session_id() == '')
-		session_start();
+	if(session_id() == ''){
+		try{
+			$res = @session_start();
+			if(!$res){
+				error_log(__FUNCTION__.": error in session_start(); reseting session.");
+				session_reset(); 
+			}
+		}
+		catch(Exception $e){
+			error_log(__FUNCTION__.": ".$e->getMessage()."; reseting session.");
+			session_reset();
+		}
+	}
 }
 
 function ensureEndsWithSlash($url)

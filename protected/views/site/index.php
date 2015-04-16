@@ -23,13 +23,9 @@ $this->pageTitle=Yii::app()->name;
 <? */
 
 ?>
-<script src="<?=baseUrl()?>libs/jquery-1.11.1.min.js"></script>
+
 		
 <style>
-	body{
-		margin:0;
-	}
-	
 	.section{
 		margin-left:20px; margin-top:20px; margin-bottom: 20px;
 		background:#F0F0F0;padding:20px;

@@ -170,7 +170,7 @@ function curl_get_contents($url, $curl_options_additional=null, $throw_exception
 
 	}
 	else{
-		my_log(__METHOD__.": response body: ".$body."  url:".$url);
+		//my_log(__METHOD__.": response body: ".$body."  url:".$url);
 	}
 
 	return $ok ? $body : FALSE;
@@ -852,4 +852,10 @@ function get_field_value_recursive_not_ref($root, $default_value, $property_name
 		
 	}
 	return $obj_or_arr;
+}
+
+function force_flush(){
+	flush();
+	ob_flush();
+	sleep(1);
 }

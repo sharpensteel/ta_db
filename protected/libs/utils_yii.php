@@ -362,7 +362,12 @@ function array_syncronize_with_table($record_mem_arr, $table_name, $key_field_na
 			$update_equating_sql = '';
 			foreach($field_name_arr as $field_name){
 				$val_mem = (string)$record_mem[$field_name];
-				$val_db = (string)$record_db[$field_name];
+				if(!key_exists($field_name,$record_db)){
+					error_log(__FUNCTION__.".".__LINE__.": !key_exists  field_name=".$field_name." record_db: ".json_encode($record_db,JSON_UNESCAPED_UNICODE));
+				}
+				else{
+					$val_db = (string)$record_db[$field_name];
+				}
 				if( $val_mem === $val_db) {	continue; }
 				$params[$field_name] = $record_mem[$field_name];
 				if(strlen($update_equating_sql)) { $update_equating_sql .= ', '; }

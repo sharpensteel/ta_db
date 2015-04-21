@@ -32,8 +32,12 @@ class World_data_updater {
 	
 	
 	public function make_update(){
+		set_time_limit(600);
 		
-		echo "Initial checking... ";
+		header( 'Content-type: text/html; charset=utf-8' );
+		?><htm><body><?
+		echo "Initial checking... <br>";
+		force_flush();
 		
 		$player_info_data = $this->send_request_json($this->url_ajax_endpoint."GetPlayerInfo");
 		
@@ -44,8 +48,9 @@ class World_data_updater {
 		
 		$this->world_name = trim($server_info_data['n']);
 		
-		
-		if(!query_scalar('select count(*) from alliance')){
+		/*
+		//if(!query_scalar('select count(*) from alliance'))
+		{
 			// initialize alliance table
 			
 		
@@ -66,8 +71,10 @@ class World_data_updater {
 		
 		$this->update_players_shallow_data();	
 			   
+		*/
 		
 		$this->update_players_detail_data();
+		
 		
 		query_execute("update global_data set dt_last_world_update=current_timestamp where id=1");
 		
@@ -75,6 +82,7 @@ class World_data_updater {
 	
 	public function update_players_shallow_data(){
 		echo "Shallow update alliance members... <br>";
+		force_flush();
 		
 		$alliance_record_arr = query_arr('select id, name from alliance where interested');
 		foreach($alliance_record_arr as $alliance_record){
@@ -92,16 +100,26 @@ class World_data_updater {
 			 ?> done.<br><?
 		}
 		echo "ok<br>";
+		force_flush();
 	}
 	
 	
 	public function update_players_detail_data(){
-		echo "Update members detailed data... ";
+		 
 		
-		$sql_select_players = "SELECT p.id, p.alliance_id, p.rank, p.has_sat_code, p.points, p.points_main_base, p.fraction, p.has_badge, p.hub_name, p.hub_position, p.distance_to_ff_main".
+		echo "Update members detailed data...<br> ";
+		force_flush();
+		
+		query_execute('UPDATE player p LEFT JOIN alliance a ON a.id=p.`alliance_id`'.
+			' SET p.base_id_on_hub=0, hub_name=NULL, hub_position=NULL'.
+			' WHERE (a.`id` IS NULL) OR (NOT a.`interested`)');
+		
+		
+		$sql_select_players = "SELECT p.id, p.alliance_id, p.rank, p.has_sat_code, p.points, p.points_main_base, p.fraction, p.has_badge, p.hub_name, p.hub_position, ".
+			" p.base_id_on_hub, p.distance_to_ff_main".
 			" FROM player p".
 			" LEFT JOIN alliance a ON p.`alliance_id`=a.`id`".
-			" WHERE a.`allways_full_update` OR p.`interested_in_ff_run` order by p.rank";
+			" WHERE a.interested order by p.rank";
 		
 		$record_db_arr = query_arr($sql_select_players);
 		
@@ -114,6 +132,7 @@ class World_data_updater {
 		
 		$player_updated_arr = array();
 		
+		$count_loaded =0;
 		foreach($record_db_arr as $record_db){
 			
 			$player_id = (int)$record_db['id'];
@@ -132,7 +151,8 @@ class World_data_updater {
 				'has_badge' => 0,
 				'hub_name' => null,
 				'hub_position' => null,
-				'distance_to_ff_main' => 999
+				'distance_to_ff_main' => 999,
+				'base_id_on_hub' => 0,
 			);
 			
 			
@@ -147,6 +167,7 @@ class World_data_updater {
 			
 			if(isset($data_obfuscated['c'])){
 				foreach($data_obfuscated['c'] as $base_info){
+					$base_id = $base_info['i'];
 					$points = $base_info['p'];
 					if($points > $data_parsed['points_main_base']){
 						$data_parsed['points_main_base'] = $points;
@@ -160,29 +181,49 @@ class World_data_updater {
 					
 					foreach($hub_arr as $hub_name => $hub){
 						if(isset($hub['position_arr'][$coord])){
+							
+							$data_base = $this->send_request_json( $this->url_ajax_endpoint."GetPublicCityInfoById", array('id' => $base_id) );
+							//echo json_encode(array('$player_id'=>$player_id, '$base_id'=> $base_id, '$data_base' => $data_base))."<br>";force_flush();
+							if( array_default($data_base,'g',false) ) // base is destroyed
+							{
+								continue;
+							}
+							
 							$data_parsed['hub_name'] = $hub_name;
 							$data_parsed['hub_position'] = $hub['position_arr'][$coord];
+							$data_parsed['base_id_on_hub'] = $base_id;
 							break;
 						}
 					}
 				}
 			}
 			
-			
-			
-				
-			
 			$player_updated_arr[] = $data_parsed;
 			
+			
+			
+			$count_loaded++;
+			if(!($count_loaded % 50)){
+				echo "loaded ".$count_loaded." players<br>";
+				force_flush();
+			}
 		}
+		
+		
+		echo "saving changes...<br>";
+		force_flush();
 		
 		if(count($player_updated_arr)){
 			$fields = array_keys($player_updated_arr[0]);
 			array_syncronize_with_table($player_updated_arr, 'player', 'id', $fields, $sql_select_players, true);
 		}
 		
-		echo "ok<br>";
+		echo "ok<br>"; 
+		force_flush();
+		
 	}
+	
+	
 	
 	
 

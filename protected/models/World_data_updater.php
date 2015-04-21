@@ -48,7 +48,7 @@ class World_data_updater {
 		
 		$this->world_name = trim($server_info_data['n']);
 		
-		/*
+		
 		//if(!query_scalar('select count(*) from alliance'))
 		{
 			// initialize alliance table
@@ -71,7 +71,7 @@ class World_data_updater {
 		
 		$this->update_players_shallow_data();	
 			   
-		*/
+		
 		
 		$this->update_players_detail_data();
 		

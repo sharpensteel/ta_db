@@ -5,6 +5,7 @@ class Player_form {
 	
 	public $id;
 	public $offense_level;
+	public $substitution;
 
 	/**
 	 * Declares the validation rules.
@@ -13,7 +14,7 @@ class Player_form {
 	{
 		return array(
 			// name, email, subject and body are required
-			array('id, offense_level', 'required'),
+			array('id, offense_level,substitution', 'required'),
 			// verifyCode needs to be entered correctly
 			//array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
 		);
@@ -35,13 +36,13 @@ class Player_form {
 		
 		$ip = array_default($_SERVER,'REMOTE_ADDR');
 		query_execute(
-			'insert into player_update_history (ip,player_id,offense_level) values (:ip,:player_id,:offense_level)',
-			array("ip"=>$ip,'player_id'=>$this->id,'offense_level'=>$this->offense_level)
+			'insert into player_update_history (ip,player_id,offense_level,substitution) values (:ip,:player_id,:offense_level,:substitution)',
+			array("ip"=>$ip,'player_id'=>$this->id,'offense_level'=>$this->offense_level,'substitution'=>$this->substitution)
 		);
 		
 		query_execute(
-			'update player set offense_level=:offense_level, interested_in_ff_run=1, dt_last_updated_ol=current_timestamp where id=:player_id',
-			array('player_id'=>$this->id,'offense_level'=>$this->offense_level)
+			'update player set offense_level=:offense_level, substitution=:substitution, interested_in_ff_run=1, dt_last_updated_ol=current_timestamp where id=:player_id',
+			array('player_id'=>$this->id,'offense_level'=>$this->offense_level,'substitution'=>$this->substitution)
 		);
 	}
 }

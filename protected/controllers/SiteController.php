@@ -125,6 +125,7 @@ class SiteController extends Controller
 				//$model->attributes=$_REQUEST['Player_form'];
 				$model->id = $_REQUEST['Player_form']['id'];
 				$model->offense_level = $_REQUEST['Player_form']['offense_level'];
+				$model->substitution = $_REQUEST['Player_form']['substitution'];
 
 				if(!(int)$model->id){
 					throw new Exception('Select your name');

@@ -65,8 +65,8 @@ function createUrl($route,$params=array(),$ampersand='&',$urlFormat=CUrlManager:
 /**
  * shorthand for Yii::app()->request->baseUrl(), makes "/" at end
  */
-function baseUrl(){
-	$base = trim(Yii::app()->request->baseUrl);
+function baseUrl($absolute=false){
+	$base = trim(Yii::app()->request->getBaseUrl($absolute));
 	if(substr($base, -1) !== '/')
 		$base .= '/';
 	return $base;

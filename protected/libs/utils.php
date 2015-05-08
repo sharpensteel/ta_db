@@ -7,7 +7,7 @@ $glTimeStart = microtime(1);
 
 /** @type for default params in functions; to detect that parameter is exacly OMMITED, and not passed null or something like that */
 class MAGIC_UNUSED_VALUE{};
-
+$magic_unused_value = new MAGIC_UNUSED_VALUE();
 
 
 function is_empty_string($str){

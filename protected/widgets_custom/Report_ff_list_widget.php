@@ -17,7 +17,7 @@ class Report_ff_list_widget extends CWidget{
 		
 		$sql_select_players = "SELECT p.id, p.name, p.alliance_id, p.rank, p.points, p.points_main_base, p.interested_in_ff_run, p.has_badge, p.has_sat_code,".
 			" p.offense_level, unix_timestamp(p.dt_last_updated_ol) dt_last_updated_ol, p.substitution, p.alliance_original_str, p.hub_name, p.hub_position, p.fraction, a.name alliance_name,".
-			" p.distance_to_ff_main, p.team,".
+			" p.distance_to_ff_main, p.team, p.officer_comment, ".
 			" p.`alliance_id_granted_by_cic`, p.`alliance_id_representative`, ".
 			" if( COALESCE(aliance_granted_by_cic.abbreviation,'')<>'', aliance_granted_by_cic.abbreviation, aliance_granted_by_cic.name) aliance_granted_by_cic__name,".
 			" if( COALESCE(alliance_representative.abbreviation,'')<>'', alliance_representative.abbreviation, alliance_representative.name) alliance_representative__name".
@@ -85,15 +85,16 @@ class Report_ff_list_widget extends CWidget{
 			?>
 			<script>
 				
-				function ask_update_player_team($input){
+				function ask_update_player_field($input){
 					var player_id = $input.closest('.fl_row_player').attr('player_id');
-					var team = $input.val();
-					var team_htmlencoded = encodeURIComponent(team);
+					var field_name = $input.attr('field_name');
+					var field_value = $input.val();
+					//var field_value_htmlencoded = encodeURIComponent(field_value);
 					$input.addClass('not_saved');
 					
 					$.ajax({
-						url: '<?=baseUrl()?>site/Player_update_team',
-						data: {player_id:player_id,team:team}
+						url: '<?=baseUrl()?>site/Player_update_field',
+						data: {player_id:player_id,field_name:field_name, field_value:field_value}
 					}).done(function(data) {
 						
 						$input.data('saved_val', data);
@@ -107,9 +108,9 @@ class Report_ff_list_widget extends CWidget{
 				
 				$(function(){
 					
-					$('.Report_ff_list_widget .team_input').each(function() {
+					$('.Report_ff_list_widget .player_field_input').each(function() {
 						var $elem = $(this);
-
+						
 						// Save current value of $element
 						$elem.data('old_val', $elem.val());
 						$elem.data('saved_val', $elem.val());
@@ -123,7 +124,7 @@ class Report_ff_list_widget extends CWidget{
 
 							// Do action
 							
-							ask_update_player_team($elem);
+							ask_update_player_field($elem);
 							
 						  }
 						});
@@ -153,6 +154,7 @@ class Report_ff_list_widget extends CWidget{
 						<th>Sat. code</th>
 						<th>On hub</th>
 						<th>Fraction</th>
+						<th>Comment</th>
 						<!--<th style="font-size: 1em;">Distance<br>main base to FF</th>-->
 					</tr>
 				</thead>
@@ -168,6 +170,18 @@ class Report_ff_list_widget extends CWidget{
 				$max_unbadged = 50;
 
 
+				function player_field_input_render($player, $is_admin, $field_name, $field_value = 'MAGIC_UNUSED_CONST_12312'){
+					if($field_value === 'MAGIC_UNUSED_CONST_12312'){
+						$field_value = $player[$field_name];
+					}
+					
+					if($is_admin){
+						?><input class="player_field_input" field_name="<?=$field_name?>" type="text" value="<?=$field_value?>"><?
+					}
+					else {
+						echo $player[$field_name];	
+					}
+				}
 
 				foreach($player_arr as $player){
 
@@ -214,17 +228,18 @@ class Report_ff_list_widget extends CWidget{
 						<td><?=$player['name']?></td>
 						<td><?=sprintf("%.2f",$player['offense_level'])?></td>
 						<td><?=$player['dt_last_updated_ol'] ? date('Y-n-d',$player['dt_last_updated_ol']) : ''?></td>
-						<td><? if($is_admin){ ?><input class="team_input" type="text" value="<?=$team?>"><? } else { echo $team; }; ?></td>
+						<td><? player_field_input_render($player, $is_admin, "team") ?></td>
 						<td><?=$status?></td>
 						<td><?=$this->format_points($player['points'])." /".$this->format_points($player['points_main_base']).""?></td>
-						<td><?=$player['alliance_original_str']?></td>
+						<td><? player_field_input_render($player, $is_admin, "alliance_original_str") ?></td>
 						<td><?=$player['alliance_name']?></td>
 						<!--<td><?=($player['interested_in_ff_run'] && !$player['has_badge'])?'YES':'NO' ?></td>-->
 						<td><?=$player['has_badge']?'YES':'NO' ?></td>
-						<td><?=$player['substitution']?></td>
+						<td><? player_field_input_render($player, $is_admin, "substitution") ?></td>
 						<td><?=$player['has_sat_code'] ? '' : '<span class="warning">NO</span>' ?></td>
 						<td><?=($player['hub_name'].''!='')?$player['hub_name'].':'.$player['hub_position'] :''?></td>
 						<td><?= ($player['fraction']==1)?'GDI':'NOD' ?></td>
+						<td><? player_field_input_render($player, $is_admin, "officer_comment") ?></td>
 						<!--<td><?=$player['distance_to_ff_main']?></td>-->
 					</tr>
 					<?

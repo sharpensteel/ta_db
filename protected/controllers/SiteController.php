@@ -172,14 +172,17 @@ class SiteController extends Controller
 	}
 	
 	
-	public function actionPlayer_update_team($player_id, $team){
+	public function actionPlayer_update_field($player_id, $field_name, $field_value){
 		session_start_if_not();
 		if(!array_default($_SESSION, 'is_admin',0)){
 			echo "only admins can do that."; return;
 		}
-		query_execute('insert into player_update_history (player_id, team, ip) values (:player_id, :team, :ip)', array('player_id'=>$player_id, 'team'=>$team, 'ip'=>array_default($_SERVER,'REMOTE_ADDR')));
-		query_execute('update player set team=:team where id=:player_id', array('player_id'=>$player_id, 'team'=>$team ));
-		echo $team;
+		
+		$field_name = preg_replace('/[^\w]/u', '', $field_name);
+				
+		query_execute('insert into player_update_history (player_id, `'.$field_name.'`, ip) values (:player_id, :field_value, :ip)', array('player_id'=>$player_id, 'field_value'=>$field_name, 'ip'=>array_default($_SERVER,'REMOTE_ADDR')));
+		query_execute('update player set `'.$field_name.'`=:field_value where id=:player_id', array('player_id'=>$player_id, 'field_value'=>$field_value ));
+		echo $field_value;
 	}
 	
 }

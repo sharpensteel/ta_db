@@ -61,6 +61,9 @@ class Report_ff_list_widget extends CWidget{
 				background-color: #769B49;
 				color: #000;
 			}
+			.Report_ff_list_widget tr:hover{
+				background-color: #B8FFA5;
+			}
 			.Report_ff_list_widget tr.has_badge{
 				background:#F9F6E4;
 			}
@@ -76,6 +79,7 @@ class Report_ff_list_widget extends CWidget{
 			.Report_ff_list_widget .table_teams td:first-child{
 				min-width: 100px;
 			}
+			
 			
 		</style>
 		

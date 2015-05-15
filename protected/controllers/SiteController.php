@@ -34,6 +34,10 @@ class SiteController extends Controller
 		
 	}
 	
+	public function actionFf_list_for_attack()
+	{
+		$this->render('ff_list_for_attack');
+	}
 
 	/**
 	 * This is the action to handle external exceptions.

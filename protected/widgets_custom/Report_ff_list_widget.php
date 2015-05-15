@@ -4,6 +4,9 @@
 
 class Report_ff_list_widget extends CWidget{
 	
+	/** @var boolean */
+	public $is_ff_attack_form = 0;
+	
 	public function run()
 	{
 		$global_data_record_arr = query_arr("select * from global_data where id=1");
@@ -25,8 +28,18 @@ class Report_ff_list_widget extends CWidget{
 			" LEFT JOIN alliance a ON p.`alliance_id`=a.`id`".
 			" LEFT JOIN alliance aliance_granted_by_cic ON p.`alliance_id_granted_by_cic`=aliance_granted_by_cic.`id`".
 			" LEFT JOIN alliance alliance_representative ON p.`alliance_id_representative`=alliance_representative.`id`".
-			" WHERE a.`allways_full_update` OR p.`interested_in_ff_run` order by p.offense_level desc";
+			" WHERE ";
+				
+		if(!$this->is_ff_attack_form){
+			$sql_select_players .= "(a.`allways_full_update` OR p.`interested_in_ff_run`)";
+		}
+		else{
+			$swapin_team = query_scalar('select swapin_team from global_data where id=1');
+			if(''.$swapin_team === '') $swapin_team = '$@UNUSED@$';
+			$sql_select_players .= "(a.`allways_full_update` or trim(lower(p.team))=trim(lower('".$swapin_team."')) )";
+		}
 		
+		$sql_select_players .= " order by p.offense_level desc";
 		
 		$player_arr = query_arr($sql_select_players);
 		
@@ -146,16 +159,20 @@ class Report_ff_list_widget extends CWidget{
 					<tr>
 						<th>Name</th>
 						<th>OL</th>
-						<th>OL Updated</th>
+						<? if(!$this->is_ff_attack_form){ ?>
+							<th>OL Updated</th>
+						<? } ?>
 						<th style="min-width: 110px;">Group</th>
-						<th style="font-size: 0.8em;">Group calculated</th>
-						<th>Scores<br>total/main base</th>
-						<th>Aliance origin</th>
-						<th>Aliance current</th>
-						<!--<th>Need badge?</th>-->
-						<th>Have badge?</th>
+						<? if(!$this->is_ff_attack_form){ ?>
+							<th style="font-size: 0.8em;">Group calculated</th>
+							<th>Scores<br>total/main base</th>
+							<th>Aliance origin</th>
+							<th>Aliance current</th>
+							<!--<th>Need badge?</th>-->
+							<th>Have badge?</th>
+						<? } ?>
 						<th>Substitution</th>
-						<th>Sat. code</th>
+						<? if(!$this->is_ff_attack_form){ ?> <th>Sat. code</th> <? } ?>
 						<th>On hub</th>
 						<th>Fraction</th>
 						<th>Comment</th>
@@ -231,16 +248,22 @@ class Report_ff_list_widget extends CWidget{
 					<tr class="fl_row_player <?=($player['has_badge'] ? 'has_badge' : '')?>" player_id="<?=($player['id'])?>" >
 						<td><?=$player['name']?></td>
 						<td><?=sprintf("%.2f",$player['offense_level'])?></td>
-						<td><?=$player['dt_last_updated_ol'] ? date('Y-n-d',$player['dt_last_updated_ol']) : ''?></td>
-						<td><? player_field_input_render($player, $is_admin, "team") ?></td>
-						<td><?=$status?></td>
-						<td><?=$this->format_points($player['points'])." /".$this->format_points($player['points_main_base']).""?></td>
-						<td><? player_field_input_render($player, $is_admin, "alliance_original_str") ?></td>
-						<td><?=$player['alliance_name']?></td>
-						<!--<td><?=($player['interested_in_ff_run'] && !$player['has_badge'])?'YES':'NO' ?></td>-->
-						<td><?=$player['has_badge']?'YES':'NO' ?></td>
+						<? if(!$this->is_ff_attack_form){ ?>
+							<td><?=$player['dt_last_updated_ol'] ? date('Y-n-d',$player['dt_last_updated_ol']) : ''?></td>
+						<? } ?>
+							<td><? player_field_input_render($player, $is_admin, "team") ?></td>
+						<? if(!$this->is_ff_attack_form){ ?>
+							<td><?=$status?></td>
+							<td><?=$this->format_points($player['points'])." /".$this->format_points($player['points_main_base']).""?></td>
+							<td><? player_field_input_render($player, $is_admin, "alliance_original_str") ?></td>
+							<td><?=$player['alliance_name']?></td>
+							<!--<td><?=($player['interested_in_ff_run'] && !$player['has_badge'])?'YES':'NO' ?></td>-->
+							<td><?=$player['has_badge']?'YES':'NO' ?></td>
+						<? } ?>
 						<td><? player_field_input_render($player, $is_admin, "substitution") ?></td>
-						<td><?=$player['has_sat_code'] ? '' : '<span class="warning">NO</span>' ?></td>
+						<? if(!$this->is_ff_attack_form){ ?>
+							<td><?=$player['has_sat_code'] ? '' : '<span class="warning">NO</span>' ?></td>
+						<? } ?>
 						<td><?=($player['hub_name'].''!='')?$player['hub_name'].':'.$player['hub_position'] :''?></td>
 						<td><?= ($player['fraction']==1)?'GDI':'NOD' ?></td>
 						<td><? player_field_input_render($player, $is_admin, "officer_comment") ?></td>

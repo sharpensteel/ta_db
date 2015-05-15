@@ -57,7 +57,10 @@ $this->pageTitle=Yii::app()->name;
 </div>
 
 <div id="section_complete_spreadsheet" class="section" style="">
-	<div class="section_title">Complete spreadsheet</div>
+	<div class="section_title">Complete spreadsheet   </div>
+	<a href="<?=createUrl('site/ff_list_for_attack')?>" style="">Shortened spreadsheet for FF attack</a>
+	<br><br>
+	
 	<? $this->widget('application.widgets_custom.Report_ff_list_widget',array() ); ?>
 </div>
 

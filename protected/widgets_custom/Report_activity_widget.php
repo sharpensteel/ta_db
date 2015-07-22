@@ -49,7 +49,7 @@ class Report_activity_widget extends CWidget{
 		<span style="color:gray;font-style:italic;"><? self::print_score_calc_description() ?></span><br><br>
 		<?
 		foreach($player_arr_by_score as $player){
-			?><b><?=$player['name']?> </b><br> activity score = <?=round($player['score']/1000000,3)?> M
+			?><b><?=$player['name']?> </b><br> activity score = <?=round($player['score']/1000,3)?> k
 			<div style="padding-left:20px;">
 				<?
 				krsort($player['attack_arr']);

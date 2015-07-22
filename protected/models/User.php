@@ -64,7 +64,7 @@ class User extends CActiveRecord
 			'login' => 'Login',
 			'password' => 'Password',
 			'alliance_id' => 'Alliance',
-			'is_officer' => 'Is Officer',
+			'is_officer' => 'Is Фвьшт',
 			'role' => 'Role',
 			'rank' => 'Rank',
 			'score' => 'Score',

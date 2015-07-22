@@ -26,14 +26,13 @@ class World_data_updater {
 			if($slash === false) throw new Exception('invalid $url_client: '.$url_client);
 			$this->url_ajax_endpoint = rtrim(substr($url_client, 0, $slash),'/').'/'.rtrim($url_ajax_endpoint_by_api,'/').'/';
 		}
+		set_time_limit(600);
 		
 	}
 
 	
 	
 	public function make_update(){
-		set_time_limit(600);
-		
 		header( 'Content-type: text/html; charset=utf-8' );
 		?><htm><body><?
 		echo "Initial checking... <br>";
@@ -103,6 +102,31 @@ class World_data_updater {
 		force_flush();
 	}
 	
+	
+	public function update_attack_log($take = 100, $skip=0){
+		
+		$count_uploaded = 0;
+		$count_inserted = 0;
+		$count_parsed = 0;
+		$count_parse_errors = 0;
+		
+		$packet_arr = $this->send_request_json(
+			$this->url_ajax_endpoint."NotificationGetRange",
+			array(
+				'ascending' => false,
+				'category' => "3",
+				'skip' => $skip,
+				'sortOrder' => 0,
+				'take' => $take
+			) 
+		);
+		
+		
+		$res = Packet_parser::upload(PacketType::PT_ATTACKS_LOG, $packet_arr);
+		
+		echo $res;
+		
+	}
 	
 	public function update_players_detail_data(){
 		 

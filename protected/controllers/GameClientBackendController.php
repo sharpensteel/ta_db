@@ -62,10 +62,12 @@ class GameClientBackendController extends Controller {
 				request_generic("AllianceGetMemberData",null,callback_on_done);
 			}
 			
+			
 			function request__NotificationGetRange_progress(callback_on_done){
 				var data = {category: "9", skip: 0, take: 100, sortOrder: 0, take: 200};
 				request_generic("NotificationGetRange",data,callback_on_done);
 			}
+			
 			
 			
 			
@@ -158,8 +160,53 @@ class GameClientBackendController extends Controller {
 				
 			};
 			
-
 			
+			var Tw_online_report = {
+				tw: undefined,
+				
+				create : function(){
+					var _ = jQ.extend({},Tw_online_report);
+
+					_.tw = Tool_window.create("Online report",'544px','500px', {top:'60px',left:'140px'});
+					_.tw.switch_collapse(1);
+					
+					var $button_refresh = jQ("<div class='fl_button fl_refresh' style=''>refresh</div>");
+					_.tw.$elem.find('.fl_header').append($button_refresh);
+					$button_refresh.click(_.refresh.bind(_));
+					
+					_.refresh();
+					
+					return _;
+				},
+				
+				refresh: function(){
+				
+					var _ = this;
+					var $body = _.tw.$elem.find('.fl_body');
+					$body.html("loading...");
+					request__AllianceGetMemberData(function(allance_data){
+						_.generate_report(allance_data);
+					});
+				},
+				
+				generate_report: function(allance_data){
+				
+					var _ = this;
+					var $body = _.tw.$elem.find('.fl_body');
+					
+					var player_dict = {};
+					for(var i=0; i<allance_data.length; i++){
+						var p = allance_data[i];
+						console.log(p.n, p.os);
+					}
+		
+				
+					var report = "look in console.";
+					
+					$body.html(report);
+				}
+				
+			};
 			
 			
 			var $link_world_data_update = jQ("<div><span class='fl_link'>Update world data</span></div>");
@@ -168,12 +215,19 @@ class GameClientBackendController extends Controller {
 				var w = Tw_update_world.create();
 			});
 			
-			var $link_world_data_update = jQ("<div><span class='fl_link'>Hacker attack report</span></div>");
-			$ta_stuff.append($link_world_data_update).append("<br>");
-			$link_world_data_update.click(function(){
+			var $link_hacker_attack_report = jQ("<div><span class='fl_link'>Hacker attack report</span></div>");
+			$ta_stuff.append($link_hacker_attack_report).append("<br>");
+			$link_hacker_attack_report.click(function(){
 				var w = Tw_hacker_attack_report.create();
 				
 			});
+			
+			var $link_online_report = jQ("<div><span class='fl_link'>Online report</span></div>");
+			$ta_stuff.append($link_online_report).append("<br>");
+			$link_online_report.click(function(){
+				var w = Tw_online_report.create();
+			});
+			
 			
 		})();
 		}
@@ -236,6 +290,16 @@ class GameClientBackendController extends Controller {
 		$updater->make_update();
 		
 		
+	}
+	
+	// sample call: https://ta_local/ta_db/GameClientBackend/World_data_update?session_id=bc433fa6-b8e8-41c0-bdfe-8092cdeb3abf&url_ajax_endpoint_by_api=Presentation/Service.svc/ajaxEndpoint/&url_client=https://prodgame17.alliances.commandandconquer.com/259/index.aspx
+	function actionWorld_data_update_attack_log($session_id, $url_client, $url_ajax_endpoint_by_api,$take=1000, $skip=0)
+	{
+		$updater = new World_data_updater($session_id, $url_client, $url_ajax_endpoint_by_api);
+		$updater->update_attack_log($take, $skip);
+		
 		
 	}
+	
+	
 }

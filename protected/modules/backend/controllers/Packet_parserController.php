@@ -13,7 +13,7 @@ class Packet_parserController extends Controller{
 			$model->attributes=$_POST['Packet_parser_form'];
 			
 			if($model->validate()){
-				$res = Packet_parser::upload($model);
+				$res = Packet_parser::upload_form($model);
 				
 				if($res !== false){
 					yii_flash_append('info', $res);

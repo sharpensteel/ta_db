@@ -4,18 +4,9 @@
 class Packet_parser {
 	
 	
-	/**
-	 * 
-	 * @param Packet_parse_from $packet_parse_form
-	 * @returns string|boolean  on error returns false, if ok returns information about inserted records
-	 */
-	static public function upload($packet_parse_form)
+	static public function upload_form($packet_parse_form)
 	{
-		$count_uploaded = 0;
-		$count_inserted = 0;
-		$count_parsed = 0;
-		$count_parse_errors = 0;
-		
+	
 		$packet_type_id = (int)$packet_parse_form->packet_type_id;
 		if(!$packet_type_id){ $packet_parse_form->addError('packet_type_id','packet_type_id must be non empty'); return false; }
 		
@@ -23,6 +14,22 @@ class Packet_parser {
 		$packets = json_decode($packet_parse_form->packets_json, true);
 		if($packets === null){ $packet_parse_form->addError('packets_json','unable to parse JSON'); return false; }
 		
+		return $this->upload($packet_type_id, $packets);
+	}
+	
+	/**
+	 * 
+	 * @param Packet_parse_from $packet_parse_form
+	 * @returns string|boolean  on error returns false, if ok returns information about inserted records
+	 */
+	static public function upload($packet_type_id, $packets)
+	{
+		$count_uploaded = 0;
+		$count_inserted = 0;
+		$count_parsed = 0;
+		$count_parse_errors = 0;
+		
+
 		switch($packet_type_id){
 			case PacketType::PT_ATTACKS_LOG:
 				$count_uploaded = count($packets);

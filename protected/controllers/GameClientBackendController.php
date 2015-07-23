@@ -292,7 +292,7 @@ class GameClientBackendController extends Controller {
 		
 	}
 	
-	// sample call: https://ta_local/ta_db/GameClientBackend/World_data_update?session_id=bc433fa6-b8e8-41c0-bdfe-8092cdeb3abf&url_ajax_endpoint_by_api=Presentation/Service.svc/ajaxEndpoint/&url_client=https://prodgame17.alliances.commandandconquer.com/259/index.aspx
+	// sample call: localhost/ta_db/GameClientBackend/World_data_update_attack_log?session_id=fc45eed5-edeb-47c7-bf81-5c71bf54037a&take=1000&skip=0&url_ajax_endpoint_by_api=Presentation/Service.svc/ajaxEndpoint/&url_client=https://prodgame05.alliances.commandandconquer.com/316/index.aspx
 	function actionWorld_data_update_attack_log($session_id, $url_client, $url_ajax_endpoint_by_api,$take=1000, $skip=0)
 	{
 		$updater = new World_data_updater($session_id, $url_client, $url_ajax_endpoint_by_api);

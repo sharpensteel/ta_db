@@ -5,7 +5,7 @@ class Report_activity_widget extends CWidget{
 	public $interval_days = 30;	
 	public $alliance_id; //101: vortex ares
 	
-	const DEFENDER_LEVEL_FACTOR = 1.2;
+	const DEFENDER_LEVEL_FACTOR = 1.25;
 	const KILL_MULTIPLIER = 6;
 	const ATTACK_MULTIPLIER = 1;
 	

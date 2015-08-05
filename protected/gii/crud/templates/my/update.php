@@ -13,15 +13,15 @@ $nameColumn=$this->guessNameColumn($this->tableSchema->columns);
 $label=$this->pluralize($this->class2name($this->modelClass));
 echo "\$this->breadcrumbs=array(
 	'$label'=>array('admin'),
-	\$model->{$nameColumn}=>array('view','id'=>\$model->{$this->tableSchema->primaryKey}),
+	\$model->{$nameColumn}=>array('update','id'=>\$model->{$this->tableSchema->primaryKey}),
 	'Обновить',
 );\n";
 ?>
 
 $this->menu=array(
-	array('label'=>'Создать <?php echo $this->modelClass; ?>', 'url'=>array('create')),
-	array('label'=>'Просмотр <?php echo $this->modelClass; ?>', 'url'=>array('view', 'id'=>$model-><?php echo $this->tableSchema->primaryKey; ?>)),
-	array('label'=>'Управление <?php echo $this->modelClass; ?>', 'url'=>array('admin')),
+	array('label'=>'Создать запись', 'url'=>array('create')),
+	array('label'=>'Просмотр записи', 'url'=>array('view', 'id'=>$model-><?php echo $this->tableSchema->primaryKey; ?>)),
+	array('label'=>'Управление записями', 'url'=>array('admin')),
 );
 ?>
 

@@ -18,6 +18,7 @@
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
+	'htmlOptions' => array('enctype' => 'multipart/form-data',),
 	'enableAjaxValidation'=>false,
 )); ?>\n"; ?>
 

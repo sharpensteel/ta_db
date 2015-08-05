@@ -74,7 +74,7 @@ class Report_ff_list_widget extends CWidget{
 				background-color: #769B49;
 				color: #000;
 			}
-			.Report_ff_list_widget tr:hover{
+			.Report_ff_list_widget .fl_row_player:hover{
 				background-color: #B8FFA5;
 			}
 			.Report_ff_list_widget tr.has_badge{

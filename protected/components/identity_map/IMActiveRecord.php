@@ -4,6 +4,7 @@ class IMActiveRecord extends CActiveRecord
 {
 	/** @var integer when record is updated sonewhere else, this revision number shows that record need to be refreshed */
 	private $_is_deleted = false;
+	private $_is_refreshing_now = false;
 	public function is_deleted(){ return $this->_is_deleted; }
 	/** only for calling by Identity_map */
 	public function _set_is_deleted($is_deleted){ $this->_is_deleted = $is_deleted; }
@@ -15,7 +16,15 @@ class IMActiveRecord extends CActiveRecord
 	*/
 	public function instantiate($attributes)
 	{
-		$model = Identity_map::on_record_instantiated($this, $attributes);
+		if($this->_is_refreshing_now){
+			if((string)$this->get_primary_key_from_attr($attributes) === (string)$this->primaryKey){
+				$model = parent::instantiate($attributes);
+			}
+		}
+		else{		
+			$model = Identity_map::on_record_instantiated($this, $attributes);
+		}
+		
 		return $model;		
 	}
 	
@@ -57,6 +66,17 @@ class IMActiveRecord extends CActiveRecord
 			return null;
 	}
 	
+	public function refresh()
+	{
+		// this need for instantiate() / findByPk(), to return new record, not from intance map;
+		$this->_is_refreshing_now = true;
+		
+		$result = parent::refresh();
+		
+		$this->_is_refreshing_now = false;
+		
+		return $result;
+	}
 	
 	/**
 	 * Finds a single record with the specified primary key.
@@ -68,13 +88,24 @@ class IMActiveRecord extends CActiveRecord
 	 */
 	public function findByPk($pk,$condition='',$params=array())
 	{
-		$table=$this->getTableSchema();
+		//$table=$this->getTableSchema();
 		
-		if(!is_array($pk) && !$condition && !$params){
-			$record = Identity_map::get_record( get_class($this), $pk);
-			if($record) return $record;
+		$this_is_refreshing = false;
+		
+		if($this->_is_refreshing_now ){
+			if((string)$pk === (string)$this->primaryKey)
+				$this_is_refreshing = true;  // when refresh() called, reload record from DB and not take it from IM
 		}
-		return parent::findByPk($pk,$condition,$params);
+
+		if(!$this_is_refreshing)
+		{			
+			if(!is_array($pk) && !$condition && !$params){
+				$record = Identity_map::get_record( get_class($this), $pk);
+				if($record) return $record;
+			}
+		}
+		$record = parent::findByPk($pk,$condition,$params);
+		return $record;
 	}
 	
 	

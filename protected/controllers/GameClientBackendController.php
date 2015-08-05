@@ -126,6 +126,8 @@ class GameClientBackendController extends Controller {
 				generate_report: function(allance_data, progress_data){
 					var _ = this;
 					var $body = _.tw.$elem.find('.fl_body');
+                                        var tt_now = 1*(new Date);
+                                        var tt_actual = tt_now - 24*60*60*1000;
 					
 					var player_dict = {};
 					for(var i=0; i<allance_data.length; i++){
@@ -136,6 +138,8 @@ class GameClientBackendController extends Controller {
 					for(var i=0; i<progress_data.length; i++){
 						var pd = progress_data[i];
 						if(pd['mdb']!=61) continue;
+                                                if(pd['t']<tt_actual)continue;
+                                                
 						var name = pd['p'][0]['v'];
 						if(!(name in player_dict)) continue;
 						player_dict[name]['tt_virus'] = pd['t'];

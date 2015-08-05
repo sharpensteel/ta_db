@@ -44,17 +44,37 @@ class Identity_map
 		$inst = self::get_instance();
 		$class_name = get_class($record);
 		
-		if( !key_exists($class_name, $inst->map)) {
+		if( !isset($inst->map[$class_name])) {
 			$inst->map[$class_name] = array();
 		}
 		
 		$record_arr = &$inst->map[$class_name];
 		
 		$record_key = (string)$record->primaryKey;
-		if(key_exists($record_key, $record_arr) && $record_arr[$record_key] !== $record){
+		if(isset($record_arr[$record_key]) && $record_arr[$record_key] !== $record){
 			error_log(__METHOD__.": record of type $class_name with key=$record_key already in map but not equal to saved record!");
 			return;
 		}
+		$record_arr[$record->primaryKey] = $record;
+	}
+	
+	/**
+	 * called in the end of record->refresh() 
+	 * 
+	 * @param IMActiveRecord $record
+	 */
+	public static function replace_record_in_map($record)
+	{
+		$inst = self::get_instance();
+		$class_name = get_class($record);
+		
+		if( !isset($inst->map[$class_name])) {
+			$inst->map[$class_name] = array();
+		}
+		
+		$record_arr = &$inst->map[$class_name];
+		
+		$record_key = (string)$record->primaryKey;
 		$record_arr[$record->primaryKey] = $record;
 	}
 	
@@ -66,14 +86,14 @@ class Identity_map
 		$inst = self::get_instance();
 		$class_name = get_class($record);
 		
-		if( !key_exists($class_name, $inst->map)) return;
+		if( !isset($inst->map[$class_name])) return;
 		
 		$record_arr = &$inst->map[$class_name];
 		$record_key = (string)$record->primaryKey;		
 		
 		$record->_set_is_deleted(true);
 		
-		if(key_exists($record_key, $record_arr)){
+		if(isset($record_arr[$record_key])){
 			unset($record_arr[$record_key]);
 		}
 	}
@@ -90,7 +110,7 @@ class Identity_map
 		//if( $model->getIsNewRecord() ) return null;
 		
 		$class_name = get_class($model);
-		$record_key = (string)$model->get_primary_key_from_attr($attributes);		
+		$record_key = (string)$model->get_primary_key_from_attr($attributes);
 		
 		if($record_key === null){
 			return call_user_func($function_create_instance, $attributes);
@@ -100,9 +120,9 @@ class Identity_map
 		
 		$instance = null;
 		
-		if(key_exists($class_name, $inst->map)){
+		if(isset($inst->map[$class_name])){
 			$record_arr = $inst->map[$class_name];
-			if( key_exists($record_key, $record_arr) )
+			if( isset($record_arr[$record_key]) )
 				$instance = $record_arr[$record_key];
 		}
 		else{
@@ -119,17 +139,35 @@ class Identity_map
 	}
 		
 	public static function get_record($class_name, $record_key_value)
-	{		
+	{
 		$inst = self::get_instance();
 		$record_key_value = (string)$record_key_value;
 		
-		if( !key_exists($class_name, $inst->map)) return null;
+		if( !isset($inst->map[$class_name])) return null;
 		$record_arr = $inst->map[$class_name];
 				
-		if( !key_exists($record_key_value, $record_arr) ) return null;
+		if( !isset($record_arr[$record_key_value]) ) return null;
 		
 		return $record_arr[$record_key_value];
 		
+	}
+	
+	static public function remove_from_map($class_name, $key_value_filter = null){
+		$inst = self::get_instance();
+		$key_value_filter = (string)$key_value_filter;
+		
+		if( !isset($inst->map[$class_name])) return;
+		$record_arr = &$inst->map[$class_name];
+		
+		if($key_value_filter != '')
+		{
+			if(isset($record_arr[$key_value_filter])){
+				unset($record_arr[$key_value_filter]);				
+			}
+		}
+		else{
+			array_splice($record_arr, 0);
+		}
 	}
 	
 }

@@ -306,7 +306,7 @@ class Report_ff_list_widget extends CWidget{
 			<table class="table_substitutions" style="  margin-top: 10px;background:white;">
 				<thead>
 					<tr>
-						<th style="width: 160px;">Sub-holder</th>
+						<th style="width: 180px;">Sub-holder</th>
 						<th>Substitutions</th>
 						<th style="width: 50px;">Count</th>
 					</tr>

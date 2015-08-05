@@ -300,18 +300,18 @@ class Report_ff_list_widget extends CWidget{
 			?>
 			</table>
                         
+                        
                         <br><br>
 			<b>Substitutions:</b>
 			<table class="table_substitutions" style="  margin-top: 10px;background:white;">
 				<thead>
 					<tr>
-						<th>Sub-holder</th>
+						<th style="width: 160px;">Sub-holder</th>
 						<th>Substitutions</th>
-						<th>Count</th>
+						<th style="width: 50px;">Count</th>
 					</tr>
 				</thead>
 			<?
-                        
                         $sub_record_arr = query_arr("SELECT substitution, `name`, `team` FROM player WHERE TRIM(COALESCE(substitution,''))<>'' ORDER BY 1,2");
                         $sub_arr_arr = array();
                         foreach($sub_record_arr as $sub_record){

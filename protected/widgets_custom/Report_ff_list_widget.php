@@ -45,6 +45,9 @@ class Report_ff_list_widget extends CWidget{
 		
 		$team_count_arr = query_arr("SELECT team, COUNT(*) count FROM player WHERE COALESCE(team,'')<>'' GROUP BY 1");
 		
+                
+                
+                
 		?>
 		<style>
 			.warning{
@@ -293,6 +296,46 @@ class Report_ff_list_widget extends CWidget{
 					<td><?=$record['count']?></td>
 				</tr>
 				<?
+			}
+			?>
+			</table>
+                        
+                        <br><br>
+			<b>Substitutions:</b>
+			<table class="table_substitutions" style="  margin-top: 10px;background:white;">
+				<thead>
+					<tr>
+						<th>Sub-holder</th>
+						<th>Substitutions</th>
+						<th>Count</th>
+					</tr>
+				</thead>
+			<?
+                        
+                        $sub_record_arr = query_arr("SELECT substitution, `name`, `team` FROM player WHERE TRIM(COALESCE(substitution,''))<>'' ORDER BY 1,2");
+                        $sub_arr_arr = array();
+                        foreach($sub_record_arr as $sub_record){
+                            $sub_holder = $sub_record['substitution'];
+                            if(!isset($sub_arr_arr[$sub_holder])){
+                                $sub_arr_arr[$sub_holder] = array();
+                            }
+                            $sub_arr_arr[$sub_holder][] = array('name'=>$sub_record['name'], 'team'=>$sub_record['team']);
+                        }
+                        
+                        
+			foreach($sub_arr_arr as $sub_holder => $sub_arr){
+                            $sub_list = '';
+                            foreach($sub_arr as $sub){
+                                $sub_list .= $sub['name'].'('.$sub['team'].'), ';
+                            }
+                            $sub_list = trim($sub_list, ", ")
+                            ?>
+                            <tr>
+                                <td><?=$sub_holder?></td>
+                                <td><?=$sub_list?></td>
+                                <td><?=count($sub_arr)?></td>
+                            </tr>
+                            <?
 			}
 			?>
 			</table>

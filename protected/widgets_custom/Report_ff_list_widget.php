@@ -23,7 +23,8 @@ class Report_ff_list_widget extends CWidget{
 			" p.distance_to_ff_main, p.team, p.officer_comment, ".
 			" p.`alliance_id_granted_by_cic`, p.`alliance_id_representative`, ".
 			" if( COALESCE(aliance_granted_by_cic.abbreviation,'')<>'', aliance_granted_by_cic.abbreviation, aliance_granted_by_cic.name) aliance_granted_by_cic__name,".
-			" if( COALESCE(alliance_representative.abbreviation,'')<>'', alliance_representative.abbreviation, alliance_representative.name) alliance_representative__name".
+			" if( COALESCE(alliance_representative.abbreviation,'')<>'', alliance_representative.abbreviation, alliance_representative.name) alliance_representative__name,".
+			" p.offense_level_secondary, p.hits_avaliable".
 			" FROM player p".
 			" LEFT JOIN alliance a ON p.`alliance_id`=a.`id`".
 			" LEFT JOIN alliance aliance_granted_by_cic ON p.`alliance_id_granted_by_cic`=aliance_granted_by_cic.`id`".
@@ -167,14 +168,16 @@ class Report_ff_list_widget extends CWidget{
 						<? } ?>
 						<th style="min-width: 110px;">Group</th>
 						<? if(!$this->is_ff_attack_form){ ?>
-							<th style="font-size: 0.8em;">Group calculated</th>
-							<th>Scores<br>total/main base</th>
+							<!--<th style="font-size: 0.8em;">Group calculated</th>-->
+							<th style="width:100px;">Scores<br>total/main base</th>
 							<th>Aliance origin</th>
 							<th>Aliance current</th>
 							<!--<th>Need badge?</th>-->
-							<th>Have badge?</th>
+							<th style="width:50px;">Have badge?</th>
 						<? } ?>
 						<th>Substitution</th>
+						<th>OL secondary</th>
+						<th style="width:40px;">Hits avaliable</th>
 						<? if(!$this->is_ff_attack_form){ ?> <th>Sat. code</th> <? } ?>
 						<th>On hub</th>
 						<th>Fraction</th>
@@ -256,7 +259,7 @@ class Report_ff_list_widget extends CWidget{
 						<? } ?>
 							<td><? player_field_input_render($player, $is_admin, "team") ?></td>
 						<? if(!$this->is_ff_attack_form){ ?>
-							<td><?=$status?></td>
+							<!--<td><?=$status?></td>-->
 							<td><?=$this->format_points($player['points'])." /".$this->format_points($player['points_main_base']).""?></td>
 							<td><? player_field_input_render($player, $is_admin, "alliance_original_str") ?></td>
 							<td><?=$player['alliance_name']?></td>
@@ -264,6 +267,8 @@ class Report_ff_list_widget extends CWidget{
 							<td><?=$player['has_badge']?'YES':'NO' ?></td>
 						<? } ?>
 						<td><? player_field_input_render($player, $is_admin, "substitution") ?></td>
+						<td><? player_field_input_render($player, $is_admin, "offense_level_secondary") ?></td>
+						<td><? player_field_input_render($player, $is_admin, "hits_avaliable") ?></td>
 						<? if(!$this->is_ff_attack_form){ ?>
 							<td><?=$player['has_sat_code'] ? '' : '<span class="warning">NO</span>' ?></td>
 						<? } ?>

@@ -7,7 +7,7 @@ class Player_update_widget extends CWidget{
 	{
 		
 		//player_update_history
-		$player_arr = query_arr('select p.id, p.name, p.offense_level, p.substitution from player p left join alliance a on a.id=p.alliance_id where a.interested order by name');
+		$player_arr = query_arr('select p.id, p.name, p.offense_level, p.offense_level_secondary, p.substitution, p.hits_avaliable from player p left join alliance a on a.id=p.alliance_id where a.interested order by name');
 		
 		$default_id = (int)array_default($_COOKIE,'up_id',array_default($_REQUEST,'up_id',0));
 		
@@ -69,6 +69,8 @@ class Player_update_widget extends CWidget{
 					
 					_.$elem.find('.input_offense_level').val( player ? player['offense_level'] : '');
 					_.$elem.find('.input_substitution').val( player ? player['substitution'] : '');
+					_.$elem.find('.input_offense_level_secondary').val( player ? player['offense_level_secondary'] : '');
+					_.$elem.find('.input_hits_avaliable').val( player ? player['hits_avaliable'] : '');
 				}
 			}
 			
@@ -83,19 +85,27 @@ class Player_update_widget extends CWidget{
 			<div>
 				
 				<div style="margin-bottom:10px">
-					<div style="display:inline-block;width:140px">Your name: </div>
-					<select  class="select_player_id" name="Player_form[id]" style="width:200px">
+					<div style="display:inline-block;width:190px">Your name: </div>
+					<select  class="select_player_id" name="Player_form[id]" style="width:204px">
 						<option value="">loading...</option>
 					</select>
 				</div>
 				
 				<div style="margin-bottom:10px">
-					<div style="display:inline-block;width:140px">Your offense level:</div>
-					<input class="input_offense_level" name="Player_form[offense_level]" type="text" style="width:50px" value=""><br>
+					<div style="display:inline-block;width:190px">Main offense level:</div>
+					<input class="input_offense_level" name="Player_form[offense_level]" type="text" style="width:200px" value=""><br>
 				</div>
 				<div style="margin-bottom:10px">
-					<div style="display:inline-block;width:140px">Substitution:</div>
+					<div style="display:inline-block;width:190px">Secondary offense level:</div>
+					<input class="input_offense_level_secondary" name="Player_form[offense_level_secondary]" type="text" style="width:200px" value=""><br>
+				</div>
+				<div style="margin-bottom:10px">
+					<div style="display:inline-block;width:190px">Substitution:</div>
 					<input class="input_substitution" name="Player_form[substitution]" type="text" style="width:200px;" value=""><br>
+				</div>
+				<div style="margin-bottom:10px">
+					<div style="display:inline-block;width:190px">Hits avaliable (main base):</div>
+					<input class="input_hits_avaliable" name="Player_form[hits_avaliable]" type="text" style="width:200px" value=""><br>
 				</div>
 				
 				<div style="text-align:center;margin-top:20px;">

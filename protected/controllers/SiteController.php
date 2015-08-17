@@ -130,6 +130,8 @@ class SiteController extends Controller
 				$model->id = $_REQUEST['Player_form']['id'];
 				$model->offense_level = $_REQUEST['Player_form']['offense_level'];
 				$model->substitution = $_REQUEST['Player_form']['substitution'];
+				$model->offense_level_secondary = $_REQUEST['Player_form']['offense_level_secondary'];
+				$model->hits_avaliable = (int)$_REQUEST['Player_form']['hits_avaliable'];
 
 				if(!(int)$model->id){
 					throw new Exception('Select your name');
@@ -138,6 +140,10 @@ class SiteController extends Controller
 				$model->offense_level = (double)str_replace(',', '.', $model->offense_level);
 				if(!$model->offense_level){
 					throw new Exception('Enter correct offense level');
+				}
+				
+				if(!$model->hits_avaliable){
+					throw new Exception('Enter correct number `Hits avaliable`');
 				}
 				
 				$model->update();

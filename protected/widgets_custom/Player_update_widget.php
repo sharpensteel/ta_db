@@ -105,7 +105,11 @@ class Player_update_widget extends CWidget{
 				</div>
 				<div style="margin-bottom:10px">
 					<div style="display:inline-block;width:190px">Hits avaliable (main base):</div>
-					<input class="input_hits_avaliable" name="Player_form[hits_avaliable]" type="text" style="width:200px" value=""><br>
+					<select  class="input_hits_avaliable" name="Player_form[hits_avaliable]" style="width:204px">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3 or more">3 or more</option>
+					</select>
 				</div>
 				
 				<div style="text-align:center;margin-top:20px;">

@@ -21,9 +21,7 @@ or <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmk
 and install scripts:<br>
 1. <a href="Vortek Preload.user.js" target="_blank">Vortek Preload.user.js</a><br>
 2. <a href="TA stuff.user.js" target="_blank">TA stuff.user.js</a><br>
-“Vortek Preload” must be loaded earlier then “Ta stuff”<br>
-<br>
-after install, it will look like that:<br>
+“Vortek Preload” must be loaded BEFORE “Ta stuff”<br>
 <img class="screen" src="img/1.png"><br>
 <br>
 

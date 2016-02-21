@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8232baee-8f22-488e-8a2e-00a18b60b8b9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ta_stuff/index.php" />
-      <change type="DELETED" beforePath="C:\Dropbox\ta_db\ta_stuff\README.doc" afterPath="" />
-      <change type="DELETED" beforePath="C:\Dropbox\ta_db\ta_stuff\README.rtf" afterPath="" />
-      <change type="DELETED" beforePath="C:\Dropbox\ta_db\ta_stuff\index1.html" afterPath="" />
-      <change type="MOVED" beforePath="C:\Dropbox\ta_db\ta_stuff\readme_html_179718e3.png" afterPath="$PROJECT_DIR$/ta_stuff/img/4.png" />
-      <change type="MOVED" beforePath="C:\Dropbox\ta_db\ta_stuff\readme_html_2f4d80c0.png" afterPath="$PROJECT_DIR$/ta_stuff/img/7.png" />
-      <change type="MOVED" beforePath="C:\Dropbox\ta_db\ta_stuff\readme_html_617c4f7b.png" afterPath="$PROJECT_DIR$/ta_stuff/img/5.png" />
-      <change type="MOVED" beforePath="C:\Dropbox\ta_db\ta_stuff\readme_html_633e7ccb.png" afterPath="$PROJECT_DIR$/ta_stuff/img/3.png" />
-      <change type="MOVED" beforePath="C:\Dropbox\ta_db\ta_stuff\readme_html_9a99307.png" afterPath="$PROJECT_DIR$/ta_stuff/img/6.png" />
-      <change type="MOVED" beforePath="C:\Dropbox\ta_db\ta_stuff\readme_html_m3aaa17bc.png" afterPath="$PROJECT_DIR$/ta_stuff/img/1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ta_stuff/index.php" afterPath="$PROJECT_DIR$/ta_stuff/index.php" />
     </list>
     <ignored path="ta_db.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,8 +66,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ta_stuff/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4988662">
-              <caret line="36" column="55" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.4240363">
+              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -1004,8 +994,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ta_stuff/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4988662">
-          <caret line="36" column="55" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.4240363">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>

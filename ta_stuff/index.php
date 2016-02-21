@@ -19,8 +19,8 @@
 <a href="https://addons.mozilla.org/ru/firefox/addon/greasemonkey/" target="_blank">Greasemonkey</a> (for Firefox)
 or <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank">Tampermonkey</a> (for Chrome)<br>
 and install scripts:<br>
-1. <a href="Vortek Preload.user.js">Vortek Preload.user.js</a><br>
-2. <a href="TA stuff.user.js">TA stuff.user.js</a><br>
+1. <a href="Vortek Preload.user.js" target="_blank">Vortek Preload.user.js</a><br>
+2. <a href="TA stuff.user.js" target="_blank">TA stuff.user.js</a><br>
 “Vortek Preload” must be loaded earlier then “Ta stuff”<br>
 <br>
 after install, it will look like that:<br>

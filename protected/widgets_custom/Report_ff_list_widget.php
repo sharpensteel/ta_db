@@ -35,9 +35,11 @@ class Report_ff_list_widget extends CWidget{
 			$sql_select_players .= "(a.`allways_full_update` OR p.`interested_in_ff_run`)";
 		}
 		else{
-			$swapin_team = query_scalar('select swapin_team from global_data where id=1');
-			if(''.$swapin_team === '') $swapin_team = '$@UNUSED@$';
-			$sql_select_players .= "(a.`allways_full_update` or trim(lower(p.team))=trim(lower('".$swapin_team."')) )";
+			//$swapin_team = query_scalar('select swapin_team from global_data where id=1');
+			//if(''.$swapin_team === '') $swapin_team = '$@UNUSED@$';
+			//$sql_select_players .= "(a.`allways_full_update` or trim(lower(p.team))=trim(lower('".$swapin_team."')) )";
+
+			$sql_select_players .= "(a.`allways_full_update` or length(trim(p.team)) )";
 		}
 
 		$sql_select_players .= " order by p.offense_level desc";

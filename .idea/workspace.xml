@@ -120,13 +120,13 @@
       <file leaf-file-name="Report_ff_list_widget.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5975057">
-              <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.7324263">
+              <caret line="41" column="83" selection-start-line="41" selection-start-column="83" selection-end-line="41" selection-end-column="83" />
               <folding>
-                <marker date="1456048795832" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
-                <marker date="1456048795832" expanded="true" signature="1872:1918" placeholder="select swapi..global_data..." />
-                <marker date="1456048795832" expanded="true" signature="2237:2315" placeholder="SELECT team,..." />
-                <marker date="1456048795832" expanded="true" signature="9862:9964" placeholder="SELECT subst..." />
+                <marker date="1456048912131" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
+                <marker date="1456048912131" expanded="true" signature="1874:1920" placeholder="select swapi..global_data..." />
+                <marker date="1456048912131" expanded="true" signature="2324:2402" placeholder="SELECT team,..." />
+                <marker date="1456048912131" expanded="true" signature="9949:10051" placeholder="SELECT subst..." />
               </folding>
             </state>
           </provider>
@@ -572,10 +572,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="36" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="36" />
           <folding>
-            <marker date="1456048795832" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
-            <marker date="1456048795832" expanded="true" signature="1872:1918" placeholder="select swapi..global_data..." />
-            <marker date="1456048795832" expanded="true" signature="2237:2315" placeholder="SELECT team,..." />
-            <marker date="1456048795832" expanded="true" signature="9862:9964" placeholder="SELECT subst..." />
+            <marker date="1456048912131" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
+            <marker date="1456048912131" expanded="true" signature="1874:1920" placeholder="select swapi..global_data..." />
+            <marker date="1456048912131" expanded="true" signature="2324:2402" placeholder="SELECT team,..." />
+            <marker date="1456048912131" expanded="true" signature="9949:10051" placeholder="SELECT subst..." />
           </folding>
         </state>
       </provider>
@@ -641,10 +641,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding>
-            <marker date="1456048795832" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
-            <marker date="1456048795832" expanded="true" signature="1872:1918" placeholder="select swapi..global_data..." />
-            <marker date="1456048795832" expanded="true" signature="2237:2315" placeholder="SELECT team,..." />
-            <marker date="1456048795832" expanded="true" signature="9862:9964" placeholder="SELECT subst..." />
+            <marker date="1456048912131" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
+            <marker date="1456048912131" expanded="true" signature="1874:1920" placeholder="select swapi..global_data..." />
+            <marker date="1456048912131" expanded="true" signature="2324:2402" placeholder="SELECT team,..." />
+            <marker date="1456048912131" expanded="true" signature="9949:10051" placeholder="SELECT subst..." />
           </folding>
         </state>
       </provider>
@@ -694,10 +694,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="54" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding>
-            <marker date="1456048795832" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
-            <marker date="1456048795832" expanded="true" signature="1872:1918" placeholder="select swapi..global_data..." />
-            <marker date="1456048795832" expanded="true" signature="2237:2315" placeholder="SELECT team,..." />
-            <marker date="1456048795832" expanded="true" signature="9862:9964" placeholder="SELECT subst..." />
+            <marker date="1456048912131" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
+            <marker date="1456048912131" expanded="true" signature="1874:1920" placeholder="select swapi..global_data..." />
+            <marker date="1456048912131" expanded="true" signature="2324:2402" placeholder="SELECT team,..." />
+            <marker date="1456048912131" expanded="true" signature="9949:10051" placeholder="SELECT subst..." />
           </folding>
         </state>
       </provider>
@@ -881,13 +881,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5975057">
-          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.7324263">
+          <caret line="41" column="83" selection-start-line="41" selection-start-column="83" selection-end-line="41" selection-end-column="83" />
           <folding>
-            <marker date="1456048795832" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
-            <marker date="1456048795832" expanded="true" signature="1872:1918" placeholder="select swapi..global_data..." />
-            <marker date="1456048795832" expanded="true" signature="2237:2315" placeholder="SELECT team,..." />
-            <marker date="1456048795832" expanded="true" signature="9862:9964" placeholder="SELECT subst..." />
+            <marker date="1456048912131" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
+            <marker date="1456048912131" expanded="true" signature="1874:1920" placeholder="select swapi..global_data..." />
+            <marker date="1456048912131" expanded="true" signature="2324:2402" placeholder="SELECT team,..." />
+            <marker date="1456048912131" expanded="true" signature="9949:10051" placeholder="SELECT subst..." />
           </folding>
         </state>
       </provider>

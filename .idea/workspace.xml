@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8232baee-8f22-488e-8a2e-00a18b60b8b9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ta_stuff/TA stuff.user.js" afterPath="$PROJECT_DIR$/ta_stuff/TA stuff.user.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ta_stuff/index.php" />
+      <change type="DELETED" beforePath="C:\Dropbox\ta_db\ta_stuff\README.doc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\ta_db\ta_stuff\README.rtf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\ta_db\ta_stuff\index1.html" afterPath="" />
+      <change type="MOVED" beforePath="C:\Dropbox\ta_db\ta_stuff\readme_html_179718e3.png" afterPath="$PROJECT_DIR$/ta_stuff/img/4.png" />
+      <change type="MOVED" beforePath="C:\Dropbox\ta_db\ta_stuff\readme_html_2f4d80c0.png" afterPath="$PROJECT_DIR$/ta_stuff/img/7.png" />
+      <change type="MOVED" beforePath="C:\Dropbox\ta_db\ta_stuff\readme_html_617c4f7b.png" afterPath="$PROJECT_DIR$/ta_stuff/img/5.png" />
+      <change type="MOVED" beforePath="C:\Dropbox\ta_db\ta_stuff\readme_html_633e7ccb.png" afterPath="$PROJECT_DIR$/ta_stuff/img/3.png" />
+      <change type="MOVED" beforePath="C:\Dropbox\ta_db\ta_stuff\readme_html_9a99307.png" afterPath="$PROJECT_DIR$/ta_stuff/img/6.png" />
+      <change type="MOVED" beforePath="C:\Dropbox\ta_db\ta_stuff\readme_html_m3aaa17bc.png" afterPath="$PROJECT_DIR$/ta_stuff/img/1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ta_db.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,32 +34,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SiteController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="194" column="1" selection-start-line="194" selection-start-column="1" selection-end-line="194" selection-end-column="1" />
-              <folding>
-                <marker date="1439823804000" expanded="true" signature="775:821" placeholder="SELECT dt FR..attack..." />
-                <marker date="1439823804000" expanded="true" signature="4841:4948" placeholder="insert into ..." />
-                <marker date="1439823804000" expanded="true" signature="5075:5143" placeholder="update playe..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ff_list_for_attack.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/site/ff_list_for_attack.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <marker date="1431643769000" expanded="true" signature="397:468" placeholder="select unix_..global_data..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GameClientBackendController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/controllers/GameClientBackendController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -68,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TA stuff.user.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TA stuff.user.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ta_stuff/TA stuff.user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8555176">
-              <caret line="108" column="55" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+            <state vertical-scroll-proportion="-8.931034">
+              <caret line="79" column="127" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <marker date="1456055056814" expanded="true" signature="1058:1125" placeholder="..." />
@@ -82,75 +66,57 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Report_activityController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/Report_activityController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
+      <file leaf-file-name="7.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ta_stuff/img/7.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Report_activity_widget.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/widgets_custom/Report_activity_widget.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ta_stuff/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.807692">
-              <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.4988662">
+              <caret line="36" column="55" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
               <folding>
-                <marker date="1437609980000" expanded="true" signature="282:522" placeholder="SELECT att_l..attack..." />
-                <marker date="1437609980000" expanded="true" signature="646:718" placeholder="select id, n..player..." />
-                <marker date="1437609980000" expanded="true" signature="1465:1503" placeholder="select name ..alliance..." />
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player_updateController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/Player_updateController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
+      <file leaf-file-name="6.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ta_stuff/img/6.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/models/Player.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.384615">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
+      <file leaf-file-name="3.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ta_stuff/img/3.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="World_data_updater.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/models/World_data_updater.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.653846">
-              <caret line="213" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
-              <folding>
-                <marker date="1456048370540" expanded="true" signature="2204:2276" placeholder="update globa..." />
-                <marker date="1456048370540" expanded="true" signature="2437:2483" placeholder="select id, n..alliance..." />
-              </folding>
-            </state>
+      <file leaf-file-name="4.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ta_stuff/img/4.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Report_ff_list_widget.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-28.692308">
-              <caret line="244" column="0" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
-              <folding>
-                <marker date="1456050116669" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
-                <marker date="1456050116669" expanded="true" signature="1874:1920" placeholder="select swapi..global_data..." />
-                <marker date="1456050116669" expanded="true" signature="2324:2402" placeholder="SELECT team,..." />
-                <marker date="1456050116669" expanded="true" signature="9851:9953" placeholder="SELECT subst..." />
-              </folding>
-            </state>
+      <file leaf-file-name="5.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ta_stuff/img/5.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ta_stuff/img/1.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -166,6 +132,8 @@
         <option value="$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php" />
         <option value="$PROJECT_DIR$/protected/controllers/GameClientBackendController.php" />
         <option value="$PROJECT_DIR$/ta_stuff/TA stuff.user.js" />
+        <option value="$PROJECT_DIR$/ta_stuff/index.html" />
+        <option value="$PROJECT_DIR$/ta_stuff/index.php" />
       </list>
     </option>
   </component>
@@ -238,6 +206,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ta_stuff" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_stuff" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -417,6 +403,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Dropbox\ta_db\ta_stuff\img" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
@@ -460,9 +451,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26012793" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26012793" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -481,6 +472,26 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26012793" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24946696" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -503,9 +514,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="194" column="1" selection-start-line="194" selection-start-column="1" selection-end-line="194" selection-end-column="1" />
           <folding>
-            <marker date="1439823804000" expanded="true" signature="775:821" placeholder="SELECT dt FR..attack..." />
-            <marker date="1439823804000" expanded="true" signature="4841:4948" placeholder="insert into ..." />
-            <marker date="1439823804000" expanded="true" signature="5075:5143" placeholder="update playe..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="SELECT dt FR..attack..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="update playe..." />
           </folding>
         </state>
       </provider>
@@ -515,7 +526,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <marker date="1431643769000" expanded="true" signature="397:468" placeholder="select unix_..global_data..." />
+            <marker date="1431643769000" expanded="true" signature="-1:-1" placeholder="select unix_..global_data..." />
           </folding>
         </state>
       </provider>
@@ -569,9 +580,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <marker date="1437609980000" expanded="true" signature="282:522" placeholder="SELECT att_l..attack..." />
-            <marker date="1437609980000" expanded="true" signature="646:718" placeholder="select id, n..player..." />
-            <marker date="1437609980000" expanded="true" signature="1465:1503" placeholder="select name ..alliance..." />
+            <marker date="1437609980000" expanded="true" signature="-1:-1" placeholder="SELECT att_l..attack..." />
+            <marker date="1437609980000" expanded="true" signature="-1:-1" placeholder="select id, n..player..." />
+            <marker date="1437609980000" expanded="true" signature="-1:-1" placeholder="select name ..alliance..." />
           </folding>
         </state>
       </provider>
@@ -589,10 +600,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="36" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="36" />
           <folding>
-            <marker date="1456050116669" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
-            <marker date="1456050116669" expanded="true" signature="1874:1920" placeholder="select swapi..global_data..." />
-            <marker date="1456050116669" expanded="true" signature="2324:2402" placeholder="SELECT team,..." />
-            <marker date="1456050116669" expanded="true" signature="9851:9953" placeholder="SELECT subst..." />
+            <marker date="1456050116669" expanded="true" signature="-1:-1" placeholder="select * fro..global_data..." />
+            <marker date="1456050116669" expanded="true" signature="-1:-1" placeholder="select swapi..global_data..." />
+            <marker date="1456050116669" expanded="true" signature="-1:-1" placeholder="SELECT team,..." />
+            <marker date="1456050116669" expanded="true" signature="-1:-1" placeholder="SELECT subst..." />
           </folding>
         </state>
       </provider>
@@ -602,9 +613,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="194" column="1" selection-start-line="194" selection-start-column="1" selection-end-line="194" selection-end-column="1" />
           <folding>
-            <marker date="1439823804000" expanded="true" signature="775:821" placeholder="SELECT dt FR..attack..." />
-            <marker date="1439823804000" expanded="true" signature="4841:4948" placeholder="insert into ..." />
-            <marker date="1439823804000" expanded="true" signature="5075:5143" placeholder="update playe..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="SELECT dt FR..attack..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="update playe..." />
           </folding>
         </state>
       </provider>
@@ -666,10 +677,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding>
-            <marker date="1456050116669" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
-            <marker date="1456050116669" expanded="true" signature="1874:1920" placeholder="select swapi..global_data..." />
-            <marker date="1456050116669" expanded="true" signature="2324:2402" placeholder="SELECT team,..." />
-            <marker date="1456050116669" expanded="true" signature="9851:9953" placeholder="SELECT subst..." />
+            <marker date="1456050116669" expanded="true" signature="-1:-1" placeholder="select * fro..global_data..." />
+            <marker date="1456050116669" expanded="true" signature="-1:-1" placeholder="select swapi..global_data..." />
+            <marker date="1456050116669" expanded="true" signature="-1:-1" placeholder="SELECT team,..." />
+            <marker date="1456050116669" expanded="true" signature="-1:-1" placeholder="SELECT subst..." />
           </folding>
         </state>
       </provider>
@@ -679,9 +690,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="194" column="1" selection-start-line="194" selection-start-column="1" selection-end-line="194" selection-end-column="1" />
           <folding>
-            <marker date="1439823804000" expanded="true" signature="775:821" placeholder="SELECT dt FR..attack..." />
-            <marker date="1439823804000" expanded="true" signature="4841:4948" placeholder="insert into ..." />
-            <marker date="1439823804000" expanded="true" signature="5075:5143" placeholder="update playe..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="SELECT dt FR..attack..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="update playe..." />
           </folding>
         </state>
       </provider>
@@ -727,10 +738,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="54" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding>
-            <marker date="1456050116669" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
-            <marker date="1456050116669" expanded="true" signature="1874:1920" placeholder="select swapi..global_data..." />
-            <marker date="1456050116669" expanded="true" signature="2324:2402" placeholder="SELECT team,..." />
-            <marker date="1456050116669" expanded="true" signature="9851:9953" placeholder="SELECT subst..." />
+            <marker date="1456050116669" expanded="true" signature="-1:-1" placeholder="select * fro..global_data..." />
+            <marker date="1456050116669" expanded="true" signature="-1:-1" placeholder="select swapi..global_data..." />
+            <marker date="1456050116669" expanded="true" signature="-1:-1" placeholder="SELECT team,..." />
+            <marker date="1456050116669" expanded="true" signature="-1:-1" placeholder="SELECT subst..." />
           </folding>
         </state>
       </provider>
@@ -740,9 +751,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="194" column="1" selection-start-line="194" selection-start-column="1" selection-end-line="194" selection-end-column="1" />
           <folding>
-            <marker date="1439823804000" expanded="true" signature="775:821" placeholder="SELECT dt FR..attack..." />
-            <marker date="1439823804000" expanded="true" signature="4841:4948" placeholder="insert into ..." />
-            <marker date="1439823804000" expanded="true" signature="5075:5143" placeholder="update playe..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="SELECT dt FR..attack..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="update playe..." />
           </folding>
         </state>
       </provider>
@@ -788,9 +799,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="194" column="1" selection-start-line="194" selection-start-column="1" selection-end-line="194" selection-end-column="1" />
           <folding>
-            <marker date="1439823804000" expanded="true" signature="775:821" placeholder="SELECT dt FR..attack..." />
-            <marker date="1439823804000" expanded="true" signature="4841:4948" placeholder="insert into ..." />
-            <marker date="1439823804000" expanded="true" signature="5075:5143" placeholder="update playe..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="SELECT dt FR..attack..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="update playe..." />
           </folding>
         </state>
       </provider>
@@ -816,9 +827,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1439823804000" expanded="true" signature="775:821" placeholder="SELECT dt FR..attack..." />
-            <marker date="1439823804000" expanded="true" signature="4841:4948" placeholder="insert into ..." />
-            <marker date="1439823804000" expanded="true" signature="5075:5143" placeholder="update playe..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="SELECT dt FR..attack..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="update playe..." />
           </folding>
         </state>
       </provider>
@@ -848,7 +859,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <marker date="1431643769000" expanded="true" signature="397:468" placeholder="select unix_..global_data..." />
+            <marker date="1431643769000" expanded="true" signature="-1:-1" placeholder="select unix_..global_data..." />
           </folding>
         </state>
       </provider>
@@ -858,9 +869,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="194" column="1" selection-start-line="194" selection-start-column="1" selection-end-line="194" selection-end-column="1" />
           <folding>
-            <marker date="1439823804000" expanded="true" signature="775:821" placeholder="SELECT dt FR..attack..." />
-            <marker date="1439823804000" expanded="true" signature="4841:4948" placeholder="insert into ..." />
-            <marker date="1439823804000" expanded="true" signature="5075:5143" placeholder="update playe..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="SELECT dt FR..attack..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1439823804000" expanded="true" signature="-1:-1" placeholder="update playe..." />
           </folding>
         </state>
       </provider>
@@ -886,8 +897,8 @@
         <state vertical-scroll-proportion="-10.653846">
           <caret line="213" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
           <folding>
-            <marker date="1456048370540" expanded="true" signature="2204:2276" placeholder="update globa..." />
-            <marker date="1456048370540" expanded="true" signature="2437:2483" placeholder="select id, n..alliance..." />
+            <marker date="1456048370540" expanded="true" signature="-1:-1" placeholder="update globa..." />
+            <marker date="1456048370540" expanded="true" signature="-1:-1" placeholder="select id, n..alliance..." />
           </folding>
         </state>
       </provider>
@@ -897,9 +908,9 @@
         <state vertical-scroll-proportion="-22.807692">
           <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
           <folding>
-            <marker date="1437609980000" expanded="true" signature="282:522" placeholder="SELECT att_l..attack..." />
-            <marker date="1437609980000" expanded="true" signature="646:718" placeholder="select id, n..player..." />
-            <marker date="1437609980000" expanded="true" signature="1465:1503" placeholder="select name ..alliance..." />
+            <marker date="1437609980000" expanded="true" signature="-1:-1" placeholder="SELECT att_l..attack..." />
+            <marker date="1437609980000" expanded="true" signature="-1:-1" placeholder="select id, n..player..." />
+            <marker date="1437609980000" expanded="true" signature="-1:-1" placeholder="select name ..alliance..." />
           </folding>
         </state>
       </provider>
@@ -917,10 +928,10 @@
         <state vertical-scroll-proportion="-28.692308">
           <caret line="244" column="0" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
           <folding>
-            <marker date="1456050116669" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
-            <marker date="1456050116669" expanded="true" signature="1874:1920" placeholder="select swapi..global_data..." />
-            <marker date="1456050116669" expanded="true" signature="2324:2402" placeholder="SELECT team,..." />
-            <marker date="1456050116669" expanded="true" signature="9851:9953" placeholder="SELECT subst..." />
+            <marker date="1456050116669" expanded="true" signature="-1:-1" placeholder="select * fro..global_data..." />
+            <marker date="1456050116669" expanded="true" signature="-1:-1" placeholder="select swapi..global_data..." />
+            <marker date="1456050116669" expanded="true" signature="-1:-1" placeholder="SELECT team,..." />
+            <marker date="1456050116669" expanded="true" signature="-1:-1" placeholder="SELECT subst..." />
           </folding>
         </state>
       </provider>
@@ -949,14 +960,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ta_stuff/img/1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ta_stuff/TA stuff.user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8555176">
-          <caret line="108" column="55" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        <state vertical-scroll-proportion="-8.931034">
+          <caret line="79" column="127" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <marker date="1456055056814" expanded="true" signature="1058:1125" placeholder="..." />
             <marker date="1456055056814" expanded="true" signature="1278:1385" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ta_stuff/img/7.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ta_stuff/img/3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ta_stuff/img/4.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ta_stuff/img/6.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ta_stuff/img/5.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ta_stuff/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4988662">
+          <caret line="36" column="55" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

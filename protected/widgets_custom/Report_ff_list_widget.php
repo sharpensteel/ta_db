@@ -3,34 +3,34 @@
 
 
 class Report_ff_list_widget extends CWidget{
-	
+
 	/** @var boolean */
 	public $is_ff_attack_form = 0;
-	
+
 	public function run()
 	{
 		$global_data_record_arr = query_arr("select * from global_data where id=1");
 		$global_data_record = $global_data_record_arr[0];
 		$number_of_medalists_for_ff = $global_data_record['number_of_medalists_for_ff'];
 		$number_of_granted_by_cics = $global_data_record['number_of_granted_by_cics'];
-		
+
 		session_start_if_not();
 		$is_admin = array_default($_SESSION,'is_admin',0);
-		
-		
+
+
 		$sql_select_players = "SELECT p.id, p.name, p.alliance_id, p.rank, p.points, p.points_main_base, p.interested_in_ff_run, p.has_badge, p.has_sat_code,".
 			" p.offense_level, unix_timestamp(p.dt_last_updated_ol) dt_last_updated_ol, p.substitution, p.alliance_original_str, p.hub_name, p.hub_position, p.fraction, a.name alliance_name,".
 			" p.distance_to_ff_main, p.team, p.officer_comment, ".
 			" p.`alliance_id_granted_by_cic`, p.`alliance_id_representative`, ".
 			" if( COALESCE(aliance_granted_by_cic.abbreviation,'')<>'', aliance_granted_by_cic.abbreviation, aliance_granted_by_cic.name) aliance_granted_by_cic__name,".
 			" if( COALESCE(alliance_representative.abbreviation,'')<>'', alliance_representative.abbreviation, alliance_representative.name) alliance_representative__name,".
-			" p.offense_level_secondary, p.hits_avaliable".
+			" p.offense_level_secondary, p.hits_avaliable, p.inactive".
 			" FROM player p".
 			" LEFT JOIN alliance a ON p.`alliance_id`=a.`id`".
 			" LEFT JOIN alliance aliance_granted_by_cic ON p.`alliance_id_granted_by_cic`=aliance_granted_by_cic.`id`".
 			" LEFT JOIN alliance alliance_representative ON p.`alliance_id_representative`=alliance_representative.`id`".
 			" WHERE ";
-				
+
 		if(!$this->is_ff_attack_form){
 			$sql_select_players .= "(a.`allways_full_update` OR p.`interested_in_ff_run`)";
 		}
@@ -39,28 +39,28 @@ class Report_ff_list_widget extends CWidget{
 			if(''.$swapin_team === '') $swapin_team = '$@UNUSED@$';
 			$sql_select_players .= "(a.`allways_full_update` or trim(lower(p.team))=trim(lower('".$swapin_team."')) )";
 		}
-		
+
 		$sql_select_players .= " order by p.offense_level desc";
-		
+
 		$player_arr = query_arr($sql_select_players);
-		
+
 		$team_count_arr = query_arr("SELECT team, COUNT(*) count FROM player WHERE COALESCE(team,'')<>'' GROUP BY 1");
-		
-                
-                
-                
+
+
+
+
 		?>
 		<style>
 			.warning{
 				color:red;font-weght:bold;
 			}
-			
-			
+
+
 			.Report_ff_list_widget table{
 				border-collapse: collapse;
 				border-spacing: 0;
 			}
-	
+
 			.Report_ff_list_widget td, .Report_ff_list_widget th {
 				border: 1px solid #397127;
 				font-size: 1.1em;
@@ -84,40 +84,40 @@ class Report_ff_list_widget extends CWidget{
 			.Report_ff_list_widget tr.has_badge{
 				background:#F9F6E4;
 			}
-		
+
 			.Report_ff_list_widget .team_input.not_saved,.Report_ff_list_widget .team_input.not_saved:focus{
 				border-color: #0222FF;
 			}
-			
+
 			.Report_ff_list_widget tr.fl_row_player td:nth-child(5) {
 				font-size: 0.8em;
 			}
-			
+
 			.Report_ff_list_widget .table_teams td:first-child{
 				min-width: 100px;
 			}
-			
-			
+
+
 		</style>
-		
+
 		<?
-		
+
 		if($is_admin){
 			?>
 			<script>
-				
+
 				function ask_update_player_field($input){
 					var player_id = $input.closest('.fl_row_player').attr('player_id');
 					var field_name = $input.attr('field_name');
 					var field_value = $input.val();
 					//var field_value_htmlencoded = encodeURIComponent(field_value);
 					$input.addClass('not_saved');
-					
+
 					$.ajax({
 						url: '<?=baseUrl()?>site/Player_update_field',
 						data: {player_id:player_id,field_name:field_name, field_value:field_value}
 					}).done(function(data) {
-						
+
 						$input.data('saved_val', data);
 						if($input.data('saved_val') === $input.val()){
 							$input.removeClass('not_saved');
@@ -125,13 +125,13 @@ class Report_ff_list_widget extends CWidget{
 						//console.log(data);
 					});
 				}
-				
-				
+
+
 				$(function(){
-					
+
 					$('.Report_ff_list_widget .player_field_input').each(function() {
 						var $elem = $(this);
-						
+
 						// Save current value of $element
 						$elem.data('old_val', $elem.val());
 						$elem.data('saved_val', $elem.val());
@@ -144,9 +144,9 @@ class Report_ff_list_widget extends CWidget{
 							$elem.data('old_val', $elem.val());
 
 							// Do action
-							
+
 							ask_update_player_field($elem);
-							
+
 						  }
 						});
 
@@ -155,9 +155,9 @@ class Report_ff_list_widget extends CWidget{
 			</script>
 			<?
 		}
-		
+
 		?>
-		<div class="Report_ff_list_widget"> 
+		<div class="Report_ff_list_widget">
 			<table class="">
 				<thead>
 					<tr>
@@ -201,12 +201,12 @@ class Report_ff_list_widget extends CWidget{
 					if($field_value === 'MAGIC_UNUSED_CONST_12312'){
 						$field_value = $player[$field_name];
 					}
-					
+
 					if($is_admin){
 						?><input class="player_field_input" field_name="<?=$field_name?>" type="text" value="<?=$field_value?>"><?
 					}
 					else {
-						echo $player[$field_name];	
+						echo $player[$field_name];
 					}
 				}
 
@@ -225,7 +225,7 @@ class Report_ff_list_widget extends CWidget{
 					if($is_granted){
 						$is_team = 1;
 						$status .= "TEAM granted by cic ".$player["aliance_granted_by_cic__name"]." ";
-					}				
+					}
 
 
 					if($is_unbadged){
@@ -245,14 +245,19 @@ class Report_ff_list_widget extends CWidget{
 
 					if((int)$player["alliance_id_representative"]){
 						$status .= "repres. officer ".$player["alliance_representative__name"]." ";
-					}	
+					}
 
 					$team = htmlentities($player['team']);
 
 					$is_unbadged = $player['interested_in_ff_run'] && !$player['has_badge'];
+
 					?>
 					<tr class="fl_row_player <?=($player['has_badge'] ? 'has_badge' : '')?>" player_id="<?=($player['id'])?>" >
-						<td><?=$player['name']?></td>
+						<td>
+							<?=(int)$player['inactive'] ? '<strike>' : ''?>
+							<?=$player['name']?>
+							<?=(int)$player['inactive'] ? '</strike>' : ''?>
+						</td>
 						<td><?=sprintf("%.2f",$player['offense_level'])?></td>
 						<? if(!$this->is_ff_attack_form){ ?>
 							<td><?=$player['dt_last_updated_ol'] ? date('Y-n-d',$player['dt_last_updated_ol']) : ''?></td>
@@ -293,7 +298,7 @@ class Report_ff_list_widget extends CWidget{
 						<th>Players</th>
 					</tr>
 				</thead>
-			<?	
+			<?
 			foreach($team_count_arr as $record){
 				?>
 				<tr>
@@ -304,8 +309,8 @@ class Report_ff_list_widget extends CWidget{
 			}
 			?>
 			</table>
-                        
-                        
+
+
                         <br><br>
 			<b>Substitutions:</b>
 			<table class="table_substitutions" style="  margin-top: 10px;background:white;">
@@ -326,8 +331,8 @@ class Report_ff_list_widget extends CWidget{
                             }
                             $sub_arr_arr[$sub_holder][] = array('name'=>$sub_record['name'], 'team'=>$sub_record['team']);
                         }
-                        
-                        
+
+
 			foreach($sub_arr_arr as $sub_holder => $sub_arr){
                             $sub_list = '';
                             foreach($sub_arr as $sub){
@@ -344,11 +349,11 @@ class Report_ff_list_widget extends CWidget{
 			}
 			?>
 			</table>
-			
+
 		</div>
 		<?
 	}
-	
+
 	public function format_points($val){
 		if($val>1000000)
 			return ((int)($val/1000000))."M";

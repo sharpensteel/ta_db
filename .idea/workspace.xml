@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8232baee-8f22-488e-8a2e-00a18b60b8b9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/.gitignore" afterPath="$PROJECT_DIR$/protected/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/.htaccess" afterPath="$PROJECT_DIR$/protected/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/classic/views/.htaccess" afterPath="$PROJECT_DIR$/themes/classic/views/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/ActiveRecord_with_timestamp.php" afterPath="$PROJECT_DIR$/protected/components/ActiveRecord_with_timestamp.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/Attacks_tableController.php" afterPath="$PROJECT_DIR$/protected/controllers/Attacks_tableController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/BackendBaseController.php" afterPath="$PROJECT_DIR$/protected/components/BackendBaseController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Class_with_properties.php" afterPath="$PROJECT_DIR$/protected/components/Class_with_properties.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/ContactForm.php" afterPath="$PROJECT_DIR$/protected/models/ContactForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Controller.php" afterPath="$PROJECT_DIR$/protected/components/Controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/backend/controllers/Curl_managerController.php" afterPath="$PROJECT_DIR$/protected/modules/backend/controllers/Curl_managerController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Curl_utils.php" afterPath="$PROJECT_DIR$/protected/components/Curl_utils.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Form_utils.php" afterPath="$PROJECT_DIR$/protected/components/Form_utils.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/GameClientBackendController.php" afterPath="$PROJECT_DIR$/protected/controllers/GameClientBackendController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/widgets_custom/Hubs_map_widget.php" afterPath="$PROJECT_DIR$/protected/widgets_custom/Hubs_map_widget.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/identity_map/IMActiveRecord.php" afterPath="$PROJECT_DIR$/protected/components/identity_map/IMActiveRecord.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/identity_map/Identity_map.php" afterPath="$PROJECT_DIR$/protected/components/identity_map/Identity_map.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Image_manager.php" afterPath="$PROJECT_DIR$/protected/components/Image_manager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Image_resize_calculator.php" afterPath="$PROJECT_DIR$/protected/components/Image_resize_calculator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/LoginForm.php" afterPath="$PROJECT_DIR$/protected/models/LoginForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Packet_parser.php" afterPath="$PROJECT_DIR$/protected/models/Packet_parser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/backend/controllers/Packet_parserController.php" afterPath="$PROJECT_DIR$/protected/modules/backend/controllers/Packet_parserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Packet_parser_form.php" afterPath="$PROJECT_DIR$/protected/models/Packet_parser_form.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Pager.php" afterPath="$PROJECT_DIR$/protected/components/Pager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Player.php" afterPath="$PROJECT_DIR$/protected/models/Player.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Player_form.php" afterPath="$PROJECT_DIR$/protected/models/Player_form.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/Player_updateController.php" afterPath="$PROJECT_DIR$/protected/controllers/Player_updateController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/widgets_custom/Player_update_widget.php" afterPath="$PROJECT_DIR$/protected/widgets_custom/Player_update_widget.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/Report_activityController.php" afterPath="$PROJECT_DIR$/protected/controllers/Report_activityController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/widgets_custom/Report_activity_widget.php" afterPath="$PROJECT_DIR$/protected/widgets_custom/Report_activity_widget.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php" afterPath="$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/SiteController.php" afterPath="$PROJECT_DIR$/protected/controllers/SiteController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/tests/functional/SiteTest.php" afterPath="$PROJECT_DIR$/protected/tests/functional/SiteTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/identity_map/Test_identity_map.php" afterPath="$PROJECT_DIR$/protected/components/identity_map/Test_identity_map.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Tree_of_record.php" afterPath="$PROJECT_DIR$/protected/components/Tree_of_record.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/UserException.php" afterPath="$PROJECT_DIR$/protected/components/UserException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/UserIdentity.php" afterPath="$PROJECT_DIR$/protected/components/UserIdentity.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/WebApplication.php" afterPath="$PROJECT_DIR$/protected/components/WebApplication.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/tests/WebTestCase.php" afterPath="$PROJECT_DIR$/protected/tests/WebTestCase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/WebUser.php" afterPath="$PROJECT_DIR$/protected/components/WebUser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/World.php" afterPath="$PROJECT_DIR$/protected/models/World.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/World_data_updater.php" afterPath="$PROJECT_DIR$/protected/models/World_data_updater.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/crud/templates/my/_form.php" afterPath="$PROJECT_DIR$/protected/gii/crud/templates/my/_form.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/crud/templates/my/_search.php" afterPath="$PROJECT_DIR$/protected/gii/crud/templates/my/_search.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/crud/templates/my/_view.php" afterPath="$PROJECT_DIR$/protected/gii/crud/templates/my/_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/site/pages/about.php" afterPath="$PROJECT_DIR$/protected/views/site/pages/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/crud/templates/my/admin.php" afterPath="$PROJECT_DIR$/protected/gii/crud/templates/my/admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/attacks_table/attacks_table_index.php" afterPath="$PROJECT_DIR$/protected/views/attacks_table/attacks_table_index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/tests/bootstrap.php" afterPath="$PROJECT_DIR$/protected/tests/bootstrap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/common.less" afterPath="$PROJECT_DIR$/css/common.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/console.php" afterPath="$PROJECT_DIR$/protected/config/console.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/site/contact.php" afterPath="$PROJECT_DIR$/protected/views/site/contact.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/controller/templates/my/controller.php" afterPath="$PROJECT_DIR$/protected/gii/controller/templates/my/controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/crud/templates/my/controller.php" afterPath="$PROJECT_DIR$/protected/gii/crud/templates/my/controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/crud/templates/my/create.php" afterPath="$PROJECT_DIR$/protected/gii/crud/templates/my/create.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/backend/views/curl_manager/curl_manager_index.php" afterPath="$PROJECT_DIR$/protected/modules/backend/views/curl_manager/curl_manager_index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/docs/deploy.txt" afterPath="$PROJECT_DIR$/protected/docs/deploy.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/site/error.php" afterPath="$PROJECT_DIR$/protected/views/site/error.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/site/ff_list_for_attack.php" afterPath="$PROJECT_DIR$/protected/views/site/ff_list_for_attack.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index-test.php" afterPath="$PROJECT_DIR$/index-test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/crud/templates/my/index.php" afterPath="$PROJECT_DIR$/protected/gii/crud/templates/my/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/site/index.php" afterPath="$PROJECT_DIR$/protected/views/site/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/local_prod_sample.php" afterPath="$PROJECT_DIR$/protected/config/local_prod_sample.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/site/login.php" afterPath="$PROJECT_DIR$/protected/views/site/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/main.php" afterPath="$PROJECT_DIR$/protected/config/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/layouts/main_layout.php" afterPath="$PROJECT_DIR$/protected/views/layouts/main_layout.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/model/templates/default/model.php" afterPath="$PROJECT_DIR$/protected/gii/model/templates/default/model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/backend/views/packet_parser/packet_parser_upload_form.php" afterPath="$PROJECT_DIR$/protected/modules/backend/views/packet_parser/packet_parser_upload_form.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/tests/phpunit.xml" afterPath="$PROJECT_DIR$/protected/tests/phpunit.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/report_activity/report_activity_view.php" afterPath="$PROJECT_DIR$/protected/views/report_activity/report_activity_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/data/schema.mysql.sql" afterPath="$PROJECT_DIR$/protected/data/schema.mysql.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/data/schema.sqlite.sql" afterPath="$PROJECT_DIR$/protected/data/schema.sqlite.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/test.php" afterPath="$PROJECT_DIR$/protected/config/test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/crud/templates/my/update.php" afterPath="$PROJECT_DIR$/protected/gii/crud/templates/my/update.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/libs/utils.php" afterPath="$PROJECT_DIR$/protected/libs/utils.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/libs/utils_yii.php" afterPath="$PROJECT_DIR$/protected/libs/utils_yii.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/controller/templates/my/view.php" afterPath="$PROJECT_DIR$/protected/gii/controller/templates/my/view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/crud/templates/my/view.php" afterPath="$PROJECT_DIR$/protected/gii/crud/templates/my/view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/layouts/yii_column1.php" afterPath="$PROJECT_DIR$/protected/views/layouts/yii_column1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/layouts/yii_column2.php" afterPath="$PROJECT_DIR$/protected/views/layouts/yii_column2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/backend/layouts/yii_column2_.php" afterPath="$PROJECT_DIR$/protected/modules/backend/layouts/yii_column2_.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/yii_form.css" afterPath="$PROJECT_DIR$/css/yii_form.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/yii_ie.css" afterPath="$PROJECT_DIR$/css/yii_ie.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/yii_main.css" afterPath="$PROJECT_DIR$/css/yii_main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/layouts/yii_main.php" afterPath="$PROJECT_DIR$/protected/views/layouts/yii_main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/yii_print.css" afterPath="$PROJECT_DIR$/css/yii_print.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/yii_screen.css" afterPath="$PROJECT_DIR$/css/yii_screen.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/yiic.bat" afterPath="$PROJECT_DIR$/protected/yiic.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/yiic.php" afterPath="$PROJECT_DIR$/protected/yiic.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/yiic" afterPath="$PROJECT_DIR$/protected/yiic" />
+    </list>
+    <ignored path="ta_db.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="ta_db" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="SiteController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="194" column="1" selection-start-line="194" selection-start-column="1" selection-end-line="194" selection-end-column="1" />
+              <folding>
+                <marker date="1439823804000" expanded="true" signature="775:821" placeholder="SELECT dt FR..attack..." />
+                <marker date="1439823804000" expanded="true" signature="4841:4948" placeholder="insert into ..." />
+                <marker date="1439823804000" expanded="true" signature="5075:5143" placeholder="update playe..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ff_list_for_attack.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/site/ff_list_for_attack.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <marker date="1431643769000" expanded="true" signature="397:468" placeholder="select unix_..global_data..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameClientBackendController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/controllers/GameClientBackendController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.26923">
+              <caret line="289" column="0" selection-start-line="289" selection-start-column="0" selection-end-line="289" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Report_activityController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/controllers/Report_activityController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Report_activity_widget.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/widgets_custom/Report_activity_widget.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-22.807692">
+              <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+              <folding>
+                <marker date="1437609980000" expanded="true" signature="282:522" placeholder="SELECT att_l..attack..." />
+                <marker date="1437609980000" expanded="true" signature="646:718" placeholder="select id, n..player..." />
+                <marker date="1437609980000" expanded="true" signature="1465:1503" placeholder="select name ..alliance..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player_updateController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/controllers/Player_updateController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.769231">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/models/Player.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.384615">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="World_data_updater.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/models/World_data_updater.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.653846">
+              <caret line="213" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+              <folding>
+                <marker date="1456048370540" expanded="true" signature="2204:2276" placeholder="update globa..." />
+                <marker date="1456048370540" expanded="true" signature="2437:2483" placeholder="select id, n..alliance..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Report_ff_list_widget.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.63378686">
+              <caret line="255" column="20" selection-start-line="255" selection-start-column="20" selection-end-line="255" selection-end-column="20" />
+              <folding>
+                <marker date="1456048562484" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
+                <marker date="1456048562484" expanded="true" signature="1843:1889" placeholder="select swapi..global_data..." />
+                <marker date="1456048562484" expanded="true" signature="2208:2286" placeholder="SELECT team,..." />
+                <marker date="1456048562484" expanded="true" signature="9833:9935" placeholder="SELECT subst..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/protected/controllers/GameClientBackendController.php" />
+        <option value="$PROJECT_DIR$/protected/models/World_data_updater.php" />
+        <option value="$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="widgets_custom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="report_activity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ta_db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="97642ba0-5a23-4cf4-8067-13c0fa6e8265" server_name="ta_db">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8232baee-8f22-488e-8a2e-00a18b60b8b9" name="Default" comment="" />
+      <created>1440636859358</created>
+      <option name="number" value="Default" />
+      <updated>1440636859358</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26012793" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24946696" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="194" column="1" selection-start-line="194" selection-start-column="1" selection-end-line="194" selection-end-column="1" />
+          <folding>
+            <marker date="1439823804000" expanded="true" signature="775:821" placeholder="SELECT dt FR..attack..." />
+            <marker date="1439823804000" expanded="true" signature="4841:4948" placeholder="insert into ..." />
+            <marker date="1439823804000" expanded="true" signature="5075:5143" placeholder="update playe..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/ff_list_for_attack.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <marker date="1431643769000" expanded="true" signature="397:468" placeholder="select unix_..global_data..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/GameClientBackendController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/libs/utils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/libs/utils_yii.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="216" column="33" selection-start-line="216" selection-start-column="33" selection-end-line="216" selection-end-column="33" />
+          <folding>
+            <marker date="1430442360000" expanded="true" signature="-1:-1" placeholder="select ${$sq..." />
+            <marker date="1430442360000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1430442360000" expanded="true" signature="-1:-1" placeholder="delete from ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/Report_activityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/widgets_custom/Report_activity_widget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <marker date="1437609980000" expanded="true" signature="282:522" placeholder="SELECT att_l..attack..." />
+            <marker date="1437609980000" expanded="true" signature="646:718" placeholder="select id, n..player..." />
+            <marker date="1437609980000" expanded="true" signature="1465:1503" placeholder="select name ..alliance..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/Player_updateController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="56" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="36" />
+          <folding>
+            <marker date="1456048562484" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
+            <marker date="1456048562484" expanded="true" signature="1843:1889" placeholder="select swapi..global_data..." />
+            <marker date="1456048562484" expanded="true" signature="2208:2286" placeholder="SELECT team,..." />
+            <marker date="1456048562484" expanded="true" signature="9833:9935" placeholder="SELECT subst..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="194" column="1" selection-start-line="194" selection-start-column="1" selection-end-line="194" selection-end-column="1" />
+          <folding>
+            <marker date="1439823804000" expanded="true" signature="775:821" placeholder="SELECT dt FR..attack..." />
+            <marker date="1439823804000" expanded="true" signature="4841:4948" placeholder="insert into ..." />
+            <marker date="1439823804000" expanded="true" signature="5075:5143" placeholder="update playe..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/GameClientBackendController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/libs/utils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/libs/utils_yii.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="216" column="33" selection-start-line="216" selection-start-column="33" selection-end-line="216" selection-end-column="33" />
+          <folding>
+            <marker date="1430442360000" expanded="true" signature="-1:-1" placeholder="select ${$sq..." />
+            <marker date="1430442360000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1430442360000" expanded="true" signature="-1:-1" placeholder="delete from ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/Report_activityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/Player_updateController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding>
+            <marker date="1456048562484" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
+            <marker date="1456048562484" expanded="true" signature="1843:1889" placeholder="select swapi..global_data..." />
+            <marker date="1456048562484" expanded="true" signature="2208:2286" placeholder="SELECT team,..." />
+            <marker date="1456048562484" expanded="true" signature="9833:9935" placeholder="SELECT subst..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="194" column="1" selection-start-line="194" selection-start-column="1" selection-end-line="194" selection-end-column="1" />
+          <folding>
+            <marker date="1439823804000" expanded="true" signature="775:821" placeholder="SELECT dt FR..attack..." />
+            <marker date="1439823804000" expanded="true" signature="4841:4948" placeholder="insert into ..." />
+            <marker date="1439823804000" expanded="true" signature="5075:5143" placeholder="update playe..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/GameClientBackendController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="286" column="8" selection-start-line="286" selection-start-column="8" selection-end-line="286" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/libs/utils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/libs/utils_yii.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1430442360000" expanded="true" signature="-1:-1" placeholder="select ${$sq..." />
+            <marker date="1430442360000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1430442360000" expanded="true" signature="-1:-1" placeholder="delete from ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="54" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding>
+            <marker date="1456048562484" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
+            <marker date="1456048562484" expanded="true" signature="1843:1889" placeholder="select swapi..global_data..." />
+            <marker date="1456048562484" expanded="true" signature="2208:2286" placeholder="SELECT team,..." />
+            <marker date="1456048562484" expanded="true" signature="9833:9935" placeholder="SELECT subst..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="194" column="1" selection-start-line="194" selection-start-column="1" selection-end-line="194" selection-end-column="1" />
+          <folding>
+            <marker date="1439823804000" expanded="true" signature="775:821" placeholder="SELECT dt FR..attack..." />
+            <marker date="1439823804000" expanded="true" signature="4841:4948" placeholder="insert into ..." />
+            <marker date="1439823804000" expanded="true" signature="5075:5143" placeholder="update playe..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/GameClientBackendController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="286" column="8" selection-start-line="286" selection-start-column="8" selection-end-line="286" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/libs/utils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/libs/utils_yii.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1430442360000" expanded="true" signature="-1:-1" placeholder="select ${$sq..." />
+            <marker date="1430442360000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1430442360000" expanded="true" signature="-1:-1" placeholder="delete from ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="194" column="1" selection-start-line="194" selection-start-column="1" selection-end-line="194" selection-end-column="1" />
+          <folding>
+            <marker date="1439823804000" expanded="true" signature="775:821" placeholder="SELECT dt FR..attack..." />
+            <marker date="1439823804000" expanded="true" signature="4841:4948" placeholder="insert into ..." />
+            <marker date="1439823804000" expanded="true" signature="5075:5143" placeholder="update playe..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/GameClientBackendController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1439823804000" expanded="true" signature="775:821" placeholder="SELECT dt FR..attack..." />
+            <marker date="1439823804000" expanded="true" signature="4841:4948" placeholder="insert into ..." />
+            <marker date="1439823804000" expanded="true" signature="5075:5143" placeholder="update playe..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/libs/utils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/libs/utils_yii.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="216" column="33" selection-start-line="216" selection-start-column="33" selection-end-line="216" selection-end-column="33" />
+          <folding>
+            <marker date="1430442360000" expanded="true" signature="-1:-1" placeholder="select ${$sq..." />
+            <marker date="1430442360000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1430442360000" expanded="true" signature="-1:-1" placeholder="delete from ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/Report_activityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/ff_list_for_attack.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <marker date="1431643769000" expanded="true" signature="397:468" placeholder="select unix_..global_data..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="194" column="1" selection-start-line="194" selection-start-column="1" selection-end-line="194" selection-end-column="1" />
+          <folding>
+            <marker date="1439823804000" expanded="true" signature="775:821" placeholder="SELECT dt FR..attack..." />
+            <marker date="1439823804000" expanded="true" signature="4841:4948" placeholder="insert into ..." />
+            <marker date="1439823804000" expanded="true" signature="5075:5143" placeholder="update playe..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/GameClientBackendController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.26923">
+          <caret line="289" column="0" selection-start-line="289" selection-start-column="0" selection-end-line="289" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/Player_updateController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Player.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.384615">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/World_data_updater.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.653846">
+          <caret line="213" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+          <folding>
+            <marker date="1456048370540" expanded="true" signature="2204:2276" placeholder="update globa..." />
+            <marker date="1456048370540" expanded="true" signature="2437:2483" placeholder="select id, n..alliance..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/widgets_custom/Report_activity_widget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.807692">
+          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+          <folding>
+            <marker date="1437609980000" expanded="true" signature="282:522" placeholder="SELECT att_l..attack..." />
+            <marker date="1437609980000" expanded="true" signature="646:718" placeholder="select id, n..player..." />
+            <marker date="1437609980000" expanded="true" signature="1465:1503" placeholder="select name ..alliance..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/common.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63378686">
+          <caret line="255" column="20" selection-start-line="255" selection-start-column="20" selection-end-line="255" selection-end-column="20" />
+          <folding>
+            <marker date="1456048562484" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
+            <marker date="1456048562484" expanded="true" signature="1843:1889" placeholder="select swapi..global_data..." />
+            <marker date="1456048562484" expanded="true" signature="2208:2286" placeholder="SELECT team,..." />
+            <marker date="1456048562484" expanded="true" signature="9833:9935" placeholder="SELECT subst..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

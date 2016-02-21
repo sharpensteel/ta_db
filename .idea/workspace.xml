@@ -53,8 +53,8 @@
       <file leaf-file-name="GameClientBackendController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/controllers/GameClientBackendController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.71088433">
-              <caret line="238" column="76" selection-start-line="238" selection-start-column="76" selection-end-line="238" selection-end-column="76" />
+            <state vertical-scroll-proportion="0.4047619">
+              <caret line="225" column="80" selection-start-line="225" selection-start-column="80" selection-end-line="225" selection-end-column="80" />
               <folding>
                 <element signature="e#7#191#0#PHP" expanded="true" />
                 <element signature="e#6101#6130#0#HTML" expanded="true" />
@@ -946,8 +946,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/GameClientBackendController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71088433">
-          <caret line="238" column="76" selection-start-line="238" selection-start-column="76" selection-end-line="238" selection-end-column="76" />
+        <state vertical-scroll-proportion="0.4047619">
+          <caret line="225" column="80" selection-start-line="225" selection-start-column="80" selection-end-line="225" selection-end-column="80" />
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
             <element signature="e#6101#6130#0#HTML" expanded="true" />

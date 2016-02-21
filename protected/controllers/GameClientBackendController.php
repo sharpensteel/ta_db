@@ -221,7 +221,7 @@ class GameClientBackendController extends Controller {
 
 
 			var $link_world_data_update = jQ("<div><a class='fl_link' href='"+get_world_update_link()+"' target='_blank'>Update world data</a></div>");
-			/*$ta_stuff.append($link_world_data_update).append("<br>");
+			$ta_stuff.append($link_world_data_update).append("<br>");
 			$link_world_data_update.click(function(){
 				var w = Tw_update_world.create();
 			});*/

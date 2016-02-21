@@ -29,13 +29,22 @@ class GameClientBackendController extends Controller {
 
 			function get_url_ajax_endpoint_by_api(){ return ClientLib.Net.CommunicationManager.GetInstance().get_ServerUrl(); }
 
+			function get_session_id(){ return ClientLib.Net.CommunicationManager.GetInstance().get_InstanceId(); }
+
+			function get_world_update_link(){
+				var url = ta_db_base_url+"GameClientBackend/World_data_update" +
+				"?session_id="+html_encode(get_session_id()) +
+				"&url_ajax_endpoint_by_api=" + html_encode(get_url_ajax_endpoint_by_api()) +
+				"&url_client=" + html_encode(location.href);
+				return url;
+			}
 
 			var $ta_stuff = jQ(".ta_stuff .fl_body");
 			$ta_stuff.html("loaded! "+( (new Date()).toISOString().slice(0, 19)) ).append("<br><br>");
 			$ta_stuff.append('<style>.fl_link{ cursor:pointer;text-decoration:underline;color:#0000aa; }</style>');
 
 
-			function get_session_id(){ return ClientLib.Net.CommunicationManager.GetInstance().get_InstanceId(); }
+
 
 
 
@@ -81,10 +90,7 @@ class GameClientBackendController extends Controller {
 
 					_.tw.switch_collapse(1);
 
-					var url = ta_db_base_url+"GameClientBackend/World_data_update" +
-						"?session_id="+html_encode(get_session_id()) +
-						"&url_ajax_endpoint_by_api=" + html_encode(get_url_ajax_endpoint_by_api()) +
-						"&url_client=" + html_encode(location.href);
+					var url = get_world_update_link();
 
 					var $body = _.tw.$elem.find('.fl_body');
 					$body.css('overflow','initial');
@@ -214,11 +220,11 @@ class GameClientBackendController extends Controller {
 			};
 
 
-			var $link_world_data_update = jQ("<div><span class='fl_link'>Update world data</span></div>");
-			$ta_stuff.append($link_world_data_update).append("<br>");
+			var $link_world_data_update = jQ("<div><a class='fl_link' href='"+get_world_update_link()+"' target='_blank'>Update world data</a></div>");
+			/*$ta_stuff.append($link_world_data_update).append("<br>");
 			$link_world_data_update.click(function(){
 				var w = Tw_update_world.create();
-			});
+			});*/
 
 			var $link_hacker_attack_report = jQ("<div><span class='fl_link'>Hacker attack report</span></div>");
 			$ta_stuff.append($link_hacker_attack_report).append("<br>");

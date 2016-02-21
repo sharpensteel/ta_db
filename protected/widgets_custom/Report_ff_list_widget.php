@@ -29,7 +29,7 @@ class Report_ff_list_widget extends CWidget{
 			" LEFT JOIN alliance a ON p.`alliance_id`=a.`id`".
 			" LEFT JOIN alliance aliance_granted_by_cic ON p.`alliance_id_granted_by_cic`=aliance_granted_by_cic.`id`".
 			" LEFT JOIN alliance alliance_representative ON p.`alliance_id_representative`=alliance_representative.`id`".
-			" WHERE ";
+			" WHERE coalesce(p.inactive,0)=0";
 
 		if(!$this->is_ff_attack_form){
 			$sql_select_players .= "(a.`allways_full_update` OR p.`interested_in_ff_run`)";

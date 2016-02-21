@@ -2,97 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8232baee-8f22-488e-8a2e-00a18b60b8b9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/.gitignore" afterPath="$PROJECT_DIR$/protected/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/.htaccess" afterPath="$PROJECT_DIR$/protected/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/classic/views/.htaccess" afterPath="$PROJECT_DIR$/themes/classic/views/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/ActiveRecord_with_timestamp.php" afterPath="$PROJECT_DIR$/protected/components/ActiveRecord_with_timestamp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/Attacks_tableController.php" afterPath="$PROJECT_DIR$/protected/controllers/Attacks_tableController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/BackendBaseController.php" afterPath="$PROJECT_DIR$/protected/components/BackendBaseController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Class_with_properties.php" afterPath="$PROJECT_DIR$/protected/components/Class_with_properties.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/ContactForm.php" afterPath="$PROJECT_DIR$/protected/models/ContactForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Controller.php" afterPath="$PROJECT_DIR$/protected/components/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/backend/controllers/Curl_managerController.php" afterPath="$PROJECT_DIR$/protected/modules/backend/controllers/Curl_managerController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Curl_utils.php" afterPath="$PROJECT_DIR$/protected/components/Curl_utils.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Form_utils.php" afterPath="$PROJECT_DIR$/protected/components/Form_utils.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/GameClientBackendController.php" afterPath="$PROJECT_DIR$/protected/controllers/GameClientBackendController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/widgets_custom/Hubs_map_widget.php" afterPath="$PROJECT_DIR$/protected/widgets_custom/Hubs_map_widget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/identity_map/IMActiveRecord.php" afterPath="$PROJECT_DIR$/protected/components/identity_map/IMActiveRecord.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/identity_map/Identity_map.php" afterPath="$PROJECT_DIR$/protected/components/identity_map/Identity_map.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Image_manager.php" afterPath="$PROJECT_DIR$/protected/components/Image_manager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Image_resize_calculator.php" afterPath="$PROJECT_DIR$/protected/components/Image_resize_calculator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/LoginForm.php" afterPath="$PROJECT_DIR$/protected/models/LoginForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Packet_parser.php" afterPath="$PROJECT_DIR$/protected/models/Packet_parser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/backend/controllers/Packet_parserController.php" afterPath="$PROJECT_DIR$/protected/modules/backend/controllers/Packet_parserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Packet_parser_form.php" afterPath="$PROJECT_DIR$/protected/models/Packet_parser_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Pager.php" afterPath="$PROJECT_DIR$/protected/components/Pager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Player.php" afterPath="$PROJECT_DIR$/protected/models/Player.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Player_form.php" afterPath="$PROJECT_DIR$/protected/models/Player_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/Player_updateController.php" afterPath="$PROJECT_DIR$/protected/controllers/Player_updateController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/widgets_custom/Player_update_widget.php" afterPath="$PROJECT_DIR$/protected/widgets_custom/Player_update_widget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/Report_activityController.php" afterPath="$PROJECT_DIR$/protected/controllers/Report_activityController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/widgets_custom/Report_activity_widget.php" afterPath="$PROJECT_DIR$/protected/widgets_custom/Report_activity_widget.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php" afterPath="$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/SiteController.php" afterPath="$PROJECT_DIR$/protected/controllers/SiteController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/tests/functional/SiteTest.php" afterPath="$PROJECT_DIR$/protected/tests/functional/SiteTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/identity_map/Test_identity_map.php" afterPath="$PROJECT_DIR$/protected/components/identity_map/Test_identity_map.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Tree_of_record.php" afterPath="$PROJECT_DIR$/protected/components/Tree_of_record.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/UserException.php" afterPath="$PROJECT_DIR$/protected/components/UserException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/UserIdentity.php" afterPath="$PROJECT_DIR$/protected/components/UserIdentity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/WebApplication.php" afterPath="$PROJECT_DIR$/protected/components/WebApplication.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/tests/WebTestCase.php" afterPath="$PROJECT_DIR$/protected/tests/WebTestCase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/WebUser.php" afterPath="$PROJECT_DIR$/protected/components/WebUser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/World.php" afterPath="$PROJECT_DIR$/protected/models/World.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/World_data_updater.php" afterPath="$PROJECT_DIR$/protected/models/World_data_updater.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/crud/templates/my/_form.php" afterPath="$PROJECT_DIR$/protected/gii/crud/templates/my/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/crud/templates/my/_search.php" afterPath="$PROJECT_DIR$/protected/gii/crud/templates/my/_search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/crud/templates/my/_view.php" afterPath="$PROJECT_DIR$/protected/gii/crud/templates/my/_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/site/pages/about.php" afterPath="$PROJECT_DIR$/protected/views/site/pages/about.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/crud/templates/my/admin.php" afterPath="$PROJECT_DIR$/protected/gii/crud/templates/my/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/attacks_table/attacks_table_index.php" afterPath="$PROJECT_DIR$/protected/views/attacks_table/attacks_table_index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/tests/bootstrap.php" afterPath="$PROJECT_DIR$/protected/tests/bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/common.less" afterPath="$PROJECT_DIR$/css/common.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/console.php" afterPath="$PROJECT_DIR$/protected/config/console.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/site/contact.php" afterPath="$PROJECT_DIR$/protected/views/site/contact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/controller/templates/my/controller.php" afterPath="$PROJECT_DIR$/protected/gii/controller/templates/my/controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/crud/templates/my/controller.php" afterPath="$PROJECT_DIR$/protected/gii/crud/templates/my/controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/crud/templates/my/create.php" afterPath="$PROJECT_DIR$/protected/gii/crud/templates/my/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/backend/views/curl_manager/curl_manager_index.php" afterPath="$PROJECT_DIR$/protected/modules/backend/views/curl_manager/curl_manager_index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/docs/deploy.txt" afterPath="$PROJECT_DIR$/protected/docs/deploy.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/site/error.php" afterPath="$PROJECT_DIR$/protected/views/site/error.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/site/ff_list_for_attack.php" afterPath="$PROJECT_DIR$/protected/views/site/ff_list_for_attack.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index-test.php" afterPath="$PROJECT_DIR$/index-test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/crud/templates/my/index.php" afterPath="$PROJECT_DIR$/protected/gii/crud/templates/my/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/site/index.php" afterPath="$PROJECT_DIR$/protected/views/site/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/local_prod_sample.php" afterPath="$PROJECT_DIR$/protected/config/local_prod_sample.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/site/login.php" afterPath="$PROJECT_DIR$/protected/views/site/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/main.php" afterPath="$PROJECT_DIR$/protected/config/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/layouts/main_layout.php" afterPath="$PROJECT_DIR$/protected/views/layouts/main_layout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/model/templates/default/model.php" afterPath="$PROJECT_DIR$/protected/gii/model/templates/default/model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/backend/views/packet_parser/packet_parser_upload_form.php" afterPath="$PROJECT_DIR$/protected/modules/backend/views/packet_parser/packet_parser_upload_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/tests/phpunit.xml" afterPath="$PROJECT_DIR$/protected/tests/phpunit.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/report_activity/report_activity_view.php" afterPath="$PROJECT_DIR$/protected/views/report_activity/report_activity_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/data/schema.mysql.sql" afterPath="$PROJECT_DIR$/protected/data/schema.mysql.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/data/schema.sqlite.sql" afterPath="$PROJECT_DIR$/protected/data/schema.sqlite.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/test.php" afterPath="$PROJECT_DIR$/protected/config/test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/crud/templates/my/update.php" afterPath="$PROJECT_DIR$/protected/gii/crud/templates/my/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/libs/utils.php" afterPath="$PROJECT_DIR$/protected/libs/utils.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/libs/utils_yii.php" afterPath="$PROJECT_DIR$/protected/libs/utils_yii.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/controller/templates/my/view.php" afterPath="$PROJECT_DIR$/protected/gii/controller/templates/my/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/gii/crud/templates/my/view.php" afterPath="$PROJECT_DIR$/protected/gii/crud/templates/my/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/layouts/yii_column1.php" afterPath="$PROJECT_DIR$/protected/views/layouts/yii_column1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/layouts/yii_column2.php" afterPath="$PROJECT_DIR$/protected/views/layouts/yii_column2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/backend/layouts/yii_column2_.php" afterPath="$PROJECT_DIR$/protected/modules/backend/layouts/yii_column2_.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/yii_form.css" afterPath="$PROJECT_DIR$/css/yii_form.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/yii_ie.css" afterPath="$PROJECT_DIR$/css/yii_ie.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/yii_main.css" afterPath="$PROJECT_DIR$/css/yii_main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/layouts/yii_main.php" afterPath="$PROJECT_DIR$/protected/views/layouts/yii_main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/yii_print.css" afterPath="$PROJECT_DIR$/css/yii_print.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/yii_screen.css" afterPath="$PROJECT_DIR$/css/yii_screen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/yiic.bat" afterPath="$PROJECT_DIR$/protected/yiic.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/yiic.php" afterPath="$PROJECT_DIR$/protected/yiic.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/yiic" afterPath="$PROJECT_DIR$/protected/yiic" />
     </list>
     <ignored path="ta_db.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -210,13 +120,13 @@
       <file leaf-file-name="Report_ff_list_widget.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63378686">
-              <caret line="255" column="20" selection-start-line="255" selection-start-column="20" selection-end-line="255" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.5975057">
+              <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
               <folding>
-                <marker date="1456048562484" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
-                <marker date="1456048562484" expanded="true" signature="1843:1889" placeholder="select swapi..global_data..." />
-                <marker date="1456048562484" expanded="true" signature="2208:2286" placeholder="SELECT team,..." />
-                <marker date="1456048562484" expanded="true" signature="9833:9935" placeholder="SELECT subst..." />
+                <marker date="1456048774552" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
+                <marker date="1456048774552" expanded="true" signature="1867:1913" placeholder="select swapi..global_data..." />
+                <marker date="1456048774552" expanded="true" signature="2232:2310" placeholder="SELECT team,..." />
+                <marker date="1456048774552" expanded="true" signature="9857:9959" placeholder="SELECT subst..." />
               </folding>
             </state>
           </provider>
@@ -662,10 +572,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="36" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="36" />
           <folding>
-            <marker date="1456048562484" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
-            <marker date="1456048562484" expanded="true" signature="1843:1889" placeholder="select swapi..global_data..." />
-            <marker date="1456048562484" expanded="true" signature="2208:2286" placeholder="SELECT team,..." />
-            <marker date="1456048562484" expanded="true" signature="9833:9935" placeholder="SELECT subst..." />
+            <marker date="1456048774552" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
+            <marker date="1456048774552" expanded="true" signature="1867:1913" placeholder="select swapi..global_data..." />
+            <marker date="1456048774552" expanded="true" signature="2232:2310" placeholder="SELECT team,..." />
+            <marker date="1456048774552" expanded="true" signature="9857:9959" placeholder="SELECT subst..." />
           </folding>
         </state>
       </provider>
@@ -731,10 +641,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding>
-            <marker date="1456048562484" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
-            <marker date="1456048562484" expanded="true" signature="1843:1889" placeholder="select swapi..global_data..." />
-            <marker date="1456048562484" expanded="true" signature="2208:2286" placeholder="SELECT team,..." />
-            <marker date="1456048562484" expanded="true" signature="9833:9935" placeholder="SELECT subst..." />
+            <marker date="1456048774552" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
+            <marker date="1456048774552" expanded="true" signature="1867:1913" placeholder="select swapi..global_data..." />
+            <marker date="1456048774552" expanded="true" signature="2232:2310" placeholder="SELECT team,..." />
+            <marker date="1456048774552" expanded="true" signature="9857:9959" placeholder="SELECT subst..." />
           </folding>
         </state>
       </provider>
@@ -784,10 +694,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="54" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding>
-            <marker date="1456048562484" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
-            <marker date="1456048562484" expanded="true" signature="1843:1889" placeholder="select swapi..global_data..." />
-            <marker date="1456048562484" expanded="true" signature="2208:2286" placeholder="SELECT team,..." />
-            <marker date="1456048562484" expanded="true" signature="9833:9935" placeholder="SELECT subst..." />
+            <marker date="1456048774552" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
+            <marker date="1456048774552" expanded="true" signature="1867:1913" placeholder="select swapi..global_data..." />
+            <marker date="1456048774552" expanded="true" signature="2232:2310" placeholder="SELECT team,..." />
+            <marker date="1456048774552" expanded="true" signature="9857:9959" placeholder="SELECT subst..." />
           </folding>
         </state>
       </provider>
@@ -971,13 +881,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63378686">
-          <caret line="255" column="20" selection-start-line="255" selection-start-column="20" selection-end-line="255" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.5975057">
+          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
           <folding>
-            <marker date="1456048562484" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
-            <marker date="1456048562484" expanded="true" signature="1843:1889" placeholder="select swapi..global_data..." />
-            <marker date="1456048562484" expanded="true" signature="2208:2286" placeholder="SELECT team,..." />
-            <marker date="1456048562484" expanded="true" signature="9833:9935" placeholder="SELECT subst..." />
+            <marker date="1456048774552" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
+            <marker date="1456048774552" expanded="true" signature="1867:1913" placeholder="select swapi..global_data..." />
+            <marker date="1456048774552" expanded="true" signature="2232:2310" placeholder="SELECT team,..." />
+            <marker date="1456048774552" expanded="true" signature="9857:9959" placeholder="SELECT subst..." />
           </folding>
         </state>
       </provider>

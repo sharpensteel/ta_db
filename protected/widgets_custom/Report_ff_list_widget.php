@@ -54,7 +54,7 @@ class Report_ff_list_widget extends CWidget{
 		?>
 		<style>
 			.warning{
-				color:red;font-weght:bold;
+				color:red;font-weight:bold;
 			}
 
 
@@ -270,7 +270,6 @@ class Report_ff_list_widget extends CWidget{
 							<td><?=$this->format_points($player['points'])." /".$this->format_points($player['points_main_base']).""?></td>
 							<td><? player_field_input_render($player, $is_admin, "alliance_original_str") ?></td>
 							<td><?=$player['alliance_name']?></td>
-							<!--<td><?=($player['interested_in_ff_run'] && !$player['has_badge'])?'YES':'NO' ?></td>-->
 							<td><?=$player['has_badge']?'YES':'NO' ?></td>
 						<? } ?>
 						<td><? player_field_input_render($player, $is_admin, "substitution") ?></td>

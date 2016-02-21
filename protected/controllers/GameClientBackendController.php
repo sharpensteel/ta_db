@@ -32,6 +32,7 @@ class GameClientBackendController extends Controller {
 
 			var $ta_stuff = jQ(".ta_stuff .fl_body");
 			$ta_stuff.html("loaded! "+( (new Date()).toISOString().slice(0, 19)) ).append("<br><br>");
+			$ta_stuff.append('<style>.fl_link{ cursor:pointer;text-decoration:underline;color:#0000aa; }</style>');
 
 
 			function get_session_id(){ return ClientLib.Net.CommunicationManager.GetInstance().get_InstanceId(); }

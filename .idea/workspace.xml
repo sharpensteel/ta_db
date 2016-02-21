@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8232baee-8f22-488e-8a2e-00a18b60b8b9" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Dropbox\ta_db\mooo.com.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/GameClientBackendController.php" afterPath="$PROJECT_DIR$/protected/controllers/GameClientBackendController.php" />
     </list>
     <ignored path="ta_db.iws" />
@@ -54,13 +53,13 @@
       <file leaf-file-name="GameClientBackendController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/controllers/GameClientBackendController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5975057">
-              <caret line="223" column="12" selection-start-line="223" selection-start-column="12" selection-end-line="223" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.61678004">
+              <caret line="224" column="14" selection-start-line="224" selection-start-column="14" selection-end-line="224" selection-end-column="14" />
               <folding>
                 <element signature="e#7#191#0#PHP" expanded="true" />
-                <element signature="e#7358#7687#0#PHP" expanded="false" />
-                <element signature="e#7466#7612#1#PHP" expanded="false" />
-                <element signature="e#7692#7829#0#PHP" expanded="false" />
+                <element signature="e#7360#7689#0#PHP" expanded="false" />
+                <element signature="e#7468#7614#1#PHP" expanded="false" />
+                <element signature="e#7694#7831#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -523,9 +522,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
-            <element signature="e#7358#7687#0#PHP" expanded="false" />
-            <element signature="e#7466#7612#1#PHP" expanded="false" />
-            <element signature="e#7692#7829#0#PHP" expanded="false" />
+            <element signature="e#7360#7689#0#PHP" expanded="false" />
+            <element signature="e#7468#7614#1#PHP" expanded="false" />
+            <element signature="e#7694#7831#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -609,9 +608,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
-            <element signature="e#7358#7687#0#PHP" expanded="false" />
-            <element signature="e#7466#7612#1#PHP" expanded="false" />
-            <element signature="e#7692#7829#0#PHP" expanded="false" />
+            <element signature="e#7360#7689#0#PHP" expanded="false" />
+            <element signature="e#7468#7614#1#PHP" expanded="false" />
+            <element signature="e#7694#7831#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -683,9 +682,9 @@
           <caret line="286" column="8" selection-start-line="286" selection-start-column="8" selection-end-line="286" selection-end-column="8" />
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
-            <element signature="e#7358#7687#0#PHP" expanded="false" />
-            <element signature="e#7466#7612#1#PHP" expanded="false" />
-            <element signature="e#7692#7829#0#PHP" expanded="false" />
+            <element signature="e#7360#7689#0#PHP" expanded="false" />
+            <element signature="e#7468#7614#1#PHP" expanded="false" />
+            <element signature="e#7694#7831#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -741,9 +740,9 @@
           <caret line="286" column="8" selection-start-line="286" selection-start-column="8" selection-end-line="286" selection-end-column="8" />
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
-            <element signature="e#7358#7687#0#PHP" expanded="false" />
-            <element signature="e#7466#7612#1#PHP" expanded="false" />
-            <element signature="e#7692#7829#0#PHP" expanded="false" />
+            <element signature="e#7360#7689#0#PHP" expanded="false" />
+            <element signature="e#7468#7614#1#PHP" expanded="false" />
+            <element signature="e#7694#7831#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -786,9 +785,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
-            <element signature="e#7358#7687#0#PHP" expanded="false" />
-            <element signature="e#7466#7612#1#PHP" expanded="false" />
-            <element signature="e#7692#7829#0#PHP" expanded="false" />
+            <element signature="e#7360#7689#0#PHP" expanded="false" />
+            <element signature="e#7468#7614#1#PHP" expanded="false" />
+            <element signature="e#7694#7831#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -917,13 +916,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/GameClientBackendController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5975057">
-          <caret line="223" column="12" selection-start-line="223" selection-start-column="12" selection-end-line="223" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.61678004">
+          <caret line="224" column="14" selection-start-line="224" selection-start-column="14" selection-end-line="224" selection-end-column="14" />
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
-            <element signature="e#7358#7687#0#PHP" expanded="false" />
-            <element signature="e#7466#7612#1#PHP" expanded="false" />
-            <element signature="e#7692#7829#0#PHP" expanded="false" />
+            <element signature="e#7360#7689#0#PHP" expanded="false" />
+            <element signature="e#7468#7614#1#PHP" expanded="false" />
+            <element signature="e#7694#7831#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

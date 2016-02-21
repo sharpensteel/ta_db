@@ -109,6 +109,8 @@ class GameClientBackendController extends Controller {
 					_.tw = Tool_window.create("Hacker attack report",'544px','500px', {top:'60px',left:'140px'});
 					_.tw.switch_collapse(1);
 
+					setTimeout(function(){_.tw.bring_to_front();},1);
+
 					var $button_refresh = jQ("<div class='fl_button fl_refresh' style=''>refresh</div>");
 					_.tw.$elem.find('.fl_header').append($button_refresh);
 					$button_refresh.click(_.refresh.bind(_));

@@ -89,6 +89,7 @@ class GameClientBackendController extends Controller {
 					_.tw = Tool_window.create("Update world data",'544px','500px', {top:'60px',left:'140px'});
 
 					_.tw.switch_collapse(1);
+					setTimeout(function(){_.tw.bring_to_front();},1);
 
 					var url = get_world_update_link();
 
@@ -108,7 +109,6 @@ class GameClientBackendController extends Controller {
 
 					_.tw = Tool_window.create("Hacker attack report",'544px','500px', {top:'60px',left:'140px'});
 					_.tw.switch_collapse(1);
-
 					setTimeout(function(){_.tw.bring_to_front();},1);
 
 					var $button_refresh = jQ("<div class='fl_button fl_refresh' style=''>refresh</div>");
@@ -182,6 +182,7 @@ class GameClientBackendController extends Controller {
 
 					_.tw = Tool_window.create("Online report",'544px','500px', {top:'60px',left:'140px'});
 					_.tw.switch_collapse(1);
+					setTimeout(function(){_.tw.bring_to_front();},1);
 
 					var $button_refresh = jQ("<div class='fl_button fl_refresh' style=''>refresh</div>");
 					_.tw.$elem.find('.fl_header').append($button_refresh);
@@ -222,20 +223,20 @@ class GameClientBackendController extends Controller {
 			};
 
 
-			var $link_world_data_update = jQ("<div><a class='fl_link' href='"+get_world_update_link()+"' target='_blank'>Update world data</a></div>");
+			var $link_world_data_update = jQ("<div style="display:inline-block;"><a class='fl_link' href='"+get_world_update_link()+"' target='_blank'>Update world data</a></div>");
 			$ta_stuff.append($link_world_data_update).append("<br>");
 			/*$link_world_data_update.click(function(){
 				var w = Tw_update_world.create();
 			});*/
 
-			var $link_hacker_attack_report = jQ("<div><span class='fl_link'>Hacker attack report</span></div>");
+			var $link_hacker_attack_report = jQ("<div style="display:inline-block;"><span class='fl_link'>Hacker attack report</span></div>");
 			$ta_stuff.append($link_hacker_attack_report).append("<br>");
 			$link_hacker_attack_report.click(function(){
 				var w = Tw_hacker_attack_report.create();
 
 			});
 
-			var $link_online_report = jQ("<div><span class='fl_link'>Online report</span></div>");
+			var $link_online_report = jQ("<div style="display:inline-block;"><span class='fl_link'>Online report</span></div>");
 			$ta_stuff.append($link_online_report).append("<br>");
 			$link_online_report.click(function(){
 				var w = Tw_online_report.create();

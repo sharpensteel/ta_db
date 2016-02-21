@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8232baee-8f22-488e-8a2e-00a18b60b8b9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/GameClientBackendController.php" afterPath="$PROJECT_DIR$/protected/controllers/GameClientBackendController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ta_stuff/TA stuff.user.js" afterPath="$PROJECT_DIR$/ta_stuff/TA stuff.user.js" />
     </list>
     <ignored path="ta_db.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameClientBackendController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameClientBackendController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/controllers/GameClientBackendController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6553288">
-              <caret line="238" column="76" selection-start-line="238" selection-start-column="76" selection-end-line="238" selection-end-column="76" />
+            <state vertical-scroll-proportion="-15.692307">
+              <caret line="237" column="42" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
               <folding>
                 <element signature="e#7#191#0#PHP" expanded="true" />
                 <element signature="e#6101#6130#0#HTML" expanded="true" />
@@ -68,15 +68,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TA stuff.user.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TA stuff.user.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ta_stuff/TA stuff.user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="22" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.8555176">
+              <caret line="108" column="55" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <marker date="1455324216946" expanded="true" signature="1077:1144" placeholder="..." />
-                <marker date="1455324216946" expanded="true" signature="1297:1404" placeholder="..." />
+                <marker date="1456055056814" expanded="true" signature="1058:1125" placeholder="..." />
+                <marker date="1456055056814" expanded="true" signature="1278:1385" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -165,6 +165,7 @@
         <option value="$PROJECT_DIR$/protected/models/World_data_updater.php" />
         <option value="$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php" />
         <option value="$PROJECT_DIR$/protected/controllers/GameClientBackendController.php" />
+        <option value="$PROJECT_DIR$/ta_stuff/TA stuff.user.js" />
       </list>
     </option>
   </component>
@@ -459,9 +460,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26012793" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26012793" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -932,22 +933,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ta_stuff/TA stuff.user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="22" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="22" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1455324216946" expanded="true" signature="1077:1144" placeholder="..." />
-            <marker date="1455324216946" expanded="true" signature="1297:1404" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/GameClientBackendController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6553288">
-          <caret line="238" column="76" selection-start-line="238" selection-start-column="76" selection-end-line="238" selection-end-column="76" />
+        <state vertical-scroll-proportion="-15.692307">
+          <caret line="237" column="42" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
             <element signature="e#6101#6130#0#HTML" expanded="true" />
@@ -956,6 +945,18 @@
             <element signature="e#7615#7944#0#PHP" expanded="false" />
             <element signature="e#7723#7869#1#PHP" expanded="false" />
             <element signature="e#7949#8086#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ta_stuff/TA stuff.user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8555176">
+          <caret line="108" column="55" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1456055056814" expanded="true" signature="1058:1125" placeholder="..." />
+            <marker date="1456055056814" expanded="true" signature="1278:1385" placeholder="..." />
           </folding>
         </state>
       </provider>

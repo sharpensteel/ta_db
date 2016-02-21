@@ -229,14 +229,14 @@ class GameClientBackendController extends Controller {
 				var w = Tw_update_world.create();
 			});*/
 
-			var $link_hacker_attack_report = jQ("<div style="display:inline-block;"><span class='fl_link'>Hacker attack report</span></div>");
+			var $link_hacker_attack_report = jQ("<div style='display:inline-block;'><span class='fl_link'>Hacker attack report</span></div>");
 			$ta_stuff.append($link_hacker_attack_report).append("<br>");
 			$link_hacker_attack_report.click(function(){
 				var w = Tw_hacker_attack_report.create();
 
 			});
 
-			var $link_online_report = jQ("<div style="display:inline-block;"><span class='fl_link'>Online report</span></div>");
+			var $link_online_report = jQ("<div style='display:inline-block;'><span class='fl_link'>Online report</span></div>");
 			$ta_stuff.append($link_online_report).append("<br>");
 			$link_online_report.click(function(){
 				var w = Tw_online_report.create();

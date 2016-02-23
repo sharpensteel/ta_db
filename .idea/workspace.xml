@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8232baee-8f22-488e-8a2e-00a18b60b8b9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ta_stuff/TA stuff.user.js" afterPath="$PROJECT_DIR$/ta_stuff/TA stuff.user.js" />
-    </list>
+    <list default="true" id="8232baee-8f22-488e-8a2e-00a18b60b8b9" name="Default" comment="" />
     <ignored path="ta_db.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -42,9 +40,10 @@
       <file leaf-file-name="TA stuff.user.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ta_stuff/TA stuff.user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.037444934">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.43061674">
+              <caret line="23" column="38" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
+                <element signature="n#!!doc" expanded="true" />
                 <marker date="1456263926330" expanded="true" signature="1058:1125" placeholder="..." />
                 <marker date="1456263926330" expanded="true" signature="1278:1385" placeholder="..." />
               </folding>
@@ -864,9 +863,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ta_stuff/TA stuff.user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.037444934">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.43061674">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <marker date="1456263926330" expanded="true" signature="1058:1125" placeholder="..." />
             <marker date="1456263926330" expanded="true" signature="1278:1385" placeholder="..." />
           </folding>

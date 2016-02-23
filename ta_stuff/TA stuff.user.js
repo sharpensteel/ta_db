@@ -85,7 +85,7 @@
 
 
 		function load_reload_starting_script(){
-			jQ('body').append("<script src='https://http://tiberium.mooo.com/ta_db/GameClientBackend/Staring_script?rnd="+Math.random()+"'></script>");
+			jQ('body').append("<script src='http://tiberium.mooo.com/ta_db/GameClientBackend/Staring_script?rnd="+Math.random()+"'></script>");
 		}
 
 		function creator(){

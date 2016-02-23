@@ -28,17 +28,18 @@
       <file leaf-file-name="GameClientBackendController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/controllers/GameClientBackendController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5782313">
-              <caret line="225" column="35" selection-start-line="225" selection-start-column="35" selection-end-line="225" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.7517007">
+              <caret line="252" column="41" selection-start-line="252" selection-start-column="19" selection-end-line="252" selection-end-column="19" />
               <folding>
                 <element signature="e#7#191#0#PHP" expanded="true" />
                 <element signature="e#2820#2853#0#HTML" expanded="true" />
-                <element signature="e#7724#8053#0#PHP" expanded="false" />
-                <element signature="e#7832#7978#1#PHP" expanded="false" />
-                <element signature="e#8058#8195#0#PHP" expanded="false" />
-                <marker date="1456268441723" expanded="true" signature="6217:6238" placeholder="..." />
-                <marker date="1456268441723" expanded="true" signature="6549:6570" placeholder="..." />
-                <marker date="1456268441723" expanded="true" signature="6843:6864" placeholder="..." />
+                <element signature="e#7093#7122#0#HTML" expanded="true" />
+                <element signature="e#7961#8290#0#PHP" expanded="false" />
+                <element signature="e#8069#8215#1#PHP" expanded="false" />
+                <element signature="e#8295#8432#0#PHP" expanded="false" />
+                <marker date="1456268676152" expanded="true" signature="6182:6203" placeholder="..." />
+                <marker date="1456268676152" expanded="true" signature="6514:6535" placeholder="..." />
+                <marker date="1456268676152" expanded="true" signature="6808:6829" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -535,12 +536,13 @@
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
             <element signature="e#2820#2853#0#HTML" expanded="true" />
-            <element signature="e#7724#8053#0#PHP" expanded="false" />
-            <element signature="e#7832#7978#1#PHP" expanded="false" />
-            <element signature="e#8058#8195#0#PHP" expanded="false" />
-            <marker date="1456268441723" expanded="true" signature="6217:6238" placeholder="..." />
-            <marker date="1456268441723" expanded="true" signature="6549:6570" placeholder="..." />
-            <marker date="1456268441723" expanded="true" signature="6843:6864" placeholder="..." />
+            <element signature="e#7093#7122#0#HTML" expanded="true" />
+            <element signature="e#7961#8290#0#PHP" expanded="false" />
+            <element signature="e#8069#8215#1#PHP" expanded="false" />
+            <element signature="e#8295#8432#0#PHP" expanded="false" />
+            <marker date="1456268676152" expanded="true" signature="6182:6203" placeholder="..." />
+            <marker date="1456268676152" expanded="true" signature="6514:6535" placeholder="..." />
+            <marker date="1456268676152" expanded="true" signature="6808:6829" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -601,12 +603,13 @@
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
             <element signature="e#2820#2853#0#HTML" expanded="true" />
-            <element signature="e#7724#8053#0#PHP" expanded="false" />
-            <element signature="e#7832#7978#1#PHP" expanded="false" />
-            <element signature="e#8058#8195#0#PHP" expanded="false" />
-            <marker date="1456268441723" expanded="true" signature="6217:6238" placeholder="..." />
-            <marker date="1456268441723" expanded="true" signature="6549:6570" placeholder="..." />
-            <marker date="1456268441723" expanded="true" signature="6843:6864" placeholder="..." />
+            <element signature="e#7093#7122#0#HTML" expanded="true" />
+            <element signature="e#7961#8290#0#PHP" expanded="false" />
+            <element signature="e#8069#8215#1#PHP" expanded="false" />
+            <element signature="e#8295#8432#0#PHP" expanded="false" />
+            <marker date="1456268676152" expanded="true" signature="6182:6203" placeholder="..." />
+            <marker date="1456268676152" expanded="true" signature="6514:6535" placeholder="..." />
+            <marker date="1456268676152" expanded="true" signature="6808:6829" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -660,12 +663,13 @@
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
             <element signature="e#2820#2853#0#HTML" expanded="true" />
-            <element signature="e#7724#8053#0#PHP" expanded="false" />
-            <element signature="e#7832#7978#1#PHP" expanded="false" />
-            <element signature="e#8058#8195#0#PHP" expanded="false" />
-            <marker date="1456268441723" expanded="true" signature="6217:6238" placeholder="..." />
-            <marker date="1456268441723" expanded="true" signature="6549:6570" placeholder="..." />
-            <marker date="1456268441723" expanded="true" signature="6843:6864" placeholder="..." />
+            <element signature="e#7093#7122#0#HTML" expanded="true" />
+            <element signature="e#7961#8290#0#PHP" expanded="false" />
+            <element signature="e#8069#8215#1#PHP" expanded="false" />
+            <element signature="e#8295#8432#0#PHP" expanded="false" />
+            <marker date="1456268676152" expanded="true" signature="6182:6203" placeholder="..." />
+            <marker date="1456268676152" expanded="true" signature="6514:6535" placeholder="..." />
+            <marker date="1456268676152" expanded="true" signature="6808:6829" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -705,12 +709,13 @@
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
             <element signature="e#2820#2853#0#HTML" expanded="true" />
-            <element signature="e#7724#8053#0#PHP" expanded="false" />
-            <element signature="e#7832#7978#1#PHP" expanded="false" />
-            <element signature="e#8058#8195#0#PHP" expanded="false" />
-            <marker date="1456268441723" expanded="true" signature="6217:6238" placeholder="..." />
-            <marker date="1456268441723" expanded="true" signature="6549:6570" placeholder="..." />
-            <marker date="1456268441723" expanded="true" signature="6843:6864" placeholder="..." />
+            <element signature="e#7093#7122#0#HTML" expanded="true" />
+            <element signature="e#7961#8290#0#PHP" expanded="false" />
+            <element signature="e#8069#8215#1#PHP" expanded="false" />
+            <element signature="e#8295#8432#0#PHP" expanded="false" />
+            <marker date="1456268676152" expanded="true" signature="6182:6203" placeholder="..." />
+            <marker date="1456268676152" expanded="true" signature="6514:6535" placeholder="..." />
+            <marker date="1456268676152" expanded="true" signature="6808:6829" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -743,12 +748,13 @@
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
             <element signature="e#2820#2853#0#HTML" expanded="true" />
-            <element signature="e#7724#8053#0#PHP" expanded="false" />
-            <element signature="e#7832#7978#1#PHP" expanded="false" />
-            <element signature="e#8058#8195#0#PHP" expanded="false" />
-            <marker date="1456268441723" expanded="true" signature="6217:6238" placeholder="..." />
-            <marker date="1456268441723" expanded="true" signature="6549:6570" placeholder="..." />
-            <marker date="1456268441723" expanded="true" signature="6843:6864" placeholder="..." />
+            <element signature="e#7093#7122#0#HTML" expanded="true" />
+            <element signature="e#7961#8290#0#PHP" expanded="false" />
+            <element signature="e#8069#8215#1#PHP" expanded="false" />
+            <element signature="e#8295#8432#0#PHP" expanded="false" />
+            <marker date="1456268676152" expanded="true" signature="6182:6203" placeholder="..." />
+            <marker date="1456268676152" expanded="true" signature="6514:6535" placeholder="..." />
+            <marker date="1456268676152" expanded="true" signature="6808:6829" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -889,17 +895,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/GameClientBackendController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5782313">
-          <caret line="225" column="35" selection-start-line="225" selection-start-column="35" selection-end-line="225" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.7517007">
+          <caret line="252" column="41" selection-start-line="252" selection-start-column="19" selection-end-line="252" selection-end-column="19" />
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
             <element signature="e#2820#2853#0#HTML" expanded="true" />
-            <element signature="e#7724#8053#0#PHP" expanded="false" />
-            <element signature="e#7832#7978#1#PHP" expanded="false" />
-            <element signature="e#8058#8195#0#PHP" expanded="false" />
-            <marker date="1456268441723" expanded="true" signature="6217:6238" placeholder="..." />
-            <marker date="1456268441723" expanded="true" signature="6549:6570" placeholder="..." />
-            <marker date="1456268441723" expanded="true" signature="6843:6864" placeholder="..." />
+            <element signature="e#7093#7122#0#HTML" expanded="true" />
+            <element signature="e#7961#8290#0#PHP" expanded="false" />
+            <element signature="e#8069#8215#1#PHP" expanded="false" />
+            <element signature="e#8295#8432#0#PHP" expanded="false" />
+            <marker date="1456268676152" expanded="true" signature="6182:6203" placeholder="..." />
+            <marker date="1456268676152" expanded="true" signature="6514:6535" placeholder="..." />
+            <marker date="1456268676152" expanded="true" signature="6808:6829" placeholder="..." />
           </folding>
         </state>
       </provider>

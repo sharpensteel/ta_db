@@ -223,7 +223,7 @@ class GameClientBackendController extends Controller {
 
 			};
 
-			<?= $is_debug ? 'debug;' : '' ?>
+
 			var $link_world_data_update = jQ("<div style='display:inline-block;'><a class='fl_link' href='"+get_world_update_link()+"' target='_blank'>Update world data</a></div>");
 			$ta_stuff.append($link_world_data_update).append("<br>");
 			/*$link_world_data_update.click(function(){
@@ -243,6 +243,17 @@ class GameClientBackendController extends Controller {
 				var w = Tw_online_report.create();
 			});
 
+			<?php
+			if($is_debug){
+				?>
+				var $link_debug = jQ("<div style='display:inline-block;'><span class='fl_link'>debug</span></div>");
+				$ta_stuff.append(var $link_debug).append("<br>");
+				var $link_debug.click(function(){
+					debug;
+				});
+				<?php
+			}
+			?>
 
 		})();
 		}

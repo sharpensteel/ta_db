@@ -224,11 +224,11 @@ class GameClientBackendController extends Controller {
 			};
 
 
-			var $link_world_data_update = jQ("<div style='display:inline-block;'><a class='fl_link' href='"+get_world_update_link()+"' target='_blank'>Update world data</a></div>");
+			var $link_world_data_update = jQ("<div style='display:inline-block;'><span class='fl_link'>Update world data</span></div>");
 			$ta_stuff.append($link_world_data_update).append("<br>");
-			/*$link_world_data_update.click(function(){
-				var w = Tw_update_world.create();
-			});*/
+			$link_world_data_update.click(function(){
+				window.open(get_world_update_link(), '_blank');
+			});
 
 			var $link_hacker_attack_report = jQ("<div style='display:inline-block;'><span class='fl_link'>Hacker attack report</span></div>");
 			$ta_stuff.append($link_hacker_attack_report).append("<br>");

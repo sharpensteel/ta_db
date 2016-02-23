@@ -247,7 +247,7 @@ class GameClientBackendController extends Controller {
 			if($is_debug){
 				?>
 				var $link_debug = jQ("<div style='display:inline-block;'><span class='fl_link'>debug</span></div>");
-				$ta_stuff.append(var $link_debug).append("<br>");
+				$ta_stuff.append($link_debug).append("<br>");
 				$link_debug.click(function(){
 					debug;
 				});

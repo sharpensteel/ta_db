@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8232baee-8f22-488e-8a2e-00a18b60b8b9" name="Default" comment="" />
+    <list default="true" id="8232baee-8f22-488e-8a2e-00a18b60b8b9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/GameClientBackendController.php" afterPath="$PROJECT_DIR$/protected/controllers/GameClientBackendController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="ta_db.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -22,25 +25,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GameClientBackendController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameClientBackendController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/controllers/GameClientBackendController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="237" column="42" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5782313">
+              <caret line="225" column="35" selection-start-line="225" selection-start-column="35" selection-end-line="225" selection-end-column="35" />
               <folding>
                 <element signature="e#7#191#0#PHP" expanded="true" />
-                <element signature="e#7615#7944#0#PHP" expanded="false" />
-                <element signature="e#7723#7869#1#PHP" expanded="false" />
-                <element signature="e#7949#8086#0#PHP" expanded="false" />
+                <element signature="e#2820#2853#0#HTML" expanded="true" />
+                <element signature="e#7724#8053#0#PHP" expanded="false" />
+                <element signature="e#7832#7978#1#PHP" expanded="false" />
+                <element signature="e#8058#8195#0#PHP" expanded="false" />
+                <marker date="1456268441723" expanded="true" signature="6217:6238" placeholder="..." />
+                <marker date="1456268441723" expanded="true" signature="6549:6570" placeholder="..." />
+                <marker date="1456268441723" expanded="true" signature="6843:6864" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TA stuff.user.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TA stuff.user.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ta_stuff/TA stuff.user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43061674">
+            <state vertical-scroll-proportion="0.0">
               <caret line="23" column="38" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -61,8 +68,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ta_stuff/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.307693">
-              <caret line="30" column="58" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="58" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -113,10 +120,10 @@
       <list>
         <option value="$PROJECT_DIR$/protected/models/World_data_updater.php" />
         <option value="$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/GameClientBackendController.php" />
         <option value="$PROJECT_DIR$/ta_stuff/index.html" />
         <option value="$PROJECT_DIR$/ta_stuff/index.php" />
         <option value="$PROJECT_DIR$/ta_stuff/TA stuff.user.js" />
+        <option value="$PROJECT_DIR$/protected/controllers/GameClientBackendController.php" />
       </list>
     </option>
   </component>
@@ -436,7 +443,7 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26279318" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26545843" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -527,9 +534,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
-            <element signature="e#7615#7944#0#PHP" expanded="false" />
-            <element signature="e#7723#7869#1#PHP" expanded="false" />
-            <element signature="e#7949#8086#0#PHP" expanded="false" />
+            <element signature="e#2820#2853#0#HTML" expanded="true" />
+            <element signature="e#7724#8053#0#PHP" expanded="false" />
+            <element signature="e#7832#7978#1#PHP" expanded="false" />
+            <element signature="e#8058#8195#0#PHP" expanded="false" />
+            <marker date="1456268441723" expanded="true" signature="6217:6238" placeholder="..." />
+            <marker date="1456268441723" expanded="true" signature="6549:6570" placeholder="..." />
+            <marker date="1456268441723" expanded="true" signature="6843:6864" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -589,9 +600,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
-            <element signature="e#7615#7944#0#PHP" expanded="false" />
-            <element signature="e#7723#7869#1#PHP" expanded="false" />
-            <element signature="e#7949#8086#0#PHP" expanded="false" />
+            <element signature="e#2820#2853#0#HTML" expanded="true" />
+            <element signature="e#7724#8053#0#PHP" expanded="false" />
+            <element signature="e#7832#7978#1#PHP" expanded="false" />
+            <element signature="e#8058#8195#0#PHP" expanded="false" />
+            <marker date="1456268441723" expanded="true" signature="6217:6238" placeholder="..." />
+            <marker date="1456268441723" expanded="true" signature="6549:6570" placeholder="..." />
+            <marker date="1456268441723" expanded="true" signature="6843:6864" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -644,9 +659,13 @@
           <caret line="286" column="8" selection-start-line="286" selection-start-column="8" selection-end-line="286" selection-end-column="8" />
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
-            <element signature="e#7615#7944#0#PHP" expanded="false" />
-            <element signature="e#7723#7869#1#PHP" expanded="false" />
-            <element signature="e#7949#8086#0#PHP" expanded="false" />
+            <element signature="e#2820#2853#0#HTML" expanded="true" />
+            <element signature="e#7724#8053#0#PHP" expanded="false" />
+            <element signature="e#7832#7978#1#PHP" expanded="false" />
+            <element signature="e#8058#8195#0#PHP" expanded="false" />
+            <marker date="1456268441723" expanded="true" signature="6217:6238" placeholder="..." />
+            <marker date="1456268441723" expanded="true" signature="6549:6570" placeholder="..." />
+            <marker date="1456268441723" expanded="true" signature="6843:6864" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -685,9 +704,13 @@
           <caret line="286" column="8" selection-start-line="286" selection-start-column="8" selection-end-line="286" selection-end-column="8" />
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
-            <element signature="e#7615#7944#0#PHP" expanded="false" />
-            <element signature="e#7723#7869#1#PHP" expanded="false" />
-            <element signature="e#7949#8086#0#PHP" expanded="false" />
+            <element signature="e#2820#2853#0#HTML" expanded="true" />
+            <element signature="e#7724#8053#0#PHP" expanded="false" />
+            <element signature="e#7832#7978#1#PHP" expanded="false" />
+            <element signature="e#8058#8195#0#PHP" expanded="false" />
+            <marker date="1456268441723" expanded="true" signature="6217:6238" placeholder="..." />
+            <marker date="1456268441723" expanded="true" signature="6549:6570" placeholder="..." />
+            <marker date="1456268441723" expanded="true" signature="6843:6864" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -719,9 +742,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
-            <element signature="e#7615#7944#0#PHP" expanded="false" />
-            <element signature="e#7723#7869#1#PHP" expanded="false" />
-            <element signature="e#7949#8086#0#PHP" expanded="false" />
+            <element signature="e#2820#2853#0#HTML" expanded="true" />
+            <element signature="e#7724#8053#0#PHP" expanded="false" />
+            <element signature="e#7832#7978#1#PHP" expanded="false" />
+            <element signature="e#8058#8195#0#PHP" expanded="false" />
+            <marker date="1456268441723" expanded="true" signature="6217:6238" placeholder="..." />
+            <marker date="1456268441723" expanded="true" signature="6549:6570" placeholder="..." />
+            <marker date="1456268441723" expanded="true" signature="6843:6864" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -810,19 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/GameClientBackendController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="237" column="42" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
-          <folding>
-            <element signature="e#7#191#0#PHP" expanded="true" />
-            <element signature="e#7615#7944#0#PHP" expanded="false" />
-            <element signature="e#7723#7869#1#PHP" expanded="false" />
-            <element signature="e#7949#8086#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ta_stuff/img/1.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -855,20 +869,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ta_stuff/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.307693">
-          <caret line="30" column="58" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="58" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ta_stuff/TA stuff.user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43061674">
+        <state vertical-scroll-proportion="0.0">
           <caret line="23" column="38" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <marker date="1456263926330" expanded="true" signature="1058:1125" placeholder="..." />
             <marker date="1456263926330" expanded="true" signature="1278:1385" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/GameClientBackendController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5782313">
+          <caret line="225" column="35" selection-start-line="225" selection-start-column="35" selection-end-line="225" selection-end-column="35" />
+          <folding>
+            <element signature="e#7#191#0#PHP" expanded="true" />
+            <element signature="e#2820#2853#0#HTML" expanded="true" />
+            <element signature="e#7724#8053#0#PHP" expanded="false" />
+            <element signature="e#7832#7978#1#PHP" expanded="false" />
+            <element signature="e#8058#8195#0#PHP" expanded="false" />
+            <marker date="1456268441723" expanded="true" signature="6217:6238" placeholder="..." />
+            <marker date="1456268441723" expanded="true" signature="6549:6570" placeholder="..." />
+            <marker date="1456268441723" expanded="true" signature="6843:6864" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -15,6 +15,7 @@ class GameClientBackendController extends Controller {
 	function actionStaring_script($_){
 
 
+		$is_debug = isset($_REQUEST['is_debug']) && (int)$_REQUEST['is_debug'];
 
 		header('Content-Type: application/javascript');
 		?>
@@ -222,7 +223,7 @@ class GameClientBackendController extends Controller {
 
 			};
 
-
+			<?= $is_debug ? 'debug;' : '' ?>
 			var $link_world_data_update = jQ("<div style='display:inline-block;'><a class='fl_link' href='"+get_world_update_link()+"' target='_blank'>Update world data</a></div>");
 			$ta_stuff.append($link_world_data_update).append("<br>");
 			/*$link_world_data_update.click(function(){

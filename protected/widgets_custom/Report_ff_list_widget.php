@@ -31,7 +31,7 @@ class Report_ff_list_widget extends CWidget{
 			'offense_level_secondary',
 			'hits_avaliable',
 			'has_sat_code',
-			'hub_name, hub_position',
+			'hub_name',
 			'fraction',
 			'officer_comment',
 			'distance_to_ff_main',

@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8232baee-8f22-488e-8a2e-00a18b60b8b9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php" afterPath="$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/SiteController.php" afterPath="$PROJECT_DIR$/protected/controllers/SiteController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ta_stuff/index.php" afterPath="$PROJECT_DIR$/ta_stuff/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/libs/utils.php" afterPath="$PROJECT_DIR$/protected/libs/utils.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ta_db.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,13 +42,13 @@
       <file leaf-file-name="Report_ff_list_widget.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.80991733">
-              <caret line="119" column="57" selection-start-line="119" selection-start-column="57" selection-end-line="119" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.6225895">
+              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
               <folding>
-                <marker date="1457042526927" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
-                <marker date="1457042526927" expanded="true" signature="3988:4066" placeholder="SELECT team,..." />
-                <marker date="1457042526927" expanded="true" signature="5254:5292" placeholder="{...}" />
-                <marker date="1457042526927" expanded="true" signature="12459:12561" placeholder="SELECT subst..." />
+                <marker date="1457042794352" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
+                <marker date="1457042794352" expanded="true" signature="3974:4052" placeholder="SELECT team,..." />
+                <marker date="1457042794352" expanded="true" signature="5240:5278" placeholder="{...}" />
+                <marker date="1457042794352" expanded="true" signature="12445:12547" placeholder="SELECT subst..." />
               </folding>
             </state>
           </provider>
@@ -942,13 +938,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80991733">
-          <caret line="119" column="57" selection-start-line="119" selection-start-column="57" selection-end-line="119" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.6225895">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
           <folding>
-            <marker date="1457042526927" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
-            <marker date="1457042526927" expanded="true" signature="3988:4066" placeholder="SELECT team,..." />
-            <marker date="1457042526927" expanded="true" signature="5254:5292" placeholder="{...}" />
-            <marker date="1457042526927" expanded="true" signature="12459:12561" placeholder="SELECT subst..." />
+            <marker date="1457042794352" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
+            <marker date="1457042794352" expanded="true" signature="3974:4052" placeholder="SELECT team,..." />
+            <marker date="1457042794352" expanded="true" signature="5240:5278" placeholder="{...}" />
+            <marker date="1457042794352" expanded="true" signature="12445:12547" placeholder="SELECT subst..." />
           </folding>
         </state>
       </provider>

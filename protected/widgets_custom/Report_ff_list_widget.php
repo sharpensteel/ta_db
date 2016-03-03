@@ -61,10 +61,18 @@ class Report_ff_list_widget extends CWidget{
 
 
 		$print_column_title = function($title, $field) use($order_field, $order_dir){
-			$dir = ($field === $order_field) ? ($order_dir==='asc' ? 'desc' : 'asc') : null;
+
+			$dir = null;
+
+			$current_dir = null;
+			if($field === $order_field){
+				$current_dir = $order_dir;
+				$dir = ($order_dir==='asc' ? 'desc' : 'asc');
+
+			}
 
 			if($dir===null){
-				if(in_array($order_field,['name'],true)) {
+				if(in_array($order_field,['name','alliance_original_str','alliance_name',],true)) {
 					$dir = 'asc';
 				}
 				else{
@@ -96,7 +104,7 @@ class Report_ff_list_widget extends CWidget{
 
 			$url .= '?'.http_build_query($params);
 
-			?><a href="<?=$url?>"><?=$title?></a><?php
+			?><a href="<?=$url?>" class="link_sort"><?=$title?><?= $current_dir!==null ? ($current_dir=='desc'?'&nbsp;▼':'&nbsp;▲'):''?></a><?php
 		};
 
 
@@ -162,7 +170,7 @@ class Report_ff_list_widget extends CWidget{
 				padding-top: 5px;
 				text-align: left;
 			}
-			.Report_ff_list_widget th a{
+			.Report_ff_list_widget th a.link_sort{
 				color: #fff;
 			}
 

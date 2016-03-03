@@ -45,7 +45,12 @@ class Report_ff_list_widget extends CWidget{
 		}
 		$order_dir = strtolower(array_default($_REQUEST,'ff_list_order_dir'));
 		if(!in_array($order_dir,['asc','desc'],true)){
-			$order_dir = 'asc';
+			if(in_array($order_field,['name',''])) {
+				$order_dir = 'asc';
+			}
+			else{
+				$order_dir = 'desc';
+			}
 		}
 
 		if(!strlen($order_field)){

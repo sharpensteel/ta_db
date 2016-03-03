@@ -42,13 +42,13 @@
       <file leaf-file-name="Report_ff_list_widget.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6225895">
-              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.8333333">
+              <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
               <folding>
-                <marker date="1457042794352" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
-                <marker date="1457042794352" expanded="true" signature="3974:4052" placeholder="SELECT team,..." />
-                <marker date="1457042794352" expanded="true" signature="5240:5278" placeholder="{...}" />
-                <marker date="1457042794352" expanded="true" signature="12445:12547" placeholder="SELECT subst..." />
+                <marker date="1457042917336" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
+                <marker date="1457042917336" expanded="true" signature="4063:4141" placeholder="SELECT team,..." />
+                <marker date="1457042917336" expanded="true" signature="5329:5367" placeholder="{...}" />
+                <marker date="1457042917336" expanded="true" signature="12534:12636" placeholder="SELECT subst..." />
               </folding>
             </state>
           </provider>
@@ -938,13 +938,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/widgets_custom/Report_ff_list_widget.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6225895">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.8333333">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
           <folding>
-            <marker date="1457042794352" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
-            <marker date="1457042794352" expanded="true" signature="3974:4052" placeholder="SELECT team,..." />
-            <marker date="1457042794352" expanded="true" signature="5240:5278" placeholder="{...}" />
-            <marker date="1457042794352" expanded="true" signature="12445:12547" placeholder="SELECT subst..." />
+            <marker date="1457042917336" expanded="true" signature="174:210" placeholder="select * fro..global_data..." />
+            <marker date="1457042917336" expanded="true" signature="4063:4141" placeholder="SELECT team,..." />
+            <marker date="1457042917336" expanded="true" signature="5329:5367" placeholder="{...}" />
+            <marker date="1457042917336" expanded="true" signature="12534:12636" placeholder="SELECT subst..." />
           </folding>
         </state>
       </provider>

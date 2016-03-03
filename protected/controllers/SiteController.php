@@ -31,9 +31,9 @@ class SiteController extends Controller
 		$params = array();
 		$params['dt_last_attack'] = query_scalar('SELECT dt FROM attack ORDER BY id DESC LIMIT 1');
 		$this->render('index', $params);
-		
+
 	}
-	
+
 	public function actionFf_list_for_attack()
 	{
 		$this->render('ff_list_for_attack');
@@ -114,7 +114,7 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
-	
+
 	public function actionPlayer_update(){
 		$model = new Player_form();
 		try{
@@ -136,15 +136,15 @@ class SiteController extends Controller
 				if(!(int)$model->id){
 					throw new Exception('Select your name');
 				}
-				
+
 				$model->offense_level = (double)str_replace(',', '.', $model->offense_level);
 				if(!$model->offense_level){
 					throw new Exception('Enter correct offense level');
 				}
 
-				
+
 				$model->update();
-				
+
 				yii_flash_append('info', 'Information saved');
 
 				/*if($model->validate())
@@ -157,16 +157,17 @@ class SiteController extends Controller
 					}
 				}*/
 
-			}		
+			}
 		}
 		catch(Exception $e){
 			yii_flash_append('error', $e->getMessage());
 		}
 		header("Location: ".baseUrl());
 	}
-	
+
 	// https://ta_local/ta_db/site/Admin_secret_door?secret=asdeksjljk3s1sd4wsda
 	// http://146.185.186.182/ta_db/site/Admin_secret_door?secret=asdeksjljk3s1sd4wsda
+	// http://tiberium.mooo.com/ta_db/site/Admin_secret_door?secret=asdeksjljk3s1sd4wsda
 	public function actionAdmin_secret_door($secret){
 		if($secret != 'asdeksjljk3s1sd4wsda'){
 			yii_flash_append('error', 'incorrect secret!');
@@ -177,19 +178,19 @@ class SiteController extends Controller
 		}
 		header("Location: ".baseUrl());
 	}
-	
-	
+
+
 	public function actionPlayer_update_field($player_id, $field_name, $field_value){
 		session_start_if_not();
 		if(!array_default($_SESSION, 'is_admin',0)){
 			echo "only admins can do that."; return;
 		}
-		
+
 		$field_name = preg_replace('/[^\w]/u', '', $field_name);
-				
+
 		query_execute('insert into player_update_history (player_id, `'.$field_name.'`, ip) values (:player_id, :field_value, :ip)', array('player_id'=>$player_id, 'field_value'=>$field_value, 'ip'=>array_default($_SERVER,'REMOTE_ADDR')));
 		query_execute('update player set `'.$field_name.'`=:field_value where id=:player_id', array('player_id'=>$player_id, 'field_value'=>$field_value ));
 		echo $field_value;
 	}
-	
+
 }

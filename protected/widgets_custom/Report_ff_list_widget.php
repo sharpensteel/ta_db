@@ -18,6 +18,81 @@ class Report_ff_list_widget extends CWidget{
 		$is_admin = array_default($_SESSION,'is_admin',0);
 
 
+		$orderFields = array(
+			'name',
+			'offense_level',
+			'dt_last_updated_ol',
+			'team',
+			'points',
+			'alliance_original_str',
+			'alliance_name',
+			'has_badge',
+			'substitution',
+			'offense_level_secondary',
+			'hits_avaliable',
+			'has_sat_code',
+			'hub_name, hub_position',
+			'fraction',
+			'officer_comment',
+			'distance_to_ff_main',
+		);
+
+		$order_field = strtolower(array_default($_REQUEST,'ff_list_order_field'));
+		if(strlen($order_field)){
+			if(!in_array($order_field,$orderFields,true)){
+				$order_field = '';
+			}
+		}
+		$order_dir = strtolower(array_default($_REQUEST,'ff_list_order_dir'));
+		if(!in_array($order_dir,['asc','desc'],true)){
+			$order_dir = 'asc';
+		}
+
+		if(!strlen($order_field)){
+			$order_field = 'offense_level';
+			$order_dir = 'desc';
+		}
+
+
+		$order_by_sql = $order_field.' '.$order_dir;
+
+
+
+
+
+		$print_column_title = function($title, $field) use($order_field, $order_dir){
+			$dir = ($field === $order_field) ? ($order_dir==='asc' ? 'desc' : 'asc') : 'asc';
+
+			$request_url = $_SERVER['REQUEST_URI'];
+			$parts = parse_url($request_url);
+
+
+
+			$url = array_default($parts,'scheme','http').':'.'//';
+			$host = array_default($parts,'host');
+			if(!strlen($host)){
+				$host = $_SERVER['HTTP_HOST'];
+			}
+			$url .= $host;
+
+
+			if(strlen(array_default($parts,'port'))){
+				$url .= ':'.$parts['port'];
+			}
+			$url .= array_default($parts,'path');
+			parse_str( (string)array_default($parts,'query'), $params );
+			$params = (array)$params;
+			$params['ff_list_order_field'] = $field;
+			$params['ff_list_order_dir'] = $dir;
+
+			$url .= '?'.http_build_query($params);
+
+			?><a href="<?=$url?>"><?=$title?></a><?php
+		};
+
+
+
+
 		$sql_select_players = "SELECT p.id, p.name, p.alliance_id, p.rank, p.points, p.points_main_base, p.interested_in_ff_run, p.has_badge, p.has_sat_code,".
 			" p.offense_level, unix_timestamp(p.dt_last_updated_ol) dt_last_updated_ol, p.substitution, p.alliance_original_str, p.hub_name, p.hub_position, p.fraction, a.name alliance_name,".
 			" p.distance_to_ff_main, p.team, p.officer_comment, ".
@@ -42,7 +117,9 @@ class Report_ff_list_widget extends CWidget{
 			$sql_select_players .= "(a.`allways_full_update` or length(trim(p.team)) )";
 		}
 
-		$sql_select_players .= " order by p.offense_level desc";
+		$sql_select_players .= " order by ".$order_by_sql;
+
+
 
 		$player_arr = query_arr($sql_select_players);
 
@@ -68,7 +145,7 @@ class Report_ff_list_widget extends CWidget{
 				font-size: 1.1em;
 				padding: 3px 7px 2px;
 			}
-			.Report_ff_list_widget th {
+			.Report_ff_list_widget th{
 				background-color: #769B49;
 				color: #fff;
 				font-size: 1.2em;
@@ -76,6 +153,10 @@ class Report_ff_list_widget extends CWidget{
 				padding-top: 5px;
 				text-align: left;
 			}
+			.Report_ff_list_widget th a{
+				color: #fff;
+			}
+
 			.Report_ff_list_widget tr.alt td {
 				background-color: #769B49;
 				color: #000;
@@ -163,33 +244,33 @@ class Report_ff_list_widget extends CWidget{
 			<table class="">
 				<thead>
 					<tr>
-						<th>Name</th>
-						<th>OL</th>
+						<th><?=call_user_func($print_column_title, 'Name','name')?></th>
+						<th><?=call_user_func($print_column_title, 'OL','offense_level')?></th>
 						<? if(!$this->is_ff_attack_form){ ?>
-							<th>OL Updated</th>
+							<th><?=call_user_func($print_column_title, 'OL Updated','dt_last_updated_ol')?></th>
 						<? } ?>
-						<th style="min-width: 110px;">Group</th>
+						<th style="min-width: 110px;"><?=call_user_func($print_column_title, 'Group','team')?></th>
 						<? if(!$this->is_ff_attack_form){ ?>
 							<!--<th style="font-size: 0.8em;">Group calculated</th>-->
-							<th style="width:100px;">Scores<br>total/main base</th>
-							<th>Aliance origin</th>
-							<th>Aliance current</th>
+
+							<th style="width:100px;"><?=call_user_func($print_column_title, 'Scores<br>total/main base','points')?></th>
+							<th><?=call_user_func($print_column_title, 'Alliance origin','alliance_original_str')?></th>
+							<th><?=call_user_func($print_column_title, 'Alliance current','alliance_name')?></th>
 							<!--<th>Need badge?</th>-->
-							<th style="width:50px;">Have badge?</th>
+							<th style="width:50px;"><?=call_user_func($print_column_title, 'Have badge?','has_badge')?></th>
 						<? } ?>
-						<th>Substitution</th>
-						<th>OL secondary</th>
-						<th style="width:40px;">Hits avaliable</th>
-						<? if(!$this->is_ff_attack_form){ ?> <th>Sat. code</th> <? } ?>
-						<th>On hub</th>
-						<th>Fraction</th>
-						<th>Comment</th>
+						<th><?=call_user_func($print_column_title, 'Substitution','substitution')?></th>
+						<th><?=call_user_func($print_column_title, 'OL secondary','offense_level_secondary')?></th>
+						<th style="width:40px;"><?=call_user_func($print_column_title, 'Hits available','hits_avaliable')?></th>
+						<? if(!$this->is_ff_attack_form){ ?> <th><?=call_user_func($print_column_title, 'Sat. code','has_sat_code')?></th> <? } ?>
+						<th><?=call_user_func($print_column_title, 'On hub','hub_name')?></th>
+						<th><?=call_user_func($print_column_title, 'Fraction','fraction')?></th>
+						<th><?=call_user_func($print_column_title, 'Comment','officer_comment')?></th>
 						<!--<th style="font-size: 1em;">Distance<br>main base to FF</th>-->
 					</tr>
 				</thead>
+				<?php
 
-
-				<?
 
 				$count_unbadged = 0;
 

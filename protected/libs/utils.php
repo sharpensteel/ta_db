@@ -24,7 +24,7 @@ function print_r_to_string($var){
 //	error_log("Error: ".$text);
 //}
 
-function my_log($text){	
+function my_log($text){
 	if(empty($GLOBALS['CONFIG']) || empty($GLOBALS['CONFIG']['LOG_PATH'])){ // path to log not configured
 		error_log("my_log: ".$text."\n");
 	}
@@ -114,59 +114,59 @@ function curl_get_contents($url, $curl_options_additional=null, $throw_exception
 {
 	//TRACE_CALL(__METHOD__, func_get_args());
 	static $ch = 0;
-	
+
 	if(!function_exists('curl_init')){
 		error_log("curl not enabled!!");
 		if($throw_exceptions) throw new Exception ("curl not enabled!!");
 		exit;
 	}
-	
+
 	if(!$ch) $ch = curl_init();
-	
+
 	$ok = 1;
-	
-	
+
+
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	curl_setopt($ch, CURLOPT_HEADER, 1);	
-		
-	curl_setopt($ch, CURLOPT_URL, $url); 
-	
+	curl_setopt($ch, CURLOPT_HEADER, 1);
+
+	curl_setopt($ch, CURLOPT_URL, $url);
+
 	if(!empty($curl_options_additional)){
 		foreach ($curl_options_additional as $key => $val){
-			curl_setopt($ch, $key, $val); 
+			curl_setopt($ch, $key, $val);
 		}
 	}
-		
-	
-	
+
+
+
 	$response = curl_exec($ch);
-	
+
 	$header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
 	$header = substr($response, 0, $header_size);
 	$body = substr($response, $header_size);
 
-	
-	$status = curl_getinfo($ch, CURLINFO_HTTP_CODE);		
-	
+
+	$status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
 	$errorStr = "";
-	
+
 	if(curl_errno($ch))
 	{
 		$errorStr .= 'Curl error: ' . curl_error($ch).' ';
 		$ok = 0;
 	}
-	
+
 	if( $status<200 || $status>299 ){
 		$errorStr .= 'Response http status code: ' . $status.'. ';
 		$ok = 0;
 	}
-	
+
 
 	if(!$ok){
 		$errorStr = "error in ".__FUNCTION__.":\nurl: ".$url."\nerror:".$errorStr."\n";
 		if($throw_exceptions) throw new Exception ($errorStr);
 		$errorStr .= "response header: ".$header."\nresponse body: ".$body;
-		error_log($errorStr);		
+		error_log($errorStr);
 
 	}
 	else{
@@ -184,13 +184,13 @@ function session_start_if_not(){
 		session_start();
 		$isSectionStarted = 0;
 	}*/
-	
+
 	if(session_id() == ''){
 		try{
 			$res = @session_start();
 			if(!$res){
 				error_log(__FUNCTION__.": error in session_start(); reseting session.");
-				session_reset(); 
+				session_reset();
 			}
 		}
 		catch(Exception $e){
@@ -204,7 +204,7 @@ function ensureEndsWithSlash($url)
 {
 	return rtrim($url," /")."/";
 }
-	
+
 function ensureNotEndsWithSlash($url)
 {
 	return rtrim($url," /");
@@ -213,8 +213,8 @@ function ensureNotEndsWithSlash($url)
 
 
 
-function &array_default(&$arr, $index, $default_value=0){
-	if(empty($arr)) return $default_value;	
+function &array_default(&$arr, $index, $default_value=null){
+	if(empty($arr)) return $default_value;
 	$res = $default_value;
 	if(is_array($arr) && isset($arr[$index])){
 		$res = &$arr[$index];
@@ -225,12 +225,12 @@ function &array_default(&$arr, $index, $default_value=0){
 		return $res;
 	}
 	if(is_array($res)) error_log (__FUNCTION__.': returned copy of array! this function can\'t work correct with array of arrays!');
-	
+
 	return $default_value;
 }
 
-function array_default_not_ref($arr, $index, $default_value=0){		
-	if(empty($arr)) return $default_value;	
+function array_default_not_ref($arr, $index, $default_value=0){
+	if(empty($arr)) return $default_value;
 	if(is_array($arr) && isset($arr[$index])){
 		return $arr[$index];
 	}
@@ -246,10 +246,10 @@ function array_first_or_default($arr, $default_value=null){
 	if(is_array($arr) && count($arr)){
 		reset($arr);
 		$res = current($arr);
-	}	
-	
+	}
+
 	if(is_array($res)) error_log (__FUNCTION__.': returned copy of array! this function can\'t work correct with array of arrays!');
-	
+
 	return $res;
 }
 
@@ -258,7 +258,7 @@ function array_first_or_default_not_ref($arr, $default_value=null){
 	if(is_array($arr) && count($arr)){
 		reset($arr);
 		$res = current($arr);
-	}	
+	}
 	return $res;
 }
 
@@ -268,25 +268,25 @@ function array_first_or_default_not_ref($arr, $default_value=null){
 
 
 
-class AutoloadSimple1{	
+class AutoloadSimple1{
 	private static $rootDirArr = 0;
 	private static $isRegistered = 0;
-	
+
 	static public function registerRootDirectory($rootDir)
 	{
 		if(!self::$isRegistered) spl_autoload_register('AutoloadSimple::autoload');
-		
+
 		if(empty(self::$rootDirArr)) self::$rootDirArr = array();
-		
+
 		array_push(self::$rootDirArr, $rootDir);
 	}
-	
+
 	static private function autoload($classname)
 	{
-				
+
 		if( class_exists( $classname, false ))
 			return true;
-				
+
 
 		$classparts = explode( '\\', $classname );
 		$classfile = '/' . array_pop( $classparts ) . '.php';
@@ -295,13 +295,13 @@ class AutoloadSimple1{
 		if(!empty(static::$rootDirArr)){
 			foreach(static::$rootDirArr as $rootDir){
 				$filename = $rootDir . '/' . $namespace . $classfile;
-				
+
 				if( is_readable($filename)){
 					include_once $filename;
 				}
 			}
 		}
-		
+
 	}
 }
 
@@ -325,7 +325,7 @@ function string_simplify_for_url($str){
 	$str = str_replace( '%' , "проц.", $str);
 	$str = preg_replace("/_+/","_",$str);
 	$str = preg_replace("/_+/","_",$str);
-	
+
 	$str = trim($str," _");
 	//$str = urlencode($str);
 	return $str;
@@ -344,7 +344,7 @@ function url_append_parameters($url_begin, $url_parameters){
 
 
 /**
-* 
+*
 * @param array $arr array of records; each record is array('key'=>?, 'parent_key'=>?, 'field_aaa'=>?, 'field_bbb'=>? ....)
 * @param string $key_field_name  name of key field in record
 * @param string $parent_key_field_name name of key field in record
@@ -371,7 +371,7 @@ function get_parent_record_with_childrens($arr, $key_field_name, $parent_key_fie
 			   }
 
 		   }
-	   }			
+	   }
 	   $key_filter_arr = $children_key_filter_arr;
    }
    return $result_rec_arr;
@@ -380,7 +380,7 @@ function get_parent_record_with_childrens($arr, $key_field_name, $parent_key_fie
 
 
 /**
- * 
+ *
  * @param int $n
  * @param string $form1 x1 <письмо>
  * @param string $form2 x2..x4 <письма>
@@ -459,7 +459,7 @@ function my_exception_handler($exceptionObj)
 	$isInside= 1;
 	ob_start();
 	print_r($exceptionObj);
-	$exceptionText = ob_get_clean();  
+	$exceptionText = ob_get_clean();
 	error_log("Exception: ".$exceptionText);
 	$isInside=0;
 }
@@ -469,8 +469,8 @@ function my_exception_handler($exceptionObj)
 
 function my_shutdown_handler() //will be called when php script ends.
 {
-	
-	
+
+
 	$lasterror = error_get_last();
 	if($lasterror){
 		switch ($lasterror['type'])
@@ -497,7 +497,7 @@ function enable_log_request(){
 	$GLOBALS['ENABLE_LOG_REQUEST'] = 1;
 
 	my_log("REQUEST: ".(isset($_SERVER["REQUEST_URI"])?$_SERVER["REQUEST_URI"]:"NONE")."  ".$_SERVER['REMOTE_ADDR']." +++++++++++++++++++++++");
-	
+
 	set_exception_handler('my_exception_handler');
 	register_shutdown_function("my_shutdown_handler");
 }
@@ -522,9 +522,9 @@ function date_string_to_timestamp($str, $format = 'd.m.Y'){
 	if(!strlen($str)) return 0;
 	$arr = date_parse_from_format($format, $str);
 	if(!$arr || $arr['errors']) return 0;
-	
+
 	return mktime((int)$arr['hour'],(int)$arr['minute'],(int)$arr['second'],(int)$arr['month'],(int)$arr['day'],(int)$arr['year']);
-	
+
 }
 
 /**
@@ -534,38 +534,38 @@ function date_string_to_timestamp($str, $format = 'd.m.Y'){
  */
 function get_file_error_description($error_code, $lang='ru'){
 	$error_code = (int)$error_code;
-	
-	
-	
-	$description_arr = 
+
+
+
+	$description_arr =
 	array(
-		'en' =>	array( 
+		'en' =>	array(
 			'unknown' => 'Unknown file loading error code',
-			0=>"There is no error, the file uploaded with success", 
-			1=>"The uploaded file exceeds the upload_max_filesize directive in php.ini", 
+			0=>"There is no error, the file uploaded with success",
+			1=>"The uploaded file exceeds the upload_max_filesize directive in php.ini",
 			2=>"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form",
-			3=>"The uploaded file was only partially uploaded", 
-			4=>"No file was uploaded", 
+			3=>"The uploaded file was only partially uploaded",
+			4=>"No file was uploaded",
 			6=>"Missing a temporary folder"
 		),
 		'ru' => array(
 			'unknown' => 'Ошибка при загрузке файла, код неизвестен',
-			0=>"Файл удачно загружен", 
-			1=>"The uploaded file exceeds the upload_max_filesize directive in php.ini", 
+			0=>"Файл удачно загружен",
+			1=>"The uploaded file exceeds the upload_max_filesize directive in php.ini",
 			2=>"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form",
-			3=>"Файл был загружен не полностью", 
-			4=>"Отсутствует файл для загрузки", 
+			3=>"Файл был загружен не полностью",
+			4=>"Отсутствует файл для загрузки",
 			6=>"Missing a temporary folder"
 		)
-	); 
+	);
 	if(!key_exists($lang, $description_arr))
 		$lang = 'en';
-	
+
 	$d_l_arr = $description_arr[$lang];
 	if(!key_exists($error_code,$d_l_arr)) { $error_code = 'unknown'; }
-	
+
 	return $d_l_arr[$error_code]." (".$error_code.")";
-	
+
 }
 
 function remove_bom($str){
@@ -580,28 +580,28 @@ function remove_bom($str){
 
 
 /**
- * 
+ *
  * @param strin $xml_string
  * @param $schema_path use schema validation with schema in file
  * @param $schema_string use schema validation with schema in string
  * @return SimpleXMLElement|string return SimpleXMLElement object if validation ok, or string with error description
  */
 function simplexml_load_and_validate($xml_string, $schema_string=false)
-{	
-	
+{
+
 	libxml_clear_errors();
 	libxml_use_internal_errors(true);
-	
+
 	$simple_xml_element = simplexml_load_string($xml_string);
-		
+
 	$errors = libxml_get_errors();
 	$result = $simple_xml_element;
-	
+
 	$err = "";
 
 	if(!count($errors)){
 		if(!($simple_xml_element instanceof SimpleXMLElement)){ return "simple_xml_element is not SimpleXMLElement"; }
-			
+
 
 		if($schema_string !== false){
 			$dom_sxe = dom_import_simplexml($simple_xml_element);
@@ -614,12 +614,12 @@ function simplexml_load_and_validate($xml_string, $schema_string=false)
 			if ( !$dom->schemaValidateSource( $schema_string) ) {
 				$err = "xml not passes schema validation";
 				$errors = libxml_get_errors();
-			}		
+			}
 		}
 
 	}
-		
-		
+
+
 	if(count($errors)){
 		if(!is_string($err)) $err = "";
 		foreach ($errors as $error) {
@@ -653,10 +653,10 @@ function simplexml_load_and_validate($xml_string, $schema_string=false)
 	}
 
 
-	
-	
-	libxml_clear_errors();	
-	
+
+
+	libxml_clear_errors();
+
 	return $simple_xml_element;
 }
 
@@ -684,7 +684,7 @@ function load_function__array_column()
 	if (!function_exists('array_column')){
 		require_once __DIR__.'/array_column.php';
 	}
-		
+
 }
 
 function ob_capture($callback){
@@ -756,7 +756,7 @@ function strftime_ru($format = '%e %Ob %Yг.', $date = false) {
 
 function transliterate($input){
 	//todo: str_ireplace() works faster
-	
+
 	$gost = array(
 	   "Є"=>"YE","І"=>"I","Ѓ"=>"G","і"=>"i","№"=>"-","є"=>"ye","ѓ"=>"g",
 	   "А"=>"A","Б"=>"B","В"=>"V","Г"=>"G","Д"=>"D",
@@ -804,7 +804,7 @@ function get_backtrace_string($separator = '\r\n  '){
 }
 
 /**
- * 
+ *
  * @param mixed[] $unindexed_arr  array of objects that have field $field_name OR  array of arrays that have key $field_name
  * @param string $field_name delault value is 'id'
  * @param string $key_set_type if not null, do settype() for keys; possibles types: "integer" / "string" / "float" / "boolean" ...
@@ -815,18 +815,18 @@ function &make_array_indexed_by_records_field($unindexed_arr, $field_name='id', 
 		$empty_res = array();
 		return $empty_res;
 	}
-	
+
 	$indexed_arr = array();
 	reset($unindexed_arr);
 	$is_arrays = is_array(current($unindexed_arr));
-	
+
 	foreach($unindexed_arr as &$record){
 		$key = $is_arrays ? $record[$field_name] : $record->$field_name;
-		
+
 		if($key_set_type !== null){ settype($key,$key_set_type);  }
-		
+
 		$indexed_arr[$key] = &$record;
-	}		
+	}
 
 	return $indexed_arr;
 }
@@ -849,7 +849,7 @@ function get_field_value_recursive_not_ref($root, $default_value, $property_name
 			continue;
 		}
 		return $default_value;
-		
+
 	}
 	return $obj_or_arr;
 }

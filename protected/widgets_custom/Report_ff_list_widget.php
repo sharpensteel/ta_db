@@ -45,12 +45,7 @@ class Report_ff_list_widget extends CWidget{
 		}
 		$order_dir = strtolower(array_default($_REQUEST,'ff_list_order_dir'));
 		if(!in_array($order_dir,['asc','desc'],true)){
-			if(in_array($order_field,['name'],true)) {
-				$order_dir = 'asc';
-			}
-			else{
-				$order_dir = 'desc';
-			}
+			$order_dir = 'asc';
 		}
 
 		if(!strlen($order_field)){
@@ -66,7 +61,16 @@ class Report_ff_list_widget extends CWidget{
 
 
 		$print_column_title = function($title, $field) use($order_field, $order_dir){
-			$dir = ($field === $order_field) ? ($order_dir==='asc' ? 'desc' : 'asc') : 'asc';
+			$dir = ($field === $order_field) ? ($order_dir==='asc' ? 'desc' : 'asc') : null;
+
+			if($dir===null){
+				if(in_array($order_field,['name'],true)) {
+					$dir = 'asc';
+				}
+				else{
+					$dir = 'desc';
+				}
+			}
 
 			$request_url = $_SERVER['REQUEST_URI'];
 			$parts = parse_url($request_url);

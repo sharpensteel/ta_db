@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -16,6 +12,18 @@
 	}
 
 </style>
+
+
+<b>TA stuff</b> is javascript that shows panel in browser. This panel used to call my scripts from browser, from game page:<br>
+<ul>
+	<li>Update data from tiberium world</li>
+	<li>Hacker attack report</li>
+	<li>Online report</li>
+</ul>
+
+
+<h3>How to install this script:</h3>
+
 1. Open browser, open extension
 <a href="https://addons.mozilla.org/ru/firefox/addon/greasemonkey/" target="_blank">Greasemonkey</a> (for Firefox)
 or <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank">Tampermonkey</a> (for Chrome)<br>
@@ -43,11 +51,12 @@ there will be small bar. Click “expand”<br>
 Then click “Hacker attack report”<br>
 <img class="screen" src="img/6.png"><br>
 <br>
-Okey, final part! You can see list who is not injected yet<br>
+Okey, final part!<br>
+Click <b>Hacker attack report</b> to see list who is (not yet) injected virus<br>
 <br>
 You can click “refresh” to update report<br>
-Also you can click “collapse” to minimize panels<br>
 <img class="screen" src="img/7.png"><br>
+Also you can click “collapse” to minimize panels<br>
 </body>
 </html>
 

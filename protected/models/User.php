@@ -8,7 +8,6 @@
  * @property string $login
  * @property string $password
  * @property integer $alliance_id
- * @property integer $is_officer
  * @property string $role
  * @property integer $rank
  * @property integer $score
@@ -34,12 +33,12 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('alliance_id, is_officer, rank, score, base_count, is_admin', 'numerical', 'integerOnly'=>true),
+			array('alliance_id, rank, score, base_count, is_admin', 'numerical', 'integerOnly'=>true),
 			array('login, password, login_lowercase', 'length', 'max'=>50),
 			array('role', 'length', 'max'=>30),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, login, password, alliance_id, is_officer, role, rank, score, base_count, login_lowercase, is_admin', 'safe', 'on'=>'search'),
+			array('id, login, password, alliance_id, role, rank, score, base_count, login_lowercase, is_admin', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,7 +63,6 @@ class User extends CActiveRecord
 			'login' => 'Login',
 			'password' => 'Password',
 			'alliance_id' => 'Alliance',
-			'is_officer' => 'Is Фвьшт',
 			'role' => 'Role',
 			'rank' => 'Rank',
 			'score' => 'Score',
@@ -96,7 +94,6 @@ class User extends CActiveRecord
 		$criteria->compare('login',$this->login,true);
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('alliance_id',$this->alliance_id);
-		$criteria->compare('is_officer',$this->is_officer);
 		$criteria->compare('role',$this->role,true);
 		$criteria->compare('rank',$this->rank);
 		$criteria->compare('score',$this->score);

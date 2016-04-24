@@ -6,7 +6,7 @@ $GLOBALS['CACHE_SQL_LIFETIME_BY_DEFAULT'] = 30; // in seconds;  makes sence if `
 
 if(empty($GLOBALS['CONFIG'])) $GLOBALS['CONFIG'] = array();
 $GLOBALS['CONFIG']['LOG_PATH'] = __DIR__.'/../logs/PHP_logs.log';
-		
+
 
 
 //if(class_exists('Yii')){
@@ -31,7 +31,7 @@ $config_main = array(
 		'application.models.*',
 		'application.components.*',
 	),
-	
+
 	//'layout' => '//layouts/main', not works??
 
 	'modules'=>array(
@@ -43,20 +43,20 @@ $config_main = array(
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),*/
-		
+
 	),
 
 	// application components
 	'components'=>array(
-		
+
 		'user'=>array(
 			'class' => 'WebUser',
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
-		
+
 		// uncomment the following to enable URLs in path-format
-		
+
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
@@ -66,17 +66,15 @@ $config_main = array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		
-		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
-		),
+
+
 		// uncomment the following to use a MySQL database
-		
+
 		'db'=>array(
 			'emulatePrepare' => true,
 			'charset' => 'utf8',
 		),
-		
+
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',

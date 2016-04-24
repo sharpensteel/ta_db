@@ -79,41 +79,41 @@ class SiteController extends Controller
 		$this->render('contact',array('model'=>$model));
 	}
 
-	/**
-	 * Displays the login page
-	 */
-	public function actionLogin()
-	{
-		$this->layout='//layouts/yii_column2';
-		$model=new LoginForm;
-
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
-
-		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
-		}
-		// display the login form
-		$this->render('login',array('model'=>$model));
-	}
-
-	/**
-	 * Logs out the current user and redirect to homepage.
-	 */
-	public function actionLogout()
-	{
-		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
-	}
+//	/**
+//	 * Displays the login page
+//	 */
+//	public function actionLogin()
+//	{
+//		$this->layout='//layouts/yii_column2';
+//		$model=new LoginForm;
+//
+//		// if it is ajax validation request
+//		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+//		{
+//			echo CActiveForm::validate($model);
+//			Yii::app()->end();
+//		}
+//
+//		// collect user input data
+//		if(isset($_POST['LoginForm']))
+//		{
+//			$model->attributes=$_POST['LoginForm'];
+//			// validate user input and redirect to the previous page if valid
+//			if($model->validate() && $model->login())
+//				$this->redirect(Yii::app()->user->returnUrl);
+//		}
+//		// display the login form
+//		$this->render('login',array('model'=>$model));
+//	}
+//
+//	/**
+//	 * Logs out the current user and redirect to homepage.
+//	 */
+//	public function actionLogout()
+//	{
+//		Yii::app()->user->logout();
+//		$this->redirect(Yii::app()->homeUrl);
+//	}
 
 	public function actionPlayer_update(){
 		$model = new Player_form();
@@ -165,16 +165,13 @@ class SiteController extends Controller
 		header("Location: ".baseUrl());
 	}
 
-	// https://ta_local/ta_db/site/Admin_secret_door?secret=asdeksjljk3s1sd4wsda
-	// http://146.185.186.182/ta_db/site/Admin_secret_door?secret=asdeksjljk3s1sd4wsda
-	// http://tiberium.mooo.com/ta_db/site/Admin_secret_door?secret=asdeksjljk3s1sd4wsda
+	// http://localhost/ta_db/site/Admin_secret_door?secret=asdeksjljk3s
 	public function actionAdmin_secret_door($secret){
-		if($secret != 'asdeksjljk3s1sd4wsda'){
+		if($secret != \Yii::app()->params['admin_secret']){
 			yii_flash_append('error', 'incorrect secret!');
 		}
 		else{
-			session_start_if_not();
-			$_SESSION['is_admin'] = 1;
+			\Yii::app()->setIsAdmin(1);
 		}
 		header("Location: ".baseUrl());
 	}
@@ -182,7 +179,7 @@ class SiteController extends Controller
 
 	public function actionPlayer_update_field($player_id, $field_name, $field_value){
 		session_start_if_not();
-		if(!array_default($_SESSION, 'is_admin',0)){
+		if(!\Yii::app()->isAdmin()){
 			echo "only admins can do that."; return;
 		}
 

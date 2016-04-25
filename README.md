@@ -26,7 +26,7 @@ Look [screenshots](https://github.com/sharpensteel/ta_db/tree/master/screenshots
 4. If you successed at step 3, you will see panel in game. Update world data from panel
  
 5. Open your MySql database and setup tables `global_data` and `alliance`<br />
-  look at [screenshot](https://github.com/sharpensteel/ta_db/tree/master/screenshots/10._database_table_'alliance'_needs_setup.JPG) to have an idea how to setup `alliance` table.
+  look at [screenshot](https://github.com/sharpensteel/ta_db/blob/master/screenshots/10.table_'alliance'_needs_setup.JPG) to have an idea how to setup `alliance` table.
   
 
 

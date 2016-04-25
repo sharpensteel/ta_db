@@ -24,7 +24,7 @@ $this->pageTitle=Yii::app()->name;
 
 ?>
 
-		
+
 <style>
 	.section{
 		margin-left:20px; margin-top:20px; margin-bottom: 20px;
@@ -33,7 +33,7 @@ $this->pageTitle=Yii::app()->name;
 	.section_title{
 		font-size: 1.2em; font-weight: bold; margin-bottom: 20px;
 	}
-	
+
 </style>
 
 <div style="  background: #C5C5C5;padding: 10px">
@@ -60,7 +60,7 @@ $this->pageTitle=Yii::app()->name;
 	<div class="section_title">Complete spreadsheet   </div>
 	<a href="<?=createUrl('site/ff_list_for_attack')?>" style="">Shortened spreadsheet for FF attack</a>
 	<br><br>
-	
+
 	<? $this->widget('application.widgets_custom.Report_ff_list_widget',array() ); ?>
 </div>
 
@@ -70,5 +70,5 @@ $this->pageTitle=Yii::app()->name;
 </div>
 
 <div style="margin-top:40px;margin-bottom:20px;text-align: right;margin-right:30px;">
-	Created by <a href="mailto:sharpensteel@gmail.com">sharpensteel1</a>. For your feedback or if you need sources, please message/e-mail me.
+	Created by <a href="mailto:sharpensteel@gmail.com">sharpensteel1</a>. Feel free to use <a href="https://github.com/sharpensteel/ta_db">sources</a>, just let me know.
 </div>

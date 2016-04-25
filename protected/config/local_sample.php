@@ -3,15 +3,7 @@
 if(!defined('YII_FRAMEWORK_DIR'))
 	define('YII_FRAMEWORK_DIR', 'c:/xampp/yii/framework');
 
-
 mb_internal_encoding("UTF-8");
-
-/*if(!defined('YII_ENABLE_ERROR_HANDLER'))
-	define('YII_ENABLE_ERROR_HANDLER', false);
-
-if(!defined('YII_ENABLE_EXCEPTION_HANDLER'))
-	define('YII_ENABLE_EXCEPTION_HANDLER', false);
-*/
 
 putenv("TZ=Europe/Moscow");
 ini_set('date.timezone','Europe/Moscow');

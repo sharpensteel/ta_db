@@ -3,7 +3,7 @@ Site to gather information from online game tiberiumalliances.com
 
 Site was written on php+javascript and uses MySQL database.
 
-## Site can do:
+## Features
 * load alliances list from game server
 * load players list from game server
 * load attacks list of player's alliance from game server

@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8232baee-8f22-488e-8a2e-00a18b60b8b9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/site/ff_list_for_attack.php" afterPath="$PROJECT_DIR$/protected/views/site/ff_list_for_attack.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/site/index.php" afterPath="$PROJECT_DIR$/protected/views/site/index.php" />
     </list>
     <ignored path="ta_db.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,10 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Curl_utils.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Curl_utils.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/components/Curl_utils.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.038548753">
+            <state vertical-scroll-proportion="-1.3076923">
               <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
               <folding>
                 <element signature="e#7#191#0#PHP" expanded="true" />
@@ -120,14 +118,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider editor-type-id="MultiMarkdownHtmlEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.758621">
-              <caret line="32" column="66" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.096700795">
+              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -170,9 +168,9 @@
         <option value="$PROJECT_DIR$/protected/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/protected/controllers/Attacks_tableController.php" />
         <option value="$PROJECT_DIR$/protected/config/local_sample.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/protected/views/site/index.php" />
         <option value="$PROJECT_DIR$/protected/views/site/ff_list_for_attack.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -855,20 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MultiMarkdownHtmlEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.758621">
-          <caret line="32" column="66" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MultiMarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/attacks_table/attacks_table_index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.576923">
@@ -919,12 +903,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/Curl_utils.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.038548753">
+        <state vertical-scroll-proportion="-1.3076923">
           <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
           <folding>
             <element signature="e#7#191#0#PHP" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MultiMarkdownHtmlEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.096700795">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MultiMarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>

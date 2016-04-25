@@ -7,8 +7,8 @@ Site was written on php+javascript and uses MySQL database.
 * load alliances list from game server
 * load players list from game server
 * load attacks list of player's alliance from game server
-* maintain and admin list of players for ff-run
-* statistics about user attacks activity in your alliance
+* maintain and admin list of players for Forgotten Fortress attack
+* statistics about users attacks activity in your alliance
 
 Look [screenshots](https://github.com/sharpensteel/ta_db/tree/master/screenshots) to have an idea. 
 

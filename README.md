@@ -10,11 +10,11 @@ Site was written on php+javascript and uses MySQL database.
 * maintain and admin list of players for ff-run
 * statistics about user attacks activity in your alliance
 
-Look [screenshots](https://github.com/sharpensteel/Steel/tree/master/screenshots) to have an idea. 
+Look [screenshots](https://github.com/sharpensteel/ta_db/tree/master/screenshots) to have an idea. 
 
 
 ## Setup
-1. Create database from [sql dump](https://github.com/sharpensteel/Steel/tree/master/install/db_dump.sql).
+1. Create database from [sql dump](https://github.com/sharpensteel/ta_db/tree/master/install/db_dump.sql).
   It contains example data to give you an idea. 
   So before real use, truncate tables: `alliance`, `attack`, `player`, `player_update_history`, `user`
   
@@ -27,7 +27,7 @@ Look [screenshots](https://github.com/sharpensteel/Steel/tree/master/screenshots
 4. if you successed at step 3, you will see panel in game. Update world data from panel
  
 5. Go to database and setup tables `global_data` and `alliance`
-  look at [screenshot]("https://github.com/sharpensteel/Steel/tree/master/screenshots/10. database table 'alliance' needs setup.JPG") to have an idea how to setup `alliance` table.
+  look at [screenshot]("https://github.com/sharpensteel/ta_db/tree/master/screenshots/10. database table 'alliance' needs setup.JPG") to have an idea how to setup `alliance` table.
   
 
 

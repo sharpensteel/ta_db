@@ -3,4 +3,4 @@ protected/logs/*
 protected/runtime/*
 assets/*
 /.htaccess
-
+.idea
